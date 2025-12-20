@@ -1,0 +1,52 @@
+/* 1. Global Reset */
+body {
+    font-family: 'Inter', sans-serif; /* Professional default for all text */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. Custom "Header" Classes (Like Bootstrap) */
+.font-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-transform: uppercase; /* Optional: gives a corporate feel */
+}
+
+/* 3. Custom "Accent" Classes */
+.text-student-corp {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #0d6efd; /* Bootstrap Primary Blue */
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Light professional grey */
+    color: #212529;
+}
+
+/* --- Custom Professional Classes --- */
+
+/* Use this class for all Main Titles */
+.portfolio-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    color: #0b2239; /* Deep corporate blue */
+    letter-spacing: -1px;
+}
+
+/* Use this class for Section Headings */
+.section-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Use this for clean, readable body text */
+.text-main {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
