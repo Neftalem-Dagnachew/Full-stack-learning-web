@@ -18,6 +18,10 @@
     list-style: none;
 }
 
+.second_list {
+    width: 200px;
+}
+
 .translater_flag {
     width: 40px;
     height: 24px;
