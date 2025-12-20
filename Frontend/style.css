@@ -5,9 +5,21 @@
     height: 85px;
 }
 
+.container {
+    width: 1080px;
+}
+
+.nav_img_container {
+    width: 270px;
+}
+
 .nav_img {
     width: 250px;
     height: 85px;
+}
+
+.nav_list_constine {
+    width: 650px;
 }
 
 .main_list {
@@ -18,7 +30,16 @@
     list-style: none;
 }
 
+.nav_cart {
+    width: 24px;
+    height: 24px;
+}
+
 .second_list {
+    width: 500px;
+}
+
+/* .second_list {
     width: 200px;
 }
 
@@ -26,4 +47,4 @@
     width: 40px;
     height: 24px;
     padding-right: 5px;
-}
+} */ 
