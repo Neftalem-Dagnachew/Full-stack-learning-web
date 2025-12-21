@@ -1,52 +1,110 @@
-/* 1. Global Reset */
-body {
-    font-family: 'Inter', sans-serif; /* Professional default for all text */
-    color: #333;
-    line-height: 1.6;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-/* 2. Custom "Header" Classes (Like Bootstrap) */
-.font-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-    text-transform: uppercase; /* Optional: gives a corporate feel */
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-/* 3. Custom "Accent" Classes */
-.text-student-corp {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #0d6efd; /* Bootstrap Primary Blue */
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
-/* --- Global Styles --- */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f8f9fa; /* Light professional grey */
-    color: #212529;
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-/* --- Custom Professional Classes --- */
-
-/* Use this class for all Main Titles */
-.portfolio-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 3rem;
-    color: #0b2239; /* Deep corporate blue */
-    letter-spacing: -1px;
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
-/* Use this class for Section Headings */
-.section-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
-/* Use this for clean, readable body text */
-.text-main {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.8;
-    font-size: 1.1rem;
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
