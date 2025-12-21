@@ -3,6 +3,16 @@
     background-color: #013C5A;
     width: 100%;
     height: 85px;
+    gap: 200px;
+}
+
+.second_nav {
+    width: 500px;
+    height: 85px;
+}
+
+.cart_icon {
+    color: #fff;
 }
 
 .container {
@@ -18,8 +28,15 @@
     height: 85px;
 }
 
+.translaetr_img {
+    width: 24px;
+    height: 24px;
+}
+
+
 .nav_list_constine {
     width: 650px;
+    height: 85px;
 }
 
 .main_list {
@@ -37,6 +54,30 @@
 
 .second_list {
     width: 500px;
+}
+
+.nav_btn {
+    width: 95px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #46A7C9;
+}
+
+.nav_btn:hover {
+    background-color: #969696;
+    transition: all 0.2s;
+}
+
+.sign-in_p {
+    color: #fff;
+    cursor: pointer;
+}
+
+.sign-in_p:hover {
+    color: #46A7C9;
+    transition: all 0.2s;
 }
 
 /* .second_list {
