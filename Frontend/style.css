@@ -66,3 +66,74 @@
     background-color: #d8d8d885;
     transition: all 0.5s;
 }
+
+/* body home */
+
+.body_container {
+    padding-top: 130px;
+}
+
+.rightside_content_container {
+    width: 100%;
+    max-width: 550px;
+    height: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(70, 167, 201, 0.35);
+}
+
+.main_rightside_content {
+    padding: 50px 0px 0px 30px;
+}
+
+.rightside_text_content {
+    width: 500px;
+    height: 450px;
+}
+
+.heder_text_content {
+    padding-bottom: 78px;
+}
+
+.text_heder {
+    font-size: 25px;
+    color: #013C5A;
+    width: 428px;
+}
+
+.rightside_h2 {
+    font-size: 48px;
+}
+
+.rightside_button_containers {
+    width: 433px;
+}
+
+.rightside_courses_btn {
+    width: 220px;
+    height: 46px;
+    background-color: #D4E9EF;
+    color: #013C5A;
+    border: none;
+    border-radius: 30px;
+}
+
+.rightside_courses_btn:hover {
+    background-color: #013C5A;
+    color: #D4E9EF;
+    transition: all 0.1s;
+}
+
+.rightside_register_btn {
+    width: 170px;
+    height: 46px;
+    background-color: #013C5A;
+    color: #D4E9EF;
+    border: none;
+    border-radius: 30px;
+}
+
+.rightside_register_btn:hover {
+    background-color: #D4E9EF;
+    color: #013C5A;
+    transition: all 0.1s;
+}
