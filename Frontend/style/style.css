@@ -137,3 +137,16 @@
     color: #013C5A;
     transition: all 0.1s;
 }
+
+.slider_img_container {
+    width: 100%;
+    max-width: 447px;
+    height: 378px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(70, 167, 201, 0.35);
+}
+
+.secd_conten {
+    width: 447px;
+    height: 378px;
+} 
