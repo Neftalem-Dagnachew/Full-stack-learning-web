@@ -144,9 +144,20 @@
     height: 378px;
     border-radius: 12px;
     box-shadow: 0 8px 25px rgba(70, 167, 201, 0.35);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
 }
 
-.secd_conten {
+.slider {
     width: 447px;
     height: 378px;
+    display: flex;
+      /* We start the transition here */
+    transition: transform 0.5s ease-in-out; 
 } 
+.slide {
+    min-width: 447px;
+    height: 378px;
+    object-fit: cover;
+}

@@ -126,11 +126,15 @@
 
             <div class="">
 
-                <div class="slider_img_container">
+                <div class="slider_img_container mb-5">
 
-                    <div class="secd_conten">
+                    <div class="slider" id="slider">
 
-                        <img src="" alt="">
+                        <img src="https://picsum.photos/id/10/600/400" class="slide" id="lastClone">
+                        <img src="https://picsum.photos/id/10/600/400" class="slide">
+                        <img src="https://picsum.photos/id/20/600/400" class="slide">
+                        <img src="https://picsum.photos/id/30/600/400" class="slide">
+                        <img src="https://picsum.photos/id/10/600/400" class="slide" id="firstClone">
 
                     </div>
 
@@ -151,6 +155,43 @@
         </div>
 
     </div>
+
+    <script>
+
+        const slider = document.querySelector('#slider');
+        const slides = document.querySelectorAll('.slide');
+
+        let counter = 1;
+        const size = slider.clientWidth;
+
+        // Start on first real slide
+        slider.style.transform = `translateX(${-size * counter}px)`;
+
+        setInterval(() => {
+        if (counter >= slides.length - 1) return;
+
+        counter++;
+        slider.style.transition = "transform 0.5s ease-in-out";
+        slider.style.transform = `translateX(${-size * counter}px)`;
+        }, 5000);
+
+        // Infinite loop logic
+        slider.addEventListener('transitionend', () => {
+        if (slides[counter].id === 'firstClone') {
+            slider.style.transition = "none";
+            counter = 1;
+            slider.style.transform = `translateX(${-size * counter}px)`;
+        }
+
+        if (slides[counter].id === 'lastClone') {
+                slider.style.transition = "none";
+                counter = slides.length - 2;
+                slider.style.transform = `translateX(${-size * counter}px)`;
+            }
+        });
+
+
+    </script>
 
 </body>
 </html>
