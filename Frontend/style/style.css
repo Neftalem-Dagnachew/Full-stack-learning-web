@@ -190,3 +190,25 @@
     height: 600px;
     border-radius: 12px;
 }
+
+.last_sidebtn {
+    width: 75px;
+    height: 75px;
+    border: none;
+    border-radius: 50%;
+    background-color: #D4E9EF;
+}
+
+.last_sidebtn i {
+    color: #013C5A;
+    font-size: 25px;
+    transition: color 0.2s;
+}
+
+.last_sidebtn:hover {
+    background-color: #013C5A;
+}
+
+.last_sidebtn:hover i {
+    color: #fff;
+}
