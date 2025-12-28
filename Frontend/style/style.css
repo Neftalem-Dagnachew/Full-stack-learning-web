@@ -249,33 +249,39 @@
 }
 
 .first_card {
-    width: 255px;
-    height: 80px;
-    background-color: #D4E9EF;
+    width: 310px;
+    height: 109px;
+    background-color: #EDF4F6;
     border-radius: 20px;
     position: absolute;
     top: 100px;
-    left: 350px;
+    left: 300px;
+    padding: 20px;
 }
 
 .second_card {
-    width: 255px;
-    height: 80px;
-    background-color: #D4E9EF;
+    width: 310px;
+    height: 109px;
+    background-color: #EDF4F6;
     border-radius: 20px;
     position: absolute;
     top: 250px;
-    left: 300px;
+    left: 200px;
 }
 
 .third_card {
-    width: 255px;
-    height: 80px;
-    background-color: #D4E9EF;
+    width: 310px;
+    height: 109px;
+    background-color: #EDF4F6;
     border-radius: 20px;
     position: absolute;
     top: 399px;
-    left: 350px;
+    left: 300px;
+}
+
+.card_img {
+    width: 37px;
+    height: 37px;
 }
 
 .sec_allcontent_container {
