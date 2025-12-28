@@ -3,6 +3,7 @@
     width: 100%;
     max-width: 1728px;
     height: 76px;
+    z-index: 10;
     background-color: #013C5A;
     position: fixed;
 }
@@ -72,6 +73,7 @@
 
 .body_container {
     padding-top: 130px;
+    padding-bottom: 100px;
 }
 
 .rightside_content_container {
@@ -211,4 +213,66 @@
 
 .last_sidebtn:hover i {
     color: #fff;
+}
+
+/*  */
+
+.second_content_container {
+    padding-top: 100px;
+}
+
+.all_second_container {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+}
+
+.sec_img_container {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sec_img {
+    width: 500px;
+    height: 600px;
+}
+
+.img_card_container {
+    width: 455px;
+    height: 470px;
+    position: relative;
+}
+
+.first_card {
+    width: 255px;
+    height: 80px;
+    background-color: #D4E9EF;
+    border-radius: 20px;
+    position: absolute;
+    top: 50px;
+    left: 300px;
+}
+
+.second_card {
+    width: 255px;
+    height: 80px;
+    background-color: #D4E9EF;
+    border-radius: 20px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.third_card {
+    width: 255px;
+    height: 80px;
+    background-color: #D4E9EF;
+    border-radius: 20px;
+    position: absolute;
+    top: 350px;
+    left: 300px;
 }
