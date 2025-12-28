@@ -274,11 +274,14 @@
     background-color: #D4E9EF;
     border-radius: 20px;
     position: absolute;
-    top: 400px;
+    top: 399px;
     left: 250px;
 }
 
 .sec_allcontent_container {
     width: 450px;
-    height: 400px;
+    height: 500px;
+    border: 1px solid #D4E9EF;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(70, 167, 201, 0.35);
 }
