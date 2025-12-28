@@ -267,6 +267,7 @@
     position: absolute;
     top: 250px;
     left: 200px;
+    padding: 20px;
 }
 
 .third_card {
@@ -277,6 +278,7 @@
     position: absolute;
     top: 399px;
     left: 300px;
+    padding: 20px;
 }
 
 .card_img {
