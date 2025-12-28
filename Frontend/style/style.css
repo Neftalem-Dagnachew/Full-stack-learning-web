@@ -123,7 +123,7 @@
 .rightside_courses_btn:hover {
     background-color: #013C5A;
     color: #D4E9EF;
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .rightside_register_btn {
@@ -138,7 +138,7 @@
 .rightside_register_btn:hover {
     background-color: #D4E9EF;
     color: #013C5A;
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .slider_img_container {
@@ -310,4 +310,19 @@
 .chakemark {
     color: #005064;
     font-size: 20px;
+}
+
+.sec_usetext_register_btn {
+    width: 202px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #D4E9EF;
+    border: none;
+    color: #013C5A;
+}
+
+.sec_usetext_register_btn:hover {
+    background-color: #013C5A;
+    color: #fff;
+    transition: all 0.2s;
 }
