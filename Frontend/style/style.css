@@ -340,8 +340,24 @@
 }
 
 .cone_content_container {
+    padding: 100px 50px 100px 50px;
     width: 1200px;
     height: 485px;
     background-color: #005064;
     border-radius: 50px;
+}
+
+.getstart_text {
+    color: #D4E9EF;
+    font-size: 22px;
+}
+
+.getstart_learning {
+    color: #fff;
+    font-size: 32px;
+}
+
+.Forward_text {
+    color: #ffffffBD;
+    font-size: 15px;
 }
