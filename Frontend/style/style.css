@@ -219,6 +219,7 @@
 
 .second_content_container {
     padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .all_second_container {
@@ -325,4 +326,13 @@
     background-color: #013C5A;
     color: #fff;
     transition: all 0.2s;
+}
+
+/*  */
+
+.e_cone_container {
+    width: 100%;
+    height: 685px;
+    margin-top: 100px;
+    background-color: #f4f7f7;
 }
