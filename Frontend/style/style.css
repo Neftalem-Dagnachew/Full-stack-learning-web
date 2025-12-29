@@ -361,3 +361,31 @@
     color: #ffffffBD;
     font-size: 15px;
 }
+
+.getstart_register_btn {
+    width: 120px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    background-color: #D4E9EF;
+    color: #005064;
+}
+
+.getstart_register_btn:hover {
+    background-color: #fff;
+    transition: all 0.2s;
+}
+
+.getstart_courses_btn {
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #005064;
+}
+
+.getstart_courses_btn:hover {
+    background-color: #D4E9EF;
+    transition: all 0.2s;
+}
