@@ -389,3 +389,8 @@
     background-color: #D4E9EF;
     transition: all 0.2s;
 }
+
+.link-tag {
+    color: #fff;
+    text-decoration: none;
+}
