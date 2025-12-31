@@ -81,3 +81,8 @@
     color: #fff;
     border: none;
 }
+
+.login_btn:hover {
+    background-color: #0287c99a;
+    transition: all 0.5s;
+}
