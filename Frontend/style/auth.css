@@ -65,24 +65,26 @@
 }
 
 .checkbox {
-    width: 20px;
-    height: 20px;   
+  width: 20px;
+  height: 20px;   
 }
 
 .forgetpassword_text {
-    gap: 177px;
+  gap: 177px;
 }
 
 .login_btn {
-    width: 460px;
-    height: 42px;
-    border-radius: 10px;
-    background-color: #46A7C9;
-    color: #fff;
-    border: none;
+  width: 460px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #46A7C9;
+  color: #fff;
+  border: none;
 }
 
 .login_btn:hover {
-    background-color: #d8d8d885;
-    transition: all 0.5s;
+  background-color: #d8d8d885;
+  transition: all 0.5s;
 }
+
+/* Register css start her */
