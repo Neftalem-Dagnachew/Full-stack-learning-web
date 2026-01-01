@@ -136,3 +136,11 @@
   border-color: #4a90e2;
   box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
 }
+
+.identity_section {
+  width: 452px;
+  height: 40px;
+  border-radius: 10px;
+  padding: 0px 10px;
+  outline: none;
+}
