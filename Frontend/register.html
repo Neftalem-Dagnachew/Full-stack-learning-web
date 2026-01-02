@@ -97,14 +97,14 @@
                         <div class="input-rigister">
 
                             <p class="poppins-semibold text-light m-0 input_text">Phone Number</p>
-                            <input type="text" name="phone_number" required>
+                            <input type="text" name="phone_numer" required>
 
                         </div>
 
                         <div class="input-rigister">
 
                             <p class="poppins-semibold text-light m-0 input_text">Identity</p>
-                            <select class="identity_section" id="Identity" name="Identity">
+                            <select class="identity_section" id="identity" name="identity">
                                 <option value="">----</option>
                                 <option value="student">Student</option>
                                 <option value="parent">Parent / Family</option>
@@ -138,7 +138,48 @@
 
     <script>
 
+        document.getElementById("registerForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
 
+            const formData = new FormData(this);
+
+            const data = {
+
+                email: formData.get("email"),
+                password: formData.get("password"),                
+                first_name: formData.get("first_name"),
+                last_name: formData.get("last_name"),
+                nickname: formData.get("nickname"),
+                phone_numer: formData.get("phone_numer"),
+                identity: formData.get("identity"),
+
+            };
+
+            try {
+
+                const res = await fetch("http://localhost:3000/users/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await res.json();
+
+                if(res.ok) {
+                    alert("Account created successfully");
+                    console.log(result)
+                } else {
+                    alert(result.message || "Registration failed");
+                }
+
+            } catch (error) {
+                console.error(error);
+                alert("Server error");
+            }
+
+        })
 
     </script>
 

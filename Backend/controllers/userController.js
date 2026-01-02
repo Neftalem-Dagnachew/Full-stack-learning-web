@@ -8,7 +8,7 @@ exports.registerUser = async (req, res) => {
     const hashed = await bcrypt.hash(password, 10);
     const sql = "INSERT INTO users (email, password, first_name, last_name, nickname, phone_numer, identity) VALUES (?, ?, ?, ?, ?, ?, ?)"
 
-    db.query(sql [email, password, first_name, last_name, nickname, phone_numer, identity], (err, result) => {
+    db.query(sql, [email, hashed, first_name, last_name, nickname, phone_numer, identity], (err, result) => {
 
         if(err) {
 
