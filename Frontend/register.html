@@ -45,84 +45,88 @@
 
                     </div>
 
-                    <div class="d-flex rigister_creat_text pb-5">
+                    <form class="RegisterForm" id="registerForm">
 
-                        <div>
-                            <h4 class="poppins-semibold text-light m-0">Create an Account</h5>
+                        <div class="d-flex rigister_creat_text pb-5">
+
+                            <div>
+                                <h4 class="poppins-semibold text-light m-0">Create an Account</h5>
+                            </div>
+
+                            <div>
+                                <p class="poppins-extralight text-light m-0">Sign-in</p>
+                            </div>
+
                         </div>
 
-                        <div>
-                            <p class="poppins-extralight text-light m-0">Sign-in</p>
+                        <div class="input-rigister">
+
+                            <p class="poppins-semibold text-light m-0 input_text">Email</p>
+                            <input type="email" name="email" required>
+
                         </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
+                            <p class="poppins-semibold text-light m-0 input_text">Password</p>
+                            <input type="password" name="password" required>
 
-                        <p class="poppins-semibold text-light m-0 input_text">Email</p>
-                        <input type="email">
+                        </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
+                            <p class="poppins-semibold text-light m-0 input_text">First Name</p>
+                            <input type="text" name="first_name" required>
 
-                        <p class="poppins-semibold text-light m-0 input_text">Password</p>
-                        <input type="password">
+                        </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
+                            <p class="poppins-semibold text-light m-0 input_text">Last Name</p>
+                            <input type="text" name="last_name" required>
 
-                        <p class="poppins-semibold text-light m-0 input_text">First Name</p>
-                        <input type="name">
+                        </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
+                            <p class="poppins-semibold text-light m-0 input_text">Nickname</p>
+                            <input type="text" name="nickname">
 
-                        <p class="poppins-semibold text-light m-0 input_text">Last Name</p>
-                        <input type="name">
+                        </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
+                            <p class="poppins-semibold text-light m-0 input_text">Phone Number</p>
+                            <input type="text" name="phone_number" required>
 
-                        <p class="poppins-semibold text-light m-0 input_text">Nickname</p>
-                        <input type="email">
+                        </div>
 
-                    </div>
+                        <div class="input-rigister">
 
-                    <div class="input-rigister">
-
-                        <p class="poppins-semibold text-light m-0 input_text">Phone Number</p>
-                        <input type="number">
-
-                    </div>
-
-                    <div class="input-rigister">
-
-                        <p class="poppins-semibold text-light m-0 input_text">Identity</p>
-                        <select class="identity_section" id="Identity" name="Identity">
-                            <option value="">----</option>
-                            <option value="et">Student</option>
-                            <option value="us">United States</option>
-                            <option value="uk">United Kingdom</option>
-                        </select>
+                            <p class="poppins-semibold text-light m-0 input_text">Identity</p>
+                            <select class="identity_section" id="Identity" name="Identity">
+                                <option value="">----</option>
+                                <option value="student">Student</option>
+                                <option value="parent">Parent / Family</option>
+                                <option value="teacher">Teacher</option>
+                            </select>
 
 
-                    </div>
+                        </div>
 
-                    <div class="input-rigister">
+                        <div class="input-rigister">
 
-                        <p class="poppins-extralight text-light m-0 input_text">By creating an account you are agreeing to the Terms of Service and Privacy Policy.</p>
+                            <p class="poppins-extralight text-light m-0 input_text">By creating an account you are agreeing to the Terms of Service and Privacy Policy.</p>
 
-                    </div>
+                        </div>
 
-                    <div class="input-rigister">
+                        <div class="input-rigister">
 
-                        <button class="login_btn">Create an Account</button>
+                            <button class="login_btn" type="submit">Create an Account</button>
 
-                    </div>
+                        </div>
+
+                    </form>
 
                 </div>
 
@@ -131,6 +135,12 @@
         </div>
 
     </div>
+
+    <script>
+
+
+
+    </script>
 
 </body>
 </html>
