@@ -2,7 +2,19 @@
 const db = require("../config/db");
 const bcrypt = require("bcrypt");
 
-exports.registerUser = async (req, res) => {
+exports.getUsers = (req, res) => {
+
+    const sql = "SELECT * FROM users"
+    db.query(sql, (err, result) => {
+
+        if(err) return res.status(500).json({ message: "DB error"});
+        res.json(result)
+
+    })
+
+}
+
+exports.registerUsers = async (req, res) => {
 
     const { email, password, first_name, last_name, nickname, phone_numer, identity } = req.body;
     const hashed = await bcrypt.hash(password, 10);
