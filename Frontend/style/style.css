@@ -69,6 +69,11 @@
     transition: all 0.5s;
 }
 
+.link-tag {
+    color: #fff;
+    text-decoration: none;
+}
+
 /* body home */
 
 .body_container {
@@ -388,9 +393,4 @@
 .getstart_courses_btn:hover {
     background-color: #D4E9EF;
     transition: all 0.2s;
-}
-
-.link-tag {
-    color: #fff;
-    text-decoration: none;
 }
