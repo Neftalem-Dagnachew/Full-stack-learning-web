@@ -30,7 +30,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
         const result = await res.json();
 
         if(res.ok) {
-            alert("Account created successfully");
+            window.location.href = "login.html"
             console.log(result)
         } else {
             alert(result.message || "Registration failed");
