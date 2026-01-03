@@ -1,11 +1,10 @@
 
-
 .main_nav {
     width: 100%;
-    max-width: 1728px;
+    max-width: 1250px;
     height: 76px;
-    z-index: 10;
     background-color: #013C5A;
+    z-index: 10;
     position: fixed;
 }
 
@@ -74,3 +73,5 @@
     color: #fff;
     text-decoration: none;
 }
+
+/* dashboard start her */
