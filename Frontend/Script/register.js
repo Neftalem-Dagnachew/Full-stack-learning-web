@@ -8,7 +8,7 @@ document.getElementById("registerForm").addEventListener("submit", async functio
     const data = {
 
         email: formData.get("email"),
-        password: formData.get("password"),                
+        password: formData.get("password"),
         first_name: formData.get("first_name"),
         last_name: formData.get("last_name"),
         nickname: formData.get("nickname"),
