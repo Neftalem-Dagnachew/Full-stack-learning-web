@@ -37,3 +37,39 @@ exports.registerUsers = async (req, res) => {
     })
 
 }
+
+exports.loginUsers = (req, res) => {
+
+    const {email, password} = req.body;
+    const sql = "SELECT * FROM users WHERE email = ?"
+
+    db.query(sql, [email], async (err, result) => {
+
+        if(err) {
+            console.error("Login error:", err)
+            return res.sendStatus(500)
+        }
+        
+        if(result.length === 0){
+            return res.status(400).json({ message: "Invalid email"})
+        }
+
+        const user = result[0];
+        const isMatch = await bcrypt.compare(password, user.password);
+        if(!isMatch){
+            return res.status(400).json({ message: "Invalid password"});
+        }
+
+        res.json({ 
+            message: "Login successfully",
+            user: {
+                email: user.email,
+                first_name: user.first_name,
+                last_name: user.last_name,
+                identity: user.identity
+            }
+        })
+
+    })
+
+}
