@@ -22,7 +22,7 @@ document.getElementById("loginForm").addEventListener('submit', async function (
         const result = await res.json()
 
         if(res.ok) {
-            alert("Login successfully");
+            window.location.href = "my-dashboard.html"
             console.log(result);
         } else {
             alert(result.message || "Registration failed")
