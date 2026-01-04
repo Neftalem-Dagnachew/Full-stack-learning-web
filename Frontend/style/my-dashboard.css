@@ -113,6 +113,11 @@
     padding: 12px;
     top: 50px;
     right: 0;
+    display: none;
+}
+
+.dropdown_menu.active {
+    display: block;
 }
 
 .dropdown_header {
