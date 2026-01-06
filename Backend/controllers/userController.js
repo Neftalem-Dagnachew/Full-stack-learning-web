@@ -1,6 +1,8 @@
 
 const db = require("../config/db");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const JWT_SECTET = "b3f9cA7xP!2kL8mZqR#WvD1E@6yN0H4sJtUo";
 
 exports.getUsers = (req, res) => {
 
@@ -9,6 +11,26 @@ exports.getUsers = (req, res) => {
 
         if(err) return res.status(500).json({ message: "DB error"});
         res.json(result)
+
+    })
+
+}
+
+exports.getMe = (req, res) => {
+
+    const userId = req.user.id
+    const sql = "SELECT email, first_name, last_name, nickname, identity FROM users WHERE id = ?"
+    db.query(sql, [userId], (err, result) => {
+
+        console.error(err)
+        if(err) return res.status(500).json({ message: "DB error"});
+        res.json(result)
+
+        if(result.length === 0) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        res.json(result[0]);
 
     })
 
@@ -62,12 +84,14 @@ exports.loginUsers = (req, res) => {
 
         const token = jwt.sign(
             {
-                user: {
-                    id: user.id,
-                    email: user.email,
-                    identity: user.identity
-                }
-            }
+             
+                id: user.id,
+                email: user.email,
+                identity: user.identity
+                
+            },
+            JWT_SECTET,
+            {expiresIn: "1h"}
         )
 
         res.json({ 
