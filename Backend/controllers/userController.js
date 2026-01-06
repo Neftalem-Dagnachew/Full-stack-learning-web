@@ -60,6 +60,16 @@ exports.loginUsers = (req, res) => {
             return res.status(400).json({ message: "Invalid password"});
         }
 
+        const token = jwt.sign(
+            {
+                user: {
+                    id: user.id,
+                    email: user.email,
+                    identity: user.identity
+                }
+            }
+        )
+
         res.json({ 
             message: "Login successfully",
             user: {
@@ -67,7 +77,8 @@ exports.loginUsers = (req, res) => {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 identity: user.identity
-            }
+            },
+            token: token,
         })
 
     })
