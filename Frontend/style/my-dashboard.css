@@ -164,4 +164,27 @@
     height: 100vh;
     position: fixed;
     border-right: 1px solid #e6e6e6;
+    padding: 30px 30px;
+}
+
+.all_side_content_container {
+    padding-top: 65px;
+}
+
+.dashboard-active {
+    width: 185px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    color: #1E1232;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+
+.dashboard-active:hover {
+    background-color: #eee;
 }
