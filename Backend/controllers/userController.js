@@ -24,13 +24,12 @@ exports.getMe = (req, res) => {
 
         console.error(err)
         if(err) return res.status(500).json({ message: "DB error"});
-        res.json(result)
 
         if(result.length === 0) {
             return res.status(404).json({ message: "User not found" });
         }
 
-        res.json(result[0]);
+        res.json(result[0])
 
     })
 
