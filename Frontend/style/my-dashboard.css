@@ -185,10 +185,16 @@
     padding-left: 15px;
 }
 
+.dashboard-active.give {
+    background-color: #46A7C9;
+    color: #fff;
+}
+
+
 .windows {
     font-size: 20px;
 }
 
-.dashboard-active:hover {
+.dashboard-active:not(.give):hover {
     background-color: #eee;
 }

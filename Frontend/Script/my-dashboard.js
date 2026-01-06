@@ -1,6 +1,13 @@
 const profile_btn = document.getElementById("profile_btn");
 const dropdownMenu = document.getElementById("dropdownMenu");
 
+const dashboard_active = document.getElementById("dashboard_active");
+
+dashboard_active.addEventListener("click", () => {
+    dashboard_active.classList.toggle("give");
+});
+
+
 profile_btn.addEventListener("click", (e) => {
     dropdownMenu.classList.toggle("active");
 });
