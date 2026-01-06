@@ -22,6 +22,7 @@ document.getElementById("loginForm").addEventListener('submit', async function (
         const result = await res.json()
 
         if(res.ok) {
+            localStorage.setItem("token", result.token)
             window.location.href = "my-dashboard.html"
             console.log(result);
         } else {
