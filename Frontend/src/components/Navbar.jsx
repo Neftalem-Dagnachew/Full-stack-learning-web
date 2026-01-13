@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import "./Navbar.css"
+import logo from "../assets//Navbar-img/Main-Logo.png"
+import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 
 function Navbar() {
   return (
@@ -12,7 +14,7 @@ function Navbar() {
           <div className="main_logo">
             <img
               className="main_logo"
-              src="IMG/Main-Logo.png"
+              src={logo}
               alt="Main Logo"
             />
           </div>
@@ -29,14 +31,14 @@ function Navbar() {
           <div className="d-flex align-items-center">
             <img
               className="nav_translator_img ps-2"
-              src="IMG/ethio_flag.svg"
+              src={ethioFlag}
               alt="Amharic"
             />
             <p className="m-0 ps-2 translator_text poppins-light">AN</p>
 
             <img
               className="nav_translator_img ps-2"
-              src="IMG/ethio_flag.svg"
+              src={ethioFlag}
               alt="English"
             />
             <p className="m-0 ps-2 translator_text poppins-light">EN</p>
