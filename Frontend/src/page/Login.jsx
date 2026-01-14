@@ -2,6 +2,7 @@ import "./style/auth.css"
 import { Link } from "react-router-dom";
 
 import Logo from "../assets/Navbar-img/Main-Logo.png"
+import auth from "../assets/authIMG/auth.png"
 
 function Login() {
 
@@ -14,7 +15,7 @@ function Login() {
 
                     <div>
 
-                        <img className="position-fixed" src="IMG/auth.png" alt="" />
+                        <img className="position-fixed" src={auth} alt="" />
                         
                     </div>
 

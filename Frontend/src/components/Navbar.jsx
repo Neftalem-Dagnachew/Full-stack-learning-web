@@ -57,7 +57,7 @@ function Navbar() {
 
           <div className="d-flex">
             <button className="side_nav_login poppins-light">
-              <a className="link-tag" href="/register">sign-up</a>
+              <Link className="link-tag" to="/Register">sign-up</Link>
             </button>
           </div>
         </div>

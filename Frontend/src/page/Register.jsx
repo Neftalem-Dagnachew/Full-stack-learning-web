@@ -1,6 +1,7 @@
 import "./style/auth.css"
 import Logo from "../assets/Navbar-img/Main-Logo.png"
 import { Link } from "react-router-dom";
+import auth from "../assets/authIMG/auth.png"
 
 function Register() {
 
@@ -12,7 +13,7 @@ function Register() {
 
                 <div>
 
-                    <img className="position-fixed" src="IMG/auth.png" alt="" />
+                    <img className="position-fixed" src={auth} alt="" />
                     
                 </div>
 
