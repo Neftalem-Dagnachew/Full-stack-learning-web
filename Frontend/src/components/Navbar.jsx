@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import "./Navbar.css"
+import "../components/style/Navbar.css"
 import logo from "../assets//Navbar-img/Main-Logo.png"
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 

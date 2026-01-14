@@ -1,9 +1,13 @@
 import Navbar from "./components/Navbar";
+import Introduction from "./page/Introduction";
 
 function App() {
 
   return(
-    <Navbar/>
+    <>
+      <Navbar/>
+      <Introduction />
+    </>
   )
 }
 
