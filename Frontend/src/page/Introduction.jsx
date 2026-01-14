@@ -1,5 +1,6 @@
 
 import "../page/style/Introdaction.css"
+import SecondIntro from "./secondIntro";
 
 function Introduction() {
 
@@ -109,6 +110,7 @@ function Introduction() {
             </div>
 
         </div>
+        <SecondIntro/>
         </>
     )
 }

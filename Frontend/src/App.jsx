@@ -1,14 +1,17 @@
-import Navbar from "./components/Navbar";
 import Introduction from "./page/Introduction";
 import SecondIntro from "./page/secondIntro";
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
 
   return(
     <>
-      <Navbar />
-      <Introduction />
-      <SecondIntro />
+      <Routes>
+        <Route path='/' element={<MainLayout />}> 
+          <Route index element={<Introduction />}/>
+        </Route>
+      </Routes>
     </>
   )
 }
