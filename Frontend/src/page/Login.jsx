@@ -1,4 +1,4 @@
-import "./style/Login.css"
+import "./style/auth.css"
 import { Link } from "react-router-dom";
 
 import Logo from "../assets/Navbar-img/Main-Logo.png"
