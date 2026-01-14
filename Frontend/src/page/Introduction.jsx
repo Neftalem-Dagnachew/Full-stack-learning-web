@@ -2,6 +2,8 @@
 import "../page/style/Introdaction.css"
 import SecondIntro from "./secondIntro";
 
+import videoImg from "../assets/IntroIMG/videoImg.png"
+
 function Introduction() {
 
     return(
@@ -99,7 +101,7 @@ function Introduction() {
 
                 <div className="position-relative">
 
-                    <img src="IMG/Rectangle 14.png" alt="" />
+                    <img src={videoImg} alt="" />
 
                     <div className="position-absolute top-50 start-50 translate-middle">
                         <a href=""><button className="last_sidebtn"><i className="fa-solid fa-play"></i></button></a>
