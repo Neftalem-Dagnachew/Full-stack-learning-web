@@ -1,5 +1,5 @@
 import Introduction from "./page/Introduction";
-import SecondIntro from "./page/secondIntro";
+import Login from "./page/Login";
 import { Routes, Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 
@@ -11,6 +11,7 @@ function App() {
         <Route path='/' element={<MainLayout />}> 
           <Route index element={<Introduction />}/>
         </Route>
+        <Route path="Login" element={<Login />}/>
       </Routes>
     </>
   )
