@@ -62,7 +62,7 @@ function Navbar() {
 
             <div className="d-flex">
               <button className="side_nav_login poppins-light">
-                <Link className="link-tag" to="/Register">sign-up</Link>
+                <Link className="link-tag" to="/register">sign-up</Link>
               </button>
             </div>
           </div>
@@ -70,7 +70,6 @@ function Navbar() {
 
         {user && (
           <>
-            <Link to="/Dashboard">Dashboard</Link>
             <button>Logout</button>
           </>
         )}
