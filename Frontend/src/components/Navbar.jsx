@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 import "../components/style/Navbar.css"
 import logo from "../assets//Navbar-img/Main-Logo.png"
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 
 function Navbar() {
+
+  const { user } = useContext(AuthContext);
+
   return (
     <>
       <nav className="main_nav d-flex align-items-center">
@@ -48,19 +52,28 @@ function Navbar() {
 
         </div>
 
-        <div className="d-flex align-items-center side_nav_container gap-3">
-          <i className="fa-solid fa-cart-arrow-down side_cart"></i>
+        {!user && (
+          <div className="d-flex align-items-center side_nav_container gap-3">
+            <i className="fa-solid fa-cart-arrow-down side_cart"></i>
 
-          <Link className="link-tag" to="/login">
-            <p className="m-0 sidbar_nav_sign_in poppins-light">sign-in</p>
-          </Link>
+            <Link className="link-tag" to="/login">
+              <p className="m-0 sidbar_nav_sign_in poppins-light">sign-in</p>
+            </Link>
 
-          <div className="d-flex">
-            <button className="side_nav_login poppins-light">
-              <Link className="link-tag" to="/Register">sign-up</Link>
-            </button>
+            <div className="d-flex">
+              <button className="side_nav_login poppins-light">
+                <Link className="link-tag" to="/Register">sign-up</Link>
+              </button>
+            </div>
           </div>
-        </div>
+        )}
+
+        {user && (
+          <>
+            <Link to="/Dashboard">Dashboard</Link>
+            <button>Logout</button>
+          </>
+        )}
 
       </nav>
     </>
