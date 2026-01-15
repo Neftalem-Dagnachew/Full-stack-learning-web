@@ -4,12 +4,48 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/Navbar-img/Main-Logo.png"
 import auth from "../assets/authIMG/auth.png"
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { loginUser } from "../services/api";
 
 function Login() {
+
+    const navigate = useNavigate();
+    const { setUser } = useContext(AuthContext);
+
+    const [ formData, setFormData ] = useState({
+        email: "",
+        password: ""
+    });
+
+    const [ loading, setLoading ] = useState(false);
+    const [ error, setError ] = useState();
+
+    function handleChange(e) {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        setLoading(true);
+        setError();
+
+        loginUser(formData)
+         .then(data => {
+            setUser(data.user);
+            navigate("/dashboard");
+         })
+         .catch(err => {
+            setError(err.message);
+         })
+         .finally(() => {
+            setLoading(false);
+         })
+    }
 
     return(
         <>
@@ -36,7 +72,7 @@ function Login() {
 
                         </div>
 
-                        <form className="loginForm" id="loginForm">
+                        <form className="loginForm" id="loginForm" onSubmit={handleSubmit}>
 
                             <div className="d-flex auth_both_text pb-5">
 
@@ -53,14 +89,14 @@ function Login() {
                             <div className="input-wrapper">
 
                                 <i className="fa-regular fa-user"></i>
-                                <input type="email" name="email" placeholder="Email Address" required />
+                                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required />
 
                             </div>
 
                             <div className="input-wrapper">
 
                                 <i className="fa-solid fa-lock"></i>
-                                <input type="password" name="password" placeholder="Password" required />
+                                <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Password" required />
 
                             </div>
 
@@ -85,7 +121,8 @@ function Login() {
 
                             <div className="pb-3">
 
-                                <button className="login_btn" type="submit">Log in</button>
+                                <button className="login_btn" type="submit" disabled={loading}>{loading ? "Logging in ..." : "login"}</button>
+                                {error && <p style={{ color: "red"}}>{error}</p>}
 
                                 <div className="d-flex align-items-center">
                                 <hr className="w-50 text-light" /><p className="m-0 text-white-50 ps-2 pe-2 poppins-extralight">OR</p><hr className="w-50 text-light" />

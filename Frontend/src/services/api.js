@@ -1,18 +1,42 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
-export const loginUser = async (FormData) => {
-    const res = await fetch(`${API_URL}/users/login`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(FormData)
-    });
-
-    if(!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.message || "Login failed");
-    }
-
+export const getUser = async () => {
+    const res = await fetch(`${API_URL}/users/get`)
     return res.json();
 }
+
+// export const loginUser = async (formData) => {
+//     const res = await fetch(`${API_URL}/users/login`, {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(formData)
+//     });
+
+//     if(!res.ok) {
+//         const errorData = await res.json();
+//         throw new Error(errorData.message || "Login failed");
+//     }
+
+//     return res.json();
+// }
+
+// LOGIN
+export const loginUser = async (formData) => {
+  const res = await fetch(`${API_URL}/users/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(formData)
+  });
+
+  // handle wrong credentials
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.message || "Login failed");
+  }
+
+  return res.json(); // success response
+};
