@@ -3,7 +3,14 @@ import Logo from "../assets/Navbar-img/Main-Logo.png"
 import { Link } from "react-router-dom";
 import auth from "../assets/authIMG/auth.png"
 
+// 
+import { registerUsers } from "../services/api";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 function Register() {
+
+    const navigate = useNavigate();
 
     return(
         <>

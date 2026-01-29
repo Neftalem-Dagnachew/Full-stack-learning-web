@@ -23,8 +23,8 @@ export const getUser = async () => {
 // }
 
 // LOGIN
-export async function loginUser(formData) {
-    const res = await fetch(`${API_URL}/users/login`, {
+export async function registerUsers(formData) {
+    const res = await fetch(`${API_URL}/users/register`, {
         method: "POST",
         headers: {
             "Content-type" : "application/json"
