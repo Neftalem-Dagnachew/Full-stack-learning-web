@@ -21,7 +21,7 @@ export async function getMe() {
   return res.json();
 }
 
-// LOGIN
+// Register
 export async function registerUsers(formData) {
 
     const res = await fetch(`${API_URL}/users/register`, {
@@ -32,7 +32,21 @@ export async function registerUsers(formData) {
         body: JSON.stringify(formData)
     })
 
-    if(!res) throw new Error("Register failed");
-    console.log("API_URL:", API_URL);
+    if(!res.ok) throw new Error("Register failed");
     return res.json();
+}
+
+// Login
+export async function loginUsers(formData) {
+    const res = await fetch(`${API_URL}/users/login`, {
+        method: "POST",
+        headers: {
+            "Content-type" : "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+
+    if(!res.ok) throw new Error("Login Failed")
+    return res.json();
+    
 }

@@ -7,7 +7,7 @@ import auth from "../assets/authIMG/auth.png"
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-// import { loginUser } from "../services/api";
+import { loginUsers } from "../services/api";
 
 function Login() {
 
@@ -20,7 +20,7 @@ function Login() {
     });
 
     const [ loading, setLoading ] = useState(false);
-    const [ error, setError ] = useState();
+    const [ error, setError ] = useState("");
 
     function handleChange(e) {
         setFormData({
@@ -29,22 +29,22 @@ function Login() {
         })
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
         setLoading(true);
-        setError();
+        setError("");
 
-        loginUser(formData)
-         .then(data => {
+        try {
+            const data = await loginUsers(formData);
+            localStorage.setItem("token", data.token);
             setUser(data.user);
-            navigate("/dashboard");
-         })
-         .catch(err => {
+            navigate("/dashboard")
+        } catch (err) {
             setError(err.message);
-         })
-         .finally(() => {
+        } finally {
             setLoading(false);
-         })
+        }
+
     }
 
     return(
@@ -121,7 +121,9 @@ function Login() {
 
                             <div className="pb-3">
 
-                                <button className="login_btn" type="submit" disabled={loading}>{loading ? "Logging in ..." : "login"}</button>
+                                <button className="login_btn" type="submit" disabled={loading}>
+                                    {loading ? "Logging in ..." : "login"}
+                                </button>
                                 {error && <p style={{ color: "red"}}>{error}</p>}
 
                                 <div className="d-flex align-items-center">

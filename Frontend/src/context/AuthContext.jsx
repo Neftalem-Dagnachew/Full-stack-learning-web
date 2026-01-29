@@ -15,12 +15,13 @@ function AuthProvider({ children }) {
         if(!token) {
             setUser(null)
             setLoading(false);
+            return;
         }
 
         getMe()
             .then(setUser)
             .catch(() => {
-                localStorage.removeItem(token);
+                localStorage.removeItem("token");
                 setLoading(false);
             })
             .finally(() => setLoading(false));
