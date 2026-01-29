@@ -5,6 +5,22 @@ export const getUser = async () => {
     return res.json();
 }
 
+export async function getMe() {
+  const token = localStorage.getItem("token");
+
+  const res = await fetch(`${API_URL}/users/getMe`, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error("Unauthorized");
+  }
+
+  return res.json();
+}
+
 // LOGIN
 export async function registerUsers(formData) {
 
