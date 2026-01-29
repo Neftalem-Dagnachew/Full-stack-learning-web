@@ -12,6 +12,42 @@ function Register() {
 
     const navigate = useNavigate();
 
+    const [ loading, setLoading ] = useState(false);
+    const [ error, setError ] = useState("");
+
+    const [ formData, setformData ] = useState({
+        email: "",
+        password: "",
+        first_name: "",
+        last_name: "",
+        nickname: "", 
+        phone_numer: "", 
+        identity: ""
+    });
+
+    function handleChange(e) {
+        setformData({
+            ...formData,
+            [ e.target.name ]: e.target.value
+        });
+    }
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setLoading(true);
+        setError("");
+
+        try {
+            await registerUsers(formData);
+            navigate("/login");
+        } catch {
+            setError("Registration failed");
+        } finally {
+            setLoading(false);
+        }
+        
+    }
+
     return(
         <>
             <div className="d-flex">
@@ -36,7 +72,7 @@ function Register() {
 
                     </div>
 
-                    <form className="RegisterForm" id="registerForm">
+                    <form className="RegisterForm" id="registerForm" onSubmit={handleSubmit}>
 
                         <div className="d-flex rigister_creat_text pb-5">
 
@@ -53,49 +89,49 @@ function Register() {
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Email</p>
-                            <input type="email" name="email" required />
+                            <input type="email" name="email" onChange={handleChange} required />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Password</p>
-                            <input type="password" name="password" required />
+                            <input type="password" name="password" onChange={handleChange} required />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">First Name</p>
-                            <input type="text" name="first_name" required />
+                            <input type="text" name="first_name" onChange={handleChange} required />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Last Name</p>
-                            <input type="text" name="last_name" required />
+                            <input type="text" name="last_name" onChange={handleChange} required />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Nickname</p>
-                            <input type="text" name="nickname" />
+                            <input type="text" name="nickname" onChange={handleChange} />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Phone Number</p>
-                            <input type="text" name="phone_numer" required />
+                            <input type="text" name="phone_numer" onChange={handleChange} required />
 
                         </div>
 
                         <div className="input-rigister">
 
                             <p className="poppins-semibold text-light m-0 input_text">Identity</p>
-                            <select className="identity_section" id="identity" name="identity">
+                            <select className="identity_section" id="identity" name="identity" onChange={handleChange}>
                                 <option value="">----</option>
                                 <option value="student">Student</option>
                                 <option value="parent">Parent / Family</option>
@@ -113,7 +149,11 @@ function Register() {
 
                         <div className="input-rigister">
 
-                            <button className="login_btn" type="submit">Create an Account</button>
+                            <button className="login_btn" type="submit" disabled={loading}>
+                                {loading ? "Registering..." : "Register"}
+                            </button>
+
+                            {error && <p>{error}</p>}
 
                         </div>
 

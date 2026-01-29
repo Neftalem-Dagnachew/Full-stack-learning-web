@@ -5,25 +5,9 @@ export const getUser = async () => {
     return res.json();
 }
 
-// export const loginUser = async (formData) => {
-//     const res = await fetch(`${API_URL}/users/login`, {
-//         method: "POST",
-//         headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(formData)
-//     });
-
-//     if(!res.ok) {
-//         const errorData = await res.json();
-//         throw new Error(errorData.message || "Login failed");
-//     }
-
-//     return res.json();
-// }
-
 // LOGIN
 export async function registerUsers(formData) {
+
     const res = await fetch(`${API_URL}/users/register`, {
         method: "POST",
         headers: {
@@ -32,6 +16,7 @@ export async function registerUsers(formData) {
         body: JSON.stringify(formData)
     })
 
-    if(!res) throw new Error("Login failed");
+    if(!res) throw new Error("Register failed");
+    console.log("API_URL:", API_URL);
     return res.json();
 }
