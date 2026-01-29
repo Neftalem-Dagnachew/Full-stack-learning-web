@@ -7,7 +7,7 @@ import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 
 function Navbar() {
 
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
 
   return (
     <>
@@ -70,7 +70,7 @@ function Navbar() {
 
         {user && (
           <>
-            <button>Logout</button>
+            <button onClick={logout}>logout</button>
           </>
         )}
 
