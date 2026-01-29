@@ -23,20 +23,15 @@ export const getUser = async () => {
 // }
 
 // LOGIN
-export const loginUser = async (formData) => {
-  const res = await fetch(`${API_URL}/users/login`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(formData)
-  });
+export async function loginUser(formData) {
+    const res = await fetch(`${API_URL}/users/login`, {
+        method: "POST",
+        headers: {
+            "Content-type" : "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
 
-  // handle wrong credentials
-  if (!res.ok) {
-    const errorData = await res.json();
-    throw new Error(errorData.message || "Login failed");
-  }
-
-  return res.json(); // success response
-};
+    if(!res) throw new Error("Login failed");
+    return res.json();
+}
