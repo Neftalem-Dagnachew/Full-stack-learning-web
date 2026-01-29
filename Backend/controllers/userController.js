@@ -36,28 +36,30 @@ exports.getMe = (req, res) => {
 }
 
 exports.registerUsers = async (req, res) => {
+  const { email, password, first_name, last_name, nickname, phone_numer, identity } = req.body;
 
-    const { email, password, first_name, last_name, nickname, phone_numer, identity } = req.body;
-    const hashed = await bcrypt.hash(password, 10);
-    const sql = "INSERT INTO users (email, password, first_name, last_name, nickname, phone_numer, identity) VALUES (?, ?, ?, ?, ?, ?, ?)"
+  if (!email || !password) {
+    return res.status(400).json({ message: "Email and password are required" });
+  }
 
-    db.query(sql, [email, hashed, first_name, last_name, nickname, phone_numer, identity], (err, result) => {
+  const hashed = await bcrypt.hash(password, 10);
 
-        if(err) {
+  const sql = `
+    INSERT INTO users (email, password, first_name, last_name, nickname, phone_numer, identity)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `;
 
-            if(err.code === "ER_DUP_ENTRY") {
-                return res.status(409).json({ message: "Email already exists"});
-            }
+  db.query(sql, [email, hashed, first_name, last_name, nickname, phone_numer, identity], (err) => {
+    if (err) {
+      if (err.code === "ER_DUP_ENTRY") {
+        return res.status(409).json({ message: "Email already exists" });
+      }
+      return res.status(500).json({ error: err.message });
+    }
 
-            return res.status(500).json({ error: err.message});
-
-        }
-
-        res.json({message: "User registered successfully"})
-
-    })
-
-}
+    res.json({ message: "User registered successfully" });
+  });
+};
 
 exports.loginUsers = (req, res) => {
 
