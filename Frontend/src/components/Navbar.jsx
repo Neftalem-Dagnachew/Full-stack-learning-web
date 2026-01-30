@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState, useRef, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../components/style/Navbar.css"
 import logo from "../assets//Navbar-img/Main-Logo.png"
@@ -8,6 +8,27 @@ import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 function Navbar() {
 
   const { user, logout } = useContext(AuthContext);
+
+  const [openMenu, setOpenMenu] = useState(false);
+  const [buttonActive, setButtonActive] = useState(false);
+
+
+  const menuRef = useRef(null);
+
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpenMenu(false), setButtonActive(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -70,7 +91,19 @@ function Navbar() {
 
         {user && (
           <>
-            <button onClick={logout}>logout</button>
+            <div className="profile_container" ref={menuRef}>
+              <button className={`profile_btn ${buttonActive ? "active" : ""}`} onClick={() => {
+                setOpenMenu(prev => !prev);
+                setButtonActive(prev => !prev);
+              }}> Profile </button>
+              {openMenu && (
+                <div className="profile_menu">
+                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/settings">Settings</Link>
+                  <button onClick={logout}>Logout</button>
+                </div>
+              )}
+            </div>
           </>
         )}
 

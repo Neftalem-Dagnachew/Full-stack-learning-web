@@ -73,3 +73,46 @@
     color: #fff;
     text-decoration: none;
 }
+
+.profile_container {
+  position: relative;
+}
+
+.profile_btn {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.profile_menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  min-width: 150px;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.profile_btn.active {
+  background-color: red;
+}
+
+.profile_menu a,
+.profile_menu button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.profile_menu a:hover,
+.profile_menu button:hover {
+  background-color: #f2f2f2;
+}
