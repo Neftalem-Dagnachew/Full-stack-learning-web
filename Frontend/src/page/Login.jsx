@@ -89,14 +89,14 @@ function Login() {
                             <div className="input-wrapper">
 
                                 <i className="fa-regular fa-user"></i>
-                                <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email Address" required />
+                                <input type="email" name="email" value={formData.email} autoComplete="username" onChange={handleChange} placeholder="Email Address" required />
 
                             </div>
 
                             <div className="input-wrapper">
 
                                 <i className="fa-solid fa-lock"></i>
-                                <input type="password" name="password" value={formData.password} onChange={handleChange} placeholder="Password" required />
+                                <input type="password" name="password" value={formData.password} autoComplete="current-password" onChange={handleChange} placeholder="Password" required />
 
                             </div>
 
