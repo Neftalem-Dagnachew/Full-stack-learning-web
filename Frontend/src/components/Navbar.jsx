@@ -95,7 +95,7 @@ function Navbar() {
             <div className="d-flex gap-3 align-items-center">
               <i className="fa-solid fa-cart-arrow-down side_cart"></i>
 
-              <div className="profile_container">
+              <div className="profile_container position-relative">
 
                 <div className="profile_btn gap-2 d-flex align-items-center justify-content-center">
 
@@ -103,9 +103,14 @@ function Navbar() {
 
                   <img className="btn_profileImg" src={profileImg} alt="" />
 
+                  <div className="profile_manu">
+                    1234
+                  </div>
+
                 </div>
 
               </div>
+
             </div>
           </>
         )}
