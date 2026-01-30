@@ -110,7 +110,15 @@ function Navbar() {
 
                 {openMenu && (
                   <div className="profile_manu">
-                    <Link className="profile_links" to="/dashboard">Dashboard</Link>
+                    <Link className="profile_links" to="/dashboard">
+                      <span className="d-flex align-items-center">
+                        <img className="btn_profileImg" src={profileImg}/>
+                        <div className="ps-3">
+                          <p className="m-0 fw-bold">{user.first_name}</p>
+                          <p className="m-0 text-muted">{user.nickname}</p>
+                        </div>
+                      </span>
+                    </Link>
                     <Link className="profile_links" to="/settings">Settings</Link>
                     <button className="profile_links" onClick={logout}>Logout</button>
                   </div>
