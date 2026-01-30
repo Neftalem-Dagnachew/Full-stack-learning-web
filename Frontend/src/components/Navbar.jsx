@@ -3,6 +3,7 @@ import { useContext, useState, useRef, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../components/style/Navbar.css"
 import logo from "../assets//Navbar-img/Main-Logo.png"
+import profileImg from "../assets/Navbar-img/profile.png"
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
 
 function Navbar() {
@@ -91,7 +92,21 @@ function Navbar() {
 
         {user && (
           <>
-            <i className="fa-solid fa-cart-arrow-down side_cart"></i>
+            <div className="d-flex gap-3 align-items-center">
+              <i className="fa-solid fa-cart-arrow-down side_cart"></i>
+
+              <div className="profile_container">
+
+                <div className="profile_btn gap-2 d-flex align-items-center justify-content-center">
+
+                  <p className="m-0">{user.first_name}</p>
+
+                  <img className="btn_profileImg" src={profileImg} alt="" />
+
+                </div>
+
+              </div>
+            </div>
           </>
         )}
 
