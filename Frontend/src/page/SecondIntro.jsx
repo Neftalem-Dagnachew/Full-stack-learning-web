@@ -1,6 +1,12 @@
 
 import "./style/SecondIntro.css"
 
+// img
+import STU2 from "../assets/IntroIMG/STU2.png";
+import winer from "../assets/SecondIntro/seq_wine1.png";
+import star from "../assets/SecondIntro/star_seq.png";
+import student_seq from "../assets/SecondIntro/student_seq.png"
+
 function SecondIntro() {
 
     return(
@@ -11,7 +17,7 @@ function SecondIntro() {
 
                 <div className="sec_img_container position-relative d-flex">
 
-                   <img className="sec_img" src="IMG/STU2.png" alt="" />
+                   <img className="sec_img" src={STU2} alt="" />
 
                     {/* <!-- <div className="d-flex align-items-center"> --> */}
 
@@ -21,7 +27,7 @@ function SecondIntro() {
 
                                 <div className="d-flex align-items-center gap-3">
 
-                                    <img className="card_img" src="IMG/seq_wine1.png" alt="" />
+                                    <img className="card_img" src={winer} alt="" />
 
                                     <div>
 
@@ -38,7 +44,7 @@ function SecondIntro() {
 
                                 <div className="d-flex align-items-center gap-3">
 
-                                    <img className="card_img" src="IMG/star_seq.png" alt="" />
+                                    <img className="card_img" src={star} alt="" />
 
                                     <div>
 
@@ -55,7 +61,7 @@ function SecondIntro() {
 
                                 <div className="d-flex align-items-center gap-3">
 
-                                    <img className="card_img" src="IMG/student_seq.png" alt="" />
+                                    <img className="card_img" src={student_seq} alt="" />
 
                                     <div>
 

@@ -3,8 +3,10 @@ import { useContext, useState, useRef, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../components/style/Navbar.css"
 import logo from "../assets//Navbar-img/Main-Logo.png"
-import profileImg from "../assets/Navbar-img/profile.png"
-import ethioFlag from "../assets/Navbar-img/ethio_flag.svg"
+
+// imge
+import profileImg from "../assets/Navbar-img/profile.png";
+import ethioFlag from "../assets/Navbar-img/ethio_flag.svg";
 
 function Navbar() {
 

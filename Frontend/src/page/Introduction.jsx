@@ -2,7 +2,10 @@
 import "../page/style/Introdaction.css"
 import SecondIntro from "./secondIntro";
 
+// img
 import videoImg from "../assets/IntroIMG/videoImg.png"
+import studentImg from "../assets/IntroIMG/student.png";
+import STU2 from "../assets/IntroIMG/STU2.png";
 
 function Introduction() {
 
@@ -65,7 +68,7 @@ function Introduction() {
 
                     <div className="slider" id="slider">
 
-                        <img src="IMG/Rectangle 13.png" className="slide" id="lastClone" />
+                        <img src={STU2} className="slide" id="lastClone" />
                         <img src="IMG/Rectangle 13.png" className="slide" />
                         <img src="IMG/STU2.png" className="slide" />
                         <img src="IMG/student.png" className="slide" />
