@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 function Dashboard() {
-    const { user, logout } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     return(
         <>
