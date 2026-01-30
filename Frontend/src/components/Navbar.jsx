@@ -102,7 +102,7 @@ function Navbar() {
                   setButtonActive(prev => !prev)
                 }}>
 
-                  <p className="m-0">{user.first_name}</p>
+                  <p className="m-0 fw-bold">{user.first_name}</p>
 
                   <img className="btn_profileImg" src={profileImg} alt="" />
 
