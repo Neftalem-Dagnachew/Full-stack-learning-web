@@ -95,9 +95,12 @@ function Navbar() {
             <div className="d-flex gap-3 align-items-center">
               <i className="fa-solid fa-cart-arrow-down side_cart"></i>
 
-              <div className="profile_container">
+              <div className="profile_container" ref={menuRef}>
 
-                <div className="profile_btn gap-2 d-flex align-items-center justify-content-center">
+                <div className={`profile_btn gap-2 d-flex align-items-center justify-content-center ${buttonActive ? "active" : ""}`} onClick={() => {
+                  setOpenMenu(prev => !prev)
+                  setButtonActive(prev => !prev)
+                }}>
 
                   <p className="m-0">{user.first_name}</p>
 
@@ -105,11 +108,13 @@ function Navbar() {
 
                 </div>
 
-                <div className="profile_manu">
-                  <Link className="profile_links" to="/dashboard">Dashboard</Link>
-                  <Link className="profile_links" to="/settings">Settings</Link>
-                  <button className="profile_links" onClick={logout}>Logout</button>
-                </div>
+                {openMenu && (
+                  <div className="profile_manu">
+                    <Link className="profile_links" to="/dashboard">Dashboard</Link>
+                    <Link className="profile_links" to="/settings">Settings</Link>
+                    <button className="profile_links" onClick={logout}>Logout</button>
+                  </div>
+                )}
 
               </div>
 

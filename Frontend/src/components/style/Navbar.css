@@ -97,6 +97,10 @@
     transition: all 0.2s;
 }
 
+.profile_btn.active {
+    background-color: #8e46c9;
+}
+
 .profile_container {
     position: relative;
 }
