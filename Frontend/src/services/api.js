@@ -10,11 +10,13 @@ export async function getMe() {
 
   const res = await fetch(`${API_URL}/users/getMe`, {
     headers: {
-      Authorization: `Bearer ${token}`
+      "Content-Type": "application/json",
+       Authorization: `Bearer ${token}`,
     }
   });
 
   if (!res.ok) {
+    localStorage.removeItem("token");
     throw new Error("Unauthorized");
   }
 

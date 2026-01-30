@@ -11,7 +11,6 @@ function AuthProvider({ children }) {
 
     useEffect(() => {
         const token = localStorage.getItem("token");
-
         if(!token) {
             setUser(null)
             setLoading(false);
@@ -22,7 +21,7 @@ function AuthProvider({ children }) {
             .then(setUser)
             .catch(() => {
                 localStorage.removeItem("token");
-                setLoading(false);
+                setUser(null);
             })
             .finally(() => setLoading(false));
 
