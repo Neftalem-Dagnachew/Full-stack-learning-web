@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 import "./style/SecondIntro.css"
 
 // img
@@ -130,7 +132,9 @@ function SecondIntro() {
 
                             <div>
 
-                                <button className="sec_usetext_register_btn">Click here to register.</button>
+                                <Link to="/register">
+                                    <button className="sec_usetext_register_btn">Click here to register.</button>
+                                </Link>
 
                             </div>
 
