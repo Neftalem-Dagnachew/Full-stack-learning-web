@@ -91,19 +91,7 @@ function Navbar() {
 
         {user && (
           <>
-            <div className="profile_container" ref={menuRef}>
-              <button className={`profile_btn ${buttonActive ? "active" : ""}`} onClick={() => {
-                setOpenMenu(prev => !prev);
-                setButtonActive(prev => !prev);
-              }}> Profile </button>
-              {openMenu && (
-                <div className="profile_menu">
-                  <Link to="/dashboard">Dashboard</Link>
-                  <Link to="/settings">Settings</Link>
-                  <button onClick={logout}>Logout</button>
-                </div>
-              )}
-            </div>
+            <i className="fa-solid fa-cart-arrow-down side_cart"></i>
           </>
         )}
 

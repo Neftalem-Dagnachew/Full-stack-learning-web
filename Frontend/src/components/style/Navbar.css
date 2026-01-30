@@ -62,6 +62,7 @@
 
 .side_cart {
     cursor: pointer;
+    color: #fff;
 }
 
 .side_nav_login:hover {
@@ -99,18 +100,7 @@
   background-color: red;
 }
 
-.profile_menu a,
-.profile_menu button {
-  display: block;
-  width: 100%;
-  padding: 8px 16px;
-  text-align: left;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-}
+
 
 .profile_menu a:hover,
 .profile_menu button:hover {
