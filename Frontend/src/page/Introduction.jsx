@@ -2,7 +2,7 @@
 import "../page/style/Introdaction.css"
 import SecondIntro from "./secondIntro";
 
-// img
+// img herobaner
 import videoImg from "../assets/IntroIMG/videoImg.png"
 import studentImg from "../assets/IntroIMG/student.png";
 import STU2 from "../assets/IntroIMG/STU2.png";
