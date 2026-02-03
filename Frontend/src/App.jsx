@@ -1,10 +1,11 @@
+import { Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+
+// pages
 import Introduction from "./page/Introduction";
 import Login from "./page/Login";
 import Register from "./page/Register";
 import Dashboard from "./page/Dashboard";
-import { Routes, Route } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";
-
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
 
