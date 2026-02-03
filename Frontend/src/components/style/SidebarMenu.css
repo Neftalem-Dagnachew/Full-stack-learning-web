@@ -1,7 +1,29 @@
 
 .all_sidebar {
     width: 230px;
-    background-color: aqua;
     height: 100vh;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
     position: fixed;
+}
+
+.main_sidebar_container {
+    padding: 20px 0px 0px 20px;
+    width: 210px;
+}
+
+.bar_icon_container {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bar_icon_container:hover {
+    transition: all 0.1s;
+    background-color: #F9FAFB;
+}
+
+.bars_icon {
+    font-size: 20px;
 }
