@@ -5,10 +5,57 @@ function SidebarMenu() {
         <>
             <div className="all_sidebar">
                 <div className="main_sidebar_container">
-                    <div className="d-flex justify-content-center align-items-center bar_icon_container">
-                        <i class="fa-solid fa-bars bars_icon"></i>
+                    <div className="d-flex align-items-center justify-content-center bar_icon_container">
+                            <i class="fa-solid fa-bars bars_icon"></i>
                     </div>
                 </div>
+                <div className="sidebar_links_containers">
+                    <p className="m-0 poppins-extralight heder_text">Get Started</p>
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                    <div className="pt-3">
+                        <p className="m-0 poppins-extralight heder_text">Get Started</p>
+                        <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+                    </div>
+
+                </div>
+
+                <div className="sidebar_links_containers">
+                    <p className=" poppins-extralight heder_text">Get Started</p>
+                    <p className="m-0 poppins-extralight heder_text">Get Started</p>
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                    <button className="menu_btn"> 
+                        <i class="fa-brands fa-windows"></i>
+                        My Dashboard
+                    </button>
+
+                </div>
+
             </div>
         </>
     )
