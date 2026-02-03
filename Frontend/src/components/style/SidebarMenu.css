@@ -59,6 +59,10 @@
     padding-right: 60px;
 }
 
+#menu_btn_Billing {
+    padding-right: 70px;
+}
+
 .menu_btn.active {
     background-color: #34BAD5;
 }

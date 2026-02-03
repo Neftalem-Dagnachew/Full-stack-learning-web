@@ -29,34 +29,34 @@ function SidebarMenu() {
 
                     <div className="pt-3">
                         <p className="m-0 poppins-extralight heder_text">Learn</p>
-                        <button className={`menu_btn ${openMenu === "dashboard3" ? "active" : ""}`} onClick={() => {
+                        <button id="menu_btn2" className={`menu_btn ${openMenu === "dashboard3" ? "active" : ""}`} onClick={() => {
                             setOpenMenu("dashboard3")}}> 
                             <i class="fa-brands fa-windows btn_icons pe-4"></i>
-                            My Dashboard
+                            Races
                         </button>
 
                         <button className={`menu_btn ${openMenu === "dashboard4" ? "active" : ""}`} onClick={() => {
                             setOpenMenu("dashboard4")}}> 
                             <i class="fa-brands fa-windows btn_icons pe-4"></i>
-                            My Dashboard
+                            Achievements
                         </button>
                     </div>
 
                 </div>
 
                 <div className="sidebar_links_containers">
-                    <p className=" poppins-extralight heder_text">Get Started</p>
-                    <p className="m-0 poppins-extralight heder_text">Get Started</p>
-                    <button className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
+                    <p className=" poppins-extralight heder_text">Community</p>
+                    <p className="m-0 poppins-extralight heder_text">Account</p>
+                    <button id="menu_btn2" className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
                         setOpenMenu("dashboard5")}}> 
                         <i class="fa-brands fa-windows btn_icons pe-4"></i>
-                        My Dashboard
+                        Settings
                     </button>
 
-                    <button className={`menu_btn ${openMenu === "dashboard6" ? "active" : ""}`} onClick={() => {
+                    <button id="menu_btn_Billing" className={`menu_btn ${openMenu === "dashboard6" ? "active" : ""}`} onClick={() => {
                         setOpenMenu("dashboard6")}}> 
                         <i class="fa-brands fa-windows btn_icons pe-4"></i>
-                        My Dashboard
+                        Billing
                     </button>
 
                     <button className="menu_btn pe-5"> 
