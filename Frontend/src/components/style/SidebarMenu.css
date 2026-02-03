@@ -46,6 +46,10 @@
     background-color: #ffff;
 }
 
+.btn_icons {
+    font-size: 20px;
+}
+
 .menu_btn:hover {
     background-color: #F9FAFB;
     transition: all 0.1s;

@@ -12,24 +12,24 @@ function SidebarMenu() {
                 <div className="sidebar_links_containers">
                     <p className="m-0 poppins-extralight heder_text">Get Started</p>
                     <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
 
-                    <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                    <button className="menu_btn">
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
 
                     <div className="pt-3">
                         <p className="m-0 poppins-extralight heder_text">Get Started</p>
                         <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
 
                     <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
                     </div>
@@ -40,17 +40,17 @@ function SidebarMenu() {
                     <p className=" poppins-extralight heder_text">Get Started</p>
                     <p className="m-0 poppins-extralight heder_text">Get Started</p>
                     <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
 
                     <button className="menu_btn"> 
-                        <i class="fa-brands fa-windows pe-4"></i>
+                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </button>
 
                     <button className="menu_btn pe-5"> 
-                        <i class="fa-solid fa-arrow-right-from-bracket pe-4"></i>
+                        <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
                     </button>
 
