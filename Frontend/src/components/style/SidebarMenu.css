@@ -54,3 +54,11 @@
     background-color: #F9FAFB;
     transition: all 0.1s;
 }
+
+#menu_btn2 {
+    padding-right: 60px;
+}
+
+.menu_btn.active {
+    background-color: #34BAD5;
+}
