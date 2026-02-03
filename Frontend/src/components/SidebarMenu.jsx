@@ -47,7 +47,7 @@ function SidebarMenu() {
                 <div className="sidebar_links_containers_2">
                     <p className=" poppins-extralight heder_text">Community</p>
                     <p className="m-0 poppins-extralight heder_text">Account</p>
-                    <button id="menu_btn2" className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
+                    <button id="btn_Setting" className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
                         setOpenMenu("dashboard5")}}> 
                         <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         Settings
