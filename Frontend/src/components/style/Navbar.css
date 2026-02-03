@@ -135,8 +135,8 @@
 }
 
 .main_nav.dashboard {
-  width: calc(100% - 160px);
-  left: 160px;
+  width: calc(100% - 230px);
+  left: 230px;
 }
 
 .nav_links_container.dashboard {
