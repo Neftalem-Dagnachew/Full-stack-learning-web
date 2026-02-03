@@ -66,3 +66,17 @@
 .menu_btn.active {
     background-color: #34BAD5;
 }
+
+.sidebar_links_containers_2 {
+    padding: 30px 10px 0px 21px;
+    width: 210px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout_btn {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+

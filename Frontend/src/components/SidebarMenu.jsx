@@ -44,7 +44,7 @@ function SidebarMenu() {
 
                 </div>
 
-                <div className="sidebar_links_containers">
+                <div className="sidebar_links_containers_2">
                     <p className=" poppins-extralight heder_text">Community</p>
                     <p className="m-0 poppins-extralight heder_text">Account</p>
                     <button id="menu_btn2" className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
@@ -59,7 +59,7 @@ function SidebarMenu() {
                         Billing
                     </button>
 
-                    <button className="menu_btn pe-5"> 
+                    <button className="menu_btn pe-5 logout_btn"> 
                         <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
                     </button>
