@@ -8,7 +8,7 @@ import logo from "../assets//Navbar-img/Main-Logo.png"
 import profileImg from "../assets/Navbar-img/profile.png";
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg";
 
-function Navbar() {
+function Navbar( {variant} ) {
 
   const { user, logout } = useContext(AuthContext);
 
@@ -35,9 +35,9 @@ function Navbar() {
 
   return (
     <>
-      <nav className="main_nav d-flex align-items-center">
+      <nav className={`main_nav d-flex align-items-center ${variant}`}>
 
-        <div className="nav_links_container d-flex align-items-center gap-4">
+        <div className={`nav_links_container d-flex align-items-center gap-4 ${variant}`}>
 
           <div className="main_logo">
             <Link to="/">

@@ -6,8 +6,13 @@ function dashboardLayout() {
 
     return(
         <>
-            <Navbar />
-            <Outlet />
+            <div className="dashboard_layout">
+                {/* <SidebarMenu /> */}
+                <div className="dashboard_content">
+                    <Navbar variant="dashboard"/>
+                    <Outlet />
+                </div>
+            </div>
         </>
     )
 }

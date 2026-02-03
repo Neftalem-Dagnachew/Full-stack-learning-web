@@ -133,3 +133,13 @@
 .profile_links:hover {
   background-color: #f2f2f2;
 }
+
+.main_nav.dashboard {
+  width: calc(100% - 160px);
+  left: 160px;
+}
+
+.nav_links_container.dashboard {
+    width: 100%;
+    max-width: 1150px;
+}

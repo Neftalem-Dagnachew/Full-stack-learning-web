@@ -5,7 +5,7 @@ function MainLayout() {
 
     return(
         <>
-            <Navbar />
+            <Navbar variant="main"/>
             <Outlet />
         </>
     )

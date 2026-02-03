@@ -9,6 +9,8 @@ import Dashboard from "./page/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
 
+import SidebarMenu from "./components/SidebarMenu";
+
 function App() {
 
   return(
