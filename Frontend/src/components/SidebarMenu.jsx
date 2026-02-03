@@ -1,8 +1,11 @@
+import "./style/SidebarMenu.css"
 
 function SidebarMenu() {
     return(
         <>
-            <h1>123456</h1>
+            <div className="all_sidebar">
+                <h1>side</h1>
+            </div>
         </>
     )
 }

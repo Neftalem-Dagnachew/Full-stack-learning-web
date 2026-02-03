@@ -1,0 +1,12 @@
+
+.all_sidebar {
+    width: 230px;
+    background-color: aqua;
+    height: 100vh;
+    position: fixed;
+}
+
+.dashboard_content {
+  margin-left: 229px; /* SAME as .all_sidebar width */
+  padding: 20px;
+}
