@@ -5,9 +5,8 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 function SidebarMenu() {
-    // const navigate = useNavigate();
 
-    const [isActive, setIsActive] = useState(null);
+    const [isActive, setIsActive] = useState(false);
     const { logout } = useContext(AuthContext);
 
     return(
