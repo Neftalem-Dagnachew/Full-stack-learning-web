@@ -10,8 +10,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
 import Profile from "./page/Profile";
 
-import SidebarMenu from "./components/SidebarMenu";
-
 function App() {
 
   return(
@@ -24,7 +22,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} />
+          <Route path="profile" element={<Profile />} /> 
         </Route>
       </Routes>
     </>
