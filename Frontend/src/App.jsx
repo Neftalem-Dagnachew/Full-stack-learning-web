@@ -22,7 +22,7 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
-          <Route path="profile" element={<Profile />} /> 
+          <Route path="members/:nickname" element={<Profile />} /> 
         </Route>
       </Routes>
     </>

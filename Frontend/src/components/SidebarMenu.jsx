@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 function SidebarMenu() {
 
     const [isActive, setIsActive] = useState(false);
-    const { logout } = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
 
     return(
         <>
@@ -27,7 +27,7 @@ function SidebarMenu() {
                         My Dashboard
                     </NavLink>
 
-                    <NavLink to="/my-dashboard/Profile" end id="menu_btn2" className={({ isActive }) =>`menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
+                    <NavLink to={`/my-dashboard/profile/${user.nickname}`} end id="menu_btn2" className={({ isActive }) =>`menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
                     {/* onClick={() => {
                         setIsActive("dashboard2")
                         }}>  */}
