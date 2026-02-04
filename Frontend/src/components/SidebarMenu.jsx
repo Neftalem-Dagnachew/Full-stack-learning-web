@@ -27,7 +27,7 @@ function SidebarMenu() {
                         My Dashboard
                     </NavLink>
 
-                    <NavLink to={`/my-dashboard/profile/${user.nickname}`} end id="menu_btn2" className={({ isActive }) =>`menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end id="menu_btn2" className={({ isActive }) =>`menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
                     {/* onClick={() => {
                         setIsActive("dashboard2")
                         }}>  */}
