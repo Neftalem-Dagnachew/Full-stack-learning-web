@@ -38,7 +38,7 @@ function Login() {
             const data = await loginUsers(formData);
             localStorage.setItem("token", data.token);
             setUser(data.user);
-            navigate("/dashboard")
+            navigate("/my-dashboard")
         } catch (err) {
             setError(err.message);
         } finally {

@@ -8,6 +8,7 @@ import Register from "./page/Register";
 import Dashboard from "./page/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
+import Profile from "./page/Profile";
 
 import SidebarMenu from "./components/SidebarMenu";
 
@@ -21,8 +22,9 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
-        <Route path="/dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
+        <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
       </Routes>
     </>

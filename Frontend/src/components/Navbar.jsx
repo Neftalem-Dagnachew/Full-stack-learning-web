@@ -112,7 +112,7 @@ function Navbar( {variant} ) {
 
                 {openMenu && (
                   <div className="profile_manu">
-                    <Link className="profile_links" to="/dashboard">
+                    <Link className="profile_links" to="/my-dashboard">
                       <span className="d-flex align-items-center">
                         <img className="btn_profileImg" src={profileImg}/>
                         <div className="ps-3">
