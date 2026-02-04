@@ -1,9 +1,11 @@
 import "./style/SidebarMenu.css"
 
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 function SidebarMenu() {
     const [openMenu, setOpenMenu] = useState(null);
+    const { logout } = useContext(AuthContext);
 
     return(
         <>
@@ -59,7 +61,7 @@ function SidebarMenu() {
                         Billing
                     </button>
 
-                    <button className="menu_btn pe-5 logout_btn"> 
+                    <button className="menu_btn pe-5 logout_btn" onClick={logout}> 
                         <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
                     </button>
