@@ -68,10 +68,10 @@ function SidebarMenu() {
                         Billing
                     </NavLink>
 
-                    <NavLink to="/" className="menu_btn ps-2 align-items-center pe-5 logout_btn" onClick={logout}> 
+                    <button to="/" className="menu_btn ps-2 align-items-center pe-5 logout_btn" onClick={logout}> 
                         <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
-                    </NavLink>
+                    </button>
 
                 </div>
 
