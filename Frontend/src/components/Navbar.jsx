@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useContext, useState, useRef, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../components/style/Navbar.css"
@@ -112,7 +112,7 @@ function Navbar( {variant} ) {
 
                 {openMenu && (
                   <div className="profile_manu">
-                    <Link className="profile_links" to="/my-dashboard">
+                    <NavLink className="profile_links" to="/my-dashboard/profile">
                       <span className="d-flex align-items-center">
                         <img className="btn_profileImg" src={profileImg}/>
                         <div className="ps-3">
@@ -120,7 +120,7 @@ function Navbar( {variant} ) {
                           <p className="m-0 text-muted">{user.nickname}</p>
                         </div>
                       </span>
-                    </Link>
+                    </NavLink>
                     <Link className="profile_links" to="/settings">Settings</Link>
                     <button className="profile_links" onClick={logout}>Logout</button>
                   </div>

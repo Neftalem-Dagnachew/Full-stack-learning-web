@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 function SidebarMenu() {
     // const navigate = useNavigate();
 
-    const [openMenu, setOpenMenu] = useState(null);
+    const [isActive, setIsActive] = useState(null);
     const { logout } = useContext(AuthContext);
 
     return(
@@ -20,32 +20,32 @@ function SidebarMenu() {
                 </div>
                 <div className="sidebar_links_containers">
                     <p className="m-0 poppins-extralight heder_text">Get Started</p>
-                    <NavLink to="/my-dashboard" end className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard1" ? "active" : ""}`}
-                    onClick={() => {
-                        setOpenMenu("dashboard1")
-                    }}> 
+                    <NavLink to="/my-dashboard" end className={({ isActive }) => `menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
+                    {/* onClick={() => {
+                        setIsActive("dashboard1")
+                    }}>  */}
                         <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </NavLink>
 
-                    <NavLink to="/my-dashboard/Profile" end id="menu_btn2" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard2" ? "active" : ""}`} 
-                    onClick={() => {
-                        setOpenMenu("dashboard2")
-                        }}> 
+                    <NavLink to="/my-dashboard/Profile" end id="menu_btn2" className={({ isActive }) =>`menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
+                    {/* onClick={() => {
+                        setIsActive("dashboard2")
+                        }}>  */}
                         <i class="fa-solid fa-user btn_icons pe-4"></i>
                         Profile
                     </NavLink>
 
                     <div className="pt-3">
                         <p className="m-0 poppins-extralight heder_text">Learn</p>
-                        <NavLink to="/" id="menu_btn2" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard3" ? "active" : ""}`} onClick={() => {
-                            setOpenMenu("dashboard3")}}> 
+                        <NavLink to="/" id="menu_btn2" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard3" ? "active" : ""}`} onClick={() => {
+                            setIsActive("dashboard3")}}> 
                             <i class="fa-solid fa-graduation-cap btn_icons pe-4"></i>
                             Races
                         </NavLink>
 
-                        <NavLink to="/" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard4" ? "active" : ""}`} onClick={() => {
-                            setOpenMenu("dashboard4")}}> 
+                        <NavLink to="/" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard4" ? "active" : ""}`} onClick={() => {
+                            setIsActive("dashboard4")}}> 
                             <i class="fa-solid fa-crown btn_icons pe-4"></i>
                             Achievements
                         </NavLink>
@@ -56,14 +56,14 @@ function SidebarMenu() {
                 <div className="sidebar_links_containers_2">
                     <p className=" poppins-extralight heder_text">Community</p>
                     <p className="m-0 poppins-extralight heder_text">Account</p>
-                    <NavLink to="/" id="btn_Setting" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
-                        setOpenMenu("dashboard5")}}> 
+                    <NavLink to="/" id="btn_Setting" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard5" ? "active" : ""}`} onClick={() => {
+                        setIsActive("dashboard5")}}> 
                         <i class="fa-solid fa-gear btn_icons pe-4"></i>
                         Settings
                     </NavLink>
 
-                    <NavLink to="/" id="menu_btn_Billing" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard6" ? "active" : ""}`} onClick={() => {
-                        setOpenMenu("dashboard6")}}> 
+                    <NavLink to="/" id="menu_btn_Billing" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard6" ? "active" : ""}`} onClick={() => {
+                        setIsActive("dashboard6")}}> 
                         <i class="fa-solid fa-credit-card btn_icons pe-4"></i>
                         Billing
                     </NavLink>
