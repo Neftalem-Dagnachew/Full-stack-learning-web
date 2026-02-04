@@ -8,7 +8,7 @@ import Register from "./page/Register";
 import Dashboard from "./page/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
-import Profile from "./page/Profile";
+import Profile from "./page/DashboardPages/profile";
 
 function App() {
 
