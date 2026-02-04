@@ -20,19 +20,17 @@ function SidebarMenu() {
                 </div>
                 <div className="sidebar_links_containers">
                     <p className="m-0 poppins-extralight heder_text">Get Started</p>
-                    <NavLink to="/my-dashboard" end className={`menu_btn ${openMenu === "dashboard1" ? "active" : ""}`}
+                    <NavLink to="/my-dashboard" end className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard1" ? "active" : ""}`}
                     onClick={() => {
                         setOpenMenu("dashboard1")
-                        // navigate("/my-dashboard");
                     }}> 
                         <i class="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </NavLink>
 
-                    <NavLink to="/my-dashboard/Profile" end id="menu_btn2" className={`menu_btn ${openMenu === "dashboard2" ? "active" : ""}`} 
+                    <NavLink to="/my-dashboard/Profile" end id="menu_btn2" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard2" ? "active" : ""}`} 
                     onClick={() => {
                         setOpenMenu("dashboard2")
-                        // navigate("/my-dashboard/Profile")
                         }}> 
                         <i class="fa-solid fa-user btn_icons pe-4"></i>
                         Profile
@@ -40,17 +38,17 @@ function SidebarMenu() {
 
                     <div className="pt-3">
                         <p className="m-0 poppins-extralight heder_text">Learn</p>
-                        <button id="menu_btn2" className={`menu_btn ${openMenu === "dashboard3" ? "active" : ""}`} onClick={() => {
+                        <NavLink to="/" id="menu_btn2" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard3" ? "active" : ""}`} onClick={() => {
                             setOpenMenu("dashboard3")}}> 
                             <i class="fa-solid fa-graduation-cap btn_icons pe-4"></i>
                             Races
-                        </button>
+                        </NavLink>
 
-                        <button className={`menu_btn ${openMenu === "dashboard4" ? "active" : ""}`} onClick={() => {
+                        <NavLink to="/" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard4" ? "active" : ""}`} onClick={() => {
                             setOpenMenu("dashboard4")}}> 
                             <i class="fa-solid fa-crown btn_icons pe-4"></i>
                             Achievements
-                        </button>
+                        </NavLink>
                     </div>
 
                 </div>
@@ -58,22 +56,22 @@ function SidebarMenu() {
                 <div className="sidebar_links_containers_2">
                     <p className=" poppins-extralight heder_text">Community</p>
                     <p className="m-0 poppins-extralight heder_text">Account</p>
-                    <button id="btn_Setting" className={`menu_btn ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
+                    <NavLink to="/" id="btn_Setting" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard5" ? "active" : ""}`} onClick={() => {
                         setOpenMenu("dashboard5")}}> 
                         <i class="fa-solid fa-gear btn_icons pe-4"></i>
                         Settings
-                    </button>
+                    </NavLink>
 
-                    <button id="menu_btn_Billing" className={`menu_btn ${openMenu === "dashboard6" ? "active" : ""}`} onClick={() => {
+                    <NavLink to="/" id="menu_btn_Billing" className={`menu_btn ps-2 align-items-center ${openMenu === "dashboard6" ? "active" : ""}`} onClick={() => {
                         setOpenMenu("dashboard6")}}> 
                         <i class="fa-solid fa-credit-card btn_icons pe-4"></i>
                         Billing
-                    </button>
+                    </NavLink>
 
-                    <button className="menu_btn pe-5 logout_btn" onClick={logout}> 
+                    <NavLink to="/" className="menu_btn ps-2 align-items-center pe-5 logout_btn" onClick={logout}> 
                         <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
-                    </button>
+                    </NavLink>
 
                 </div>
 

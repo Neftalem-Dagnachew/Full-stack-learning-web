@@ -41,7 +41,9 @@
     width: 170px;
     height: 50px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
+    text-decoration: none;
     color: #1E2132;
     background-color: #ffff;
 }
