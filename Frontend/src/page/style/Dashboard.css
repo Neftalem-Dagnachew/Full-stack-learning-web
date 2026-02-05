@@ -22,7 +22,8 @@
 .races_container {
     width: 1080px;
     height: 30vh;
-    background-color: #5A5A5A;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .races_img {
