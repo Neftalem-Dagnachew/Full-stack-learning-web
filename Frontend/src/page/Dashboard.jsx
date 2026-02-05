@@ -10,11 +10,14 @@ function Dashboard() {
     return(
         <>
             <div>
-                <div className="d-flex">
+                <div className="d-flex align-items-center">
                     <div className="header_img_container d-flex justify-content-center align-items-center">
                         <img className="profile_img" src={proile}  />
                     </div>
-                    <p className="mt-5">Welcome, {user.first_name}</p>
+                    <div className="ps-4">
+                        <h1 className="m-0">Welcome, {user.first_name}</h1>
+                        <p className="m-0">Welcome, {user.first_name}</p>
+                    </div>
                 </div>
             </div>
         </>
