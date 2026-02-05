@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../page/style/Dashboard.css"
 
+// img
 import proile from "../assets/Navbar-img/profile.png"
+import races from "../assets/DashboardIMG/ReasIcon.png"
 
 function Dashboard() {
     const { user } = useContext(AuthContext);
@@ -22,7 +24,7 @@ function Dashboard() {
 
                 <div className="races_position">
                     <div className="races_container d-flex justify-content-center">
-                        <img src=""/>
+                        <img className="races_img" src={races}/>
                     </div>
                 </div>
 
