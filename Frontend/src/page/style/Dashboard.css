@@ -1,1 +1,7 @@
 
+.header_img_container {
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
