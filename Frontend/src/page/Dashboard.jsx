@@ -19,6 +19,13 @@ function Dashboard() {
                         <p className="m-0 poppins-regular subheder">to your Member Dashboard</p>
                     </div>
                 </div>
+
+                <div className="races_position">
+                    <div className="races_container">
+
+                    </div>
+                </div>
+
             </div>
         </>
     )

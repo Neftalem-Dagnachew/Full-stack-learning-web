@@ -14,3 +14,12 @@
     font-size: 22px;
     color: #5A5A5A;
 }
+
+.races_position {
+    margin-top: 70px;
+}
+
+.races_container {
+    width: 1080px;
+    height: 30vh;
+}
