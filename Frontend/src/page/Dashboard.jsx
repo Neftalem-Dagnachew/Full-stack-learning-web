@@ -15,8 +15,8 @@ function Dashboard() {
                         <img className="profile_img" src={proile}  />
                     </div>
                     <div className="ps-4">
-                        <h1 className="m-0">Welcome, {user.first_name}</h1>
-                        <p className="m-0">Welcome, {user.first_name}</p>
+                        <h1 className=""><span>Welcome,</span> {user.first_name}</h1>
+                        <p className="m-0">to your Member Dashboard</p>
                     </div>
                 </div>
             </div>
