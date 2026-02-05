@@ -24,7 +24,10 @@ function Dashboard() {
 
                 <div className="races_position">
                     <div className="races_container d-flex align-items-center justify-content-center">
-                        <img className="races_img" src={races}/>
+                        <div>
+                            <img className="races_img mb-2" src={races}/>
+                            <p className="m-o text-center">Rases</p>
+                        </div>
                     </div>
                 </div>
 
