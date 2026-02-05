@@ -21,8 +21,8 @@ function Dashboard() {
                 </div>
 
                 <div className="races_position">
-                    <div className="races_container">
-
+                    <div className="races_container d-flex justify-content-center">
+                        <img src=""/>
                     </div>
                 </div>
 
