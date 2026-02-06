@@ -40,16 +40,16 @@ export async function registerUsers(formData) {
 
 // Login
 export async function loginUsers(formData) {
-    const res = await fetch(`${API_URL}/users/login`, {
-        method: "POST",
-        headers: {
-            "Content-type" : "application/json"
-        },
-        body: JSON.stringify(formData)
-    })
+  const res = await fetch(`${API_URL}/users/login`, {
+    method: "POST",
+    headers: {
+      "Content-type" : "application/json"
+    },
+    body: JSON.stringify(formData)
+  });
 
-    if(!res.ok) throw new Error("Login Failed")
-    return res.json();
+  if(!res.ok) throw new Error("Login Failed")
+  return res.json();
     
 }
 
