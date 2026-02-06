@@ -8,6 +8,7 @@ import "../DashboardPages/style/profile.css"
 
 // img
 import profileImg from "../../assets/Navbar-img/profile.png";
+import coverImg from "../../assets/DashboardIMG/cover_img.png"
 
 function Profile() {
   const { user, setUser } = useContext(AuthContext);
@@ -31,8 +32,9 @@ function Profile() {
   if (!user) return <div className="p-5 text-center">Loading...</div>;
 
   return (
-    <div className="container mt-5">
-        {/* <img src="" /> */}
+    <div className="all_container">
+        <div className="heder_cover">
+        </div>
             
         <div className="image_display_area">
             <label htmlFor="upload-photo" className="profile_image_wrapper">

@@ -1,4 +1,10 @@
 
+.All_container {
+    margin-left: 230px;
+    padding: 170px 90px;
+    overflow-x: unset;
+}
+
 .header_img_container {
     width: 160px;
     height: 160px;

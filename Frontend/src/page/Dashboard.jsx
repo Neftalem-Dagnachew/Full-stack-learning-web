@@ -13,7 +13,7 @@ function Dashboard() {
 
     return(
         <>
-            <div>
+            <div className="All_container">
                 <div className="d-flex align-items-center">
                     <div className="header_img_container d-flex justify-content-center align-items-center">
                         {user.profile_image ? (

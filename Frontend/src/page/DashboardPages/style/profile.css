@@ -1,3 +1,7 @@
+.all_container {
+    margin-left: 275px;
+    padding-top: 70px;
+}
 
 .profile_circle_img {
     width: 100%;
@@ -55,4 +59,10 @@
   font-size: 11px;
   font-weight: 500;
   margin: 0;
+}
+
+.heder_cover {
+    width: 1200px;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
