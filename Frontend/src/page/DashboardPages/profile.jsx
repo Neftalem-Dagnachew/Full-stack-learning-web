@@ -4,6 +4,11 @@ import { updateProfilePhoto } from "../../services/api";
 
 const SERVER_URL = "http://localhost:5000";
 
+import "../DashboardPages/style/profile.css"
+
+// img
+import profileImg from "../../assets/Navbar-img/profile.png";
+
 function Profile() {
   const { user, setUser } = useContext(AuthContext);
 
@@ -19,7 +24,7 @@ function Profile() {
         setUser({ ...user, profile_image: result.profile_image });
       }
     } catch (err) {
-      alert("Have Error: " + err.message);
+      alert("Have Erorr: " + err.message);
     }
   };
 
@@ -38,29 +43,10 @@ function Profile() {
                 <img 
                   src={`${SERVER_URL}${user.profile_image}`} 
                   alt="Profile" 
-                  className="profile_circle_img"
-                  style={{ 
-                    width: "150px", 
-                    height: "150px", 
-                    borderRadius: "50%", 
-                    objectFit: "cover",
-                    border: "4px solid #fff",
-                    boxShadow: "0px 4px 15px rgba(0,0,0,0.1)"
-                  }} 
-                />
+                  className="profile_circle_img"/>
               ) : (
-                <div style={{
-                  width: "150px",
-                  height: "150px",
-                  borderRadius: "50%",
-                  backgroundColor: "white",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "2px solid #ddd",
-                  boxShadow: "0px 4px 10px rgba(0,0,0,0.05)"
-                }}>
-                  <i className="fa-solid fa-user text-secondary" style={{ fontSize: "50px" }}></i>
+                <div>
+                    <img className="profile_circle_img" src={profileImg} />
                 </div>
               )}
             </div>
