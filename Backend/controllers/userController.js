@@ -19,7 +19,7 @@ exports.getUsers = (req, res) => {
 exports.getMe = (req, res) => {
 
     const userId = req.user.id
-    const sql = "SELECT email, first_name, last_name, nickname, identity, profile_image, created_at FROM users WHERE id = ?"
+    const sql = "SELECT email, first_name, last_name, nickname, identity, profile_image, cover_image, created_at FROM users WHERE id = ?"
     db.query(sql, [userId], (err, result) => {
 
         console.error(err)

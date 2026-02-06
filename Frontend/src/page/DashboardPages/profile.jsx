@@ -38,6 +38,11 @@ function Profile() {
     <div className="all_container">
         <div className="heder_cover_container">
             <img className="coverImg" src={coverImg} alt="" />
+            {user.profile_image ? (
+                <img src={`${SERVER_URL}${user.profile_image}`} />
+            ) : (
+                <img className="coverImg" src={coverImg} alt="" />
+            )}
 
             <div className="image_display_area d-flex align-items-center">
             <label htmlFor="upload-photo" className="profile_image_wrapper">
