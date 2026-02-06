@@ -31,6 +31,9 @@ function Profile() {
 
   if (!user) return <div className="p-5 text-center">Loading...</div>;
 
+    const joinedDate = user?.created_at 
+        ? new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date(user.created_at)) : "Recently";
+
   return (
     <div className="all_container">
         <div className="heder_cover_container">
@@ -58,10 +61,10 @@ function Profile() {
             </label>
             <div className="ps-4">
                 <div className="d-flex align-items-center">
-                    <h2 className="poppins-semibold">neftalem</h2>
-                    <span className="userProfile_identity poppins-regular d-flex justify-content-center align-items-center ms-4">student</span>
+                    <h2 className="poppins-semibold">{user.first_name}</h2>
+                    <span className="userProfile_identity poppins-regular d-flex justify-content-center align-items-center ms-4">{user.identity}</span>
                 </div>
-                <p className="m-0 stutus_text poppins-regular">Joined Dec 2025 • Active now</p>
+                <p className="m-0 stutus_text poppins-regular">Joined {joinedDate} • Active now</p>
             </div>
         </div>
         </div>
