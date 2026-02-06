@@ -66,3 +66,9 @@
     height: 50vh;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+.coverImg {
+    width: 1200px;
+    object-fit: cover;
+    height: 30vh;
+}

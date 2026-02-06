@@ -34,10 +34,9 @@ function Profile() {
   return (
     <div className="all_container">
         <div className="heder_cover_container">
-            <img className="cover" src={coverImg} alt="" />
-        </div>
-            
-        <div className="image_display_area">
+            <img className="coverImg" src={coverImg} alt="" />
+
+            <div className="image_display_area">
             <label htmlFor="upload-photo" className="profile_image_wrapper">
                 {user.profile_image ? (
                     <img 
@@ -57,6 +56,7 @@ function Profile() {
                 </div>
                 <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
             </label>
+        </div>
         </div>
     </div>
   );
