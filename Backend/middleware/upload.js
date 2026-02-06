@@ -11,3 +11,20 @@ const storage = multer.diskStorage({
         cd(null, uniqueSuffix + path.extname(file.originalname));
     }
 });
+
+// the file type only photo
+const fileFilter = (req, file, cd) => {
+    if (file.mimetype.startsWith('image/')) {
+        cd(null, true);
+    } else {
+        cd(new Error('Please send only Photo'), false);
+    }
+};
+
+const uploads = multer({
+    storage: storage,
+    limits: { fileSize: 2 * 1024 * 1024 }, // not upper 2MG
+    fileFilter: fileFilter
+});
+
+module.exports = uploads;
