@@ -33,7 +33,8 @@ function Profile() {
 
   return (
     <div className="all_container">
-        <div className="heder_cover">
+        <div className="heder_cover_container">
+            <img className="cover" src={coverImg} alt="" />
         </div>
             
         <div className="image_display_area">

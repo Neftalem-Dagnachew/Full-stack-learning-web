@@ -61,7 +61,7 @@
   margin: 0;
 }
 
-.heder_cover {
+.heder_cover_container {
     width: 1200px;
     height: 50vh;
     border: 1px solid rgba(0, 0, 0, 0.1);
