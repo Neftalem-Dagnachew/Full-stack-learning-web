@@ -32,36 +32,29 @@ function Profile() {
 
   return (
     <div className="container mt-5">
-      <div className="row justify-content-center">
-        <div className="col-md-6 text-center">
-          <h1 className="mb-4 poppins-bold">Profile: {user.nickname}</h1>
-          
-          <div className="profile_main_wrapper d-flex flex-column align-items-center gap-4">
+        {/* <img src="" /> */}
             
-            <div className="image_display_area">
-                <label htmlFor="upload-photo" className="profile_image_wrapper">
-                    {user.profile_image ? (
-                        <img 
-                        src={`${SERVER_URL}${user.profile_image}`} 
-                        alt="Profile" 
-                        className="profile_circle_img"/>
-                    ) : (
-                        <div>
-                            <img className="profile_circle_img" src={profileImg} />
-                        </div>
-                    )}
-                    <div className="profile_img_overlay">
-                        <div className="camera_icon_bg">
-                            <i className="fa-solid fa-camera"></i>
-                        </div>
-                        <p className="overlay_text">Change Profile Photo</p>
+        <div className="image_display_area">
+            <label htmlFor="upload-photo" className="profile_image_wrapper">
+                {user.profile_image ? (
+                    <img 
+                    src={`${SERVER_URL}${user.profile_image}`} 
+                    alt="Profile" 
+                    className="profile_circle_img"/>
+                ) : (
+                    <div>
+                        <img className="profile_circle_img" src={profileImg} />
                     </div>
-                    <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
-                </label>
-            </div>
-          </div>
+                )}
+                <div className="profile_img_overlay">
+                    <div className="camera_icon_bg">
+                        <i className="fa-solid fa-camera"></i>
+                    </div>
+                    <p className="overlay_text">Change Profile Photo</p>
+                </div>
+                <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
+            </label>
         </div>
-      </div>
     </div>
   );
 }
