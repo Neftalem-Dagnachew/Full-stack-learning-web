@@ -78,3 +78,15 @@
     object-fit: cover;
     height: 30vh;
 }
+
+.userProfile_identity {
+    width: 73px;
+    height: 23px;
+    border-radius: 5px;
+    color: #4D7CBE;
+    background-color: #f2f2f2;
+}
+
+.stutus_text {
+    color: #9B9C9F;
+}

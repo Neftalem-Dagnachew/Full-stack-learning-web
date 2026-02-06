@@ -36,7 +36,7 @@ function Profile() {
         <div className="heder_cover_container">
             <img className="coverImg" src={coverImg} alt="" />
 
-            <div className="image_display_area">
+            <div className="image_display_area d-flex align-items-center">
             <label htmlFor="upload-photo" className="profile_image_wrapper">
                 {user.profile_image ? (
                     <img 
@@ -56,6 +56,13 @@ function Profile() {
                 </div>
                 <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
             </label>
+            <div className="ps-4">
+                <div className="d-flex align-items-center">
+                    <h2>neftalem</h2>
+                    <span className="userProfile_identity d-flex justify-content-center align-items-center ms-4">student</span>
+                </div>
+                <p className="m-0 stutus_text">Joined Dec 2025 • Active now</p>
+            </div>
         </div>
         </div>
     </div>
