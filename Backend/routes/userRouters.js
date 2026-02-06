@@ -3,6 +3,10 @@ const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/userController");
 const auth = require("../middleware/auth")
+const upload = require("../middleware/upload")
+
+// for uplode photo
+router.put("update-photo", auth, upload.single("image"), userController.updateProfilePhoto)
 
 // get user
 router.get("/get", userController.getUsers)
