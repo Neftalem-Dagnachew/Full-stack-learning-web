@@ -58,10 +58,10 @@ function Profile() {
             </label>
             <div className="ps-4">
                 <div className="d-flex align-items-center">
-                    <h2>neftalem</h2>
-                    <span className="userProfile_identity d-flex justify-content-center align-items-center ms-4">student</span>
+                    <h2 className="poppins-semibold">neftalem</h2>
+                    <span className="userProfile_identity poppins-regular d-flex justify-content-center align-items-center ms-4">student</span>
                 </div>
-                <p className="m-0 stutus_text">Joined Dec 2025 • Active now</p>
+                <p className="m-0 stutus_text poppins-regular">Joined Dec 2025 • Active now</p>
             </div>
         </div>
         </div>
