@@ -39,34 +39,26 @@ function Profile() {
           <div className="profile_main_wrapper d-flex flex-column align-items-center gap-4">
             
             <div className="image_display_area">
-              {user.profile_image ? (
-                <img 
-                  src={`${SERVER_URL}${user.profile_image}`} 
-                  alt="Profile" 
-                  className="profile_circle_img"/>
-              ) : (
-                <div>
-                    <img className="profile_circle_img" src={profileImg} />
-                </div>
-              )}
+                <label htmlFor="upload-photo" className="profile_image_wrapper">
+                    {user.profile_image ? (
+                        <img 
+                        src={`${SERVER_URL}${user.profile_image}`} 
+                        alt="Profile" 
+                        className="profile_circle_img"/>
+                    ) : (
+                        <div>
+                            <img className="profile_circle_img" src={profileImg} />
+                        </div>
+                    )}
+                    <div className="profile_img_overlay">
+                        <div className="camera_icon_bg">
+                            <i className="fa-solid fa-camera"></i>
+                        </div>
+                        <p className="overlay_text">Change Profile Photo</p>
+                    </div>
+                    <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
+                </label>
             </div>
-
-            <div className="user_details mt-3">
-              <h3 className="poppins-regular">{user.first_name} {user.last_name}</h3>
-              <p className="text-muted">{user.email}</p>
-            </div>
-
-            <div className="upload_section mt-4 p-4 border rounded bg-light">
-              <h5 className="poppins-light mb-3">Change Profile Picture</h5>
-              <input 
-                type="file" 
-                className="form-control"
-                accept="image/*" 
-                onChange={handleFileChange} 
-              />
-              <p className="mt-2 text-info small">Max size: 5MB</p>
-            </div>
-
           </div>
         </div>
       </div>
