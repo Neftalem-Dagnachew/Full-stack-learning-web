@@ -11,10 +11,16 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+.image_display_area {
+    position: absolute;
+    padding-left: 50px;
+    top: 250px;
+}
+
 .profile_image_wrapper {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
