@@ -19,7 +19,7 @@ function Profile() {
         setUser({ ...user, profile_image: result.profile_image });
       }
     } catch (err) {
-      alert("ስህተት ተፈጥሯል: " + err.message);
+      alert("Have Error: " + err.message);
     }
   };
 
