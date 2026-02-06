@@ -109,3 +109,24 @@ exports.loginUsers = (req, res) => {
     })
 
 }
+
+
+exports.updateProfilePhoto = (req, res) => {
+    const userId = req.user.id;
+
+    if (!req.file) {
+        return res.status(400).json({ message: "the photo its not chose" });
+    }
+
+    const imageUrl = `/uploads/${req.file.filename}`;
+    const sql = "UPDATE users SET profile_image = ? WHERE id = ?";
+
+    db.query(sql, [imageUrl, userId], (err, result) => {
+        if (err) return res.status(500).json({ message: "Database error" });
+        
+        res.json({ 
+            message: "Profile photo updated successfully!",
+            profile_image: imageUrl 
+        });
+    });
+};
