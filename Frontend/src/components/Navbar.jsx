@@ -8,6 +8,8 @@ import logo from "../assets//Navbar-img/Main-Logo.png"
 import profileImg from "../assets/Navbar-img/profile.png";
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg";
 
+const SERVER_URL = "http://localhost:5000";
+
 function Navbar( {variant} ) {
 
   const { user, logout } = useContext(AuthContext);
@@ -106,7 +108,18 @@ function Navbar( {variant} ) {
 
                   <p className="m-0 fw-bold">{user.first_name}</p>
 
-                  <img className="btn_profileImg" src={profileImg} alt="" />
+                  {user.profile_image ? (
+                    <img 
+                      className="btn_profileImg" 
+                      src={`${SERVER_URL}${user.profile_image}`} 
+                      alt="Profile" 
+                      style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }}
+                    />
+                  ) : (
+                    <div>
+                      <img className="btn_profileImg" src={profileImg} />
+                    </div>
+                  )}
 
                 </div>
 
@@ -114,7 +127,19 @@ function Navbar( {variant} ) {
                   <div className="profile_manu">
                     <NavLink className="profile_links" to={`/my-dashboard/members/${user.nickname}`}>
                       <span className="d-flex align-items-center">
-                        <img className="btn_profileImg" src={profileImg}/>
+                        {user.profile_image ? (
+                          <img 
+                            className="btn_profileImg" 
+                            src={`${SERVER_URL}${user.profile_image}`} 
+                            alt="Profile" 
+                            style={{ width: "30px", height: "30px", borderRadius: "50%", objectFit: "cover" }}
+                          />
+                        ) : (
+                          <img 
+                            className="btn_profileImg" 
+                            src={profileImg}
+                          />
+                        )}
                         <div className="ps-3">
                           <p className="m-0 fw-bold">{user.first_name}</p>
                           <p className="m-0 text-muted">{user.nickname}</p>

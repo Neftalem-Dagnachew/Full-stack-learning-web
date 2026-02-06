@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { updateProfilePhoto } from "../../services/api";
 
-// Backend URL (እንደ አስፈላጊነቱ አስተካክለው)
 const SERVER_URL = "http://localhost:5000";
 
 function Profile() {
@@ -16,7 +15,6 @@ function Profile() {
       const result = await updateProfilePhoto(file);
       alert("Photo Successfully changed");
       
-      // ግሎባል ስቴቱን በአዲሱ ፎቶ እናሳድሳለን
       if (result && result.profile_image) {
         setUser({ ...user, profile_image: result.profile_image });
       }
@@ -35,10 +33,8 @@ function Profile() {
           
           <div className="profile_main_wrapper d-flex flex-column align-items-center gap-4">
             
-            {/* ፎቶው ካለ ወይም ከሌለ የሚቀያየርበት ክፍል */}
             <div className="image_display_area">
               {user.profile_image ? (
-                // 1. ተጠቃሚው ፎቶ ካለው የሚታይ
                 <img 
                   src={`${SERVER_URL}${user.profile_image}`} 
                   alt="Profile" 
@@ -53,7 +49,6 @@ function Profile() {
                   }} 
                 />
               ) : (
-                // 2. ተጠቃሚው ፎቶ ከሌለው የሚታይ ነጭ ክብ (White Circle)
                 <div style={{
                   width: "150px",
                   height: "150px",
