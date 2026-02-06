@@ -74,3 +74,28 @@ export async function updateProfilePhoto(file) {
   
   return res.json();
 }
+export const updateCoverPhoto = async (file) => {
+  const formData = new FormData();
+  formData.append("cover_image", file);
+
+  const token = localStorage.getItem("token");
+
+  try {
+    const response = await fetch("http://localhost:5000/users/update-cover", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+      },
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message || "Failed to update cover photo");
+    }
+
+    return await response.json();
+  } catch (error) {
+    throw error;
+  }
+};

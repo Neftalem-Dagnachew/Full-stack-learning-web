@@ -91,3 +91,26 @@
 .stutus_text {
     color: #9B9C9F;
 }
+
+.cover_image_label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cover_edit_icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cover_image_label:hover .cover_edit_icon {
+    opacity: 1;
+}

@@ -131,3 +131,14 @@ exports.updateProfilePhoto = (req, res) => {
         });
     });
 };
+
+exports.updateCoverPhoto = (req, res) => {
+    const userId = req.user.id;
+    const coverPath = `/uploads/${req.file.filename}`;
+
+    const sql = "UPDATE users SET cover_image = ? WHERE id = ?";
+    db.query(sql, [coverPath, userId], (err, result) => {
+        if (err) return res.status(500).json({ message: "Database error" });
+        res.json({ message: "Cover updated", cover_image: coverPath });
+    });
+};
