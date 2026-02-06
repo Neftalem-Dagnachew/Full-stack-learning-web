@@ -52,3 +52,22 @@ export async function loginUsers(formData) {
     return res.json();
     
 }
+
+// photo
+export async function updateProfilePhoto(file) {
+    const token = localStorage.getItem("token")
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    const res = await fetch(`${API_URL}/users/update-photo`, {
+        method: "PUT",
+        headers: {
+            Authorization: `Bearer ${token}`,
+        },
+        body: formData
+    });
+    if(!res.ok) throw new Error("Photo upload failed");
+
+    return res.json();
+}
