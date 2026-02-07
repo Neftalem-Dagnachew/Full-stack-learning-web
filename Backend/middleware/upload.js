@@ -2,22 +2,22 @@ const multer = require('multer');
 const path = require('path');
 
 const storage = multer.diskStorage({
-    destination: (req, file, cd) => {
-        cd(null, "uploads/")
+    destination: (req, file, cb) => {
+        cb(null, "uploads/")
     },
-    filename: (req, file, cd) => {
+    filename: (req, file, cb) => {
         // the file name is not repited use (timestamp + random number)
-        const uniqueSuffix = Date.now() + "_" + Math.random(Math.random() * 1E9);
-        cd(null, uniqueSuffix + path.extname(file.originalname));
+        const uniqueSuffix = Date.now() + "_" + Math.round(Math.random() * 1E9);
+        cb(null, uniqueSuffix + path.extname(file.originalname));
     }
 });
 
 // the file type only photo
-const fileFilter = (req, file, cd) => {
+const fileFilter = (req, file, cb) => {
     if (file.mimetype.startsWith('image/')) {
-        cd(null, true);
+        cb(null, true);
     } else {
-        cd(new Error('Please send only Photo'), false);
+        cb(new Error('Please send only Photo'), false);
     }
 };
 
