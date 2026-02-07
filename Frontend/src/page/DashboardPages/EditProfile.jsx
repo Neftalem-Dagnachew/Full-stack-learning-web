@@ -1,6 +1,7 @@
 import "./style/EditProfile.css"
 
 function EditProfile() {
+
     return(
         <>
             <div className="mt-4 gap-5 d-flex">
