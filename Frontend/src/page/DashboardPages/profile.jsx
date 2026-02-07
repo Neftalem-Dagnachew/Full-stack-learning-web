@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { updateProfilePhoto, updateCoverPhoto } from "../../services/api"; 
 
+import EditProfile from "./EditProfile";
+
 const SERVER_URL = "http://localhost:5000";
 
 import "../DashboardPages/style/profile.css"
@@ -51,50 +53,53 @@ function Profile() {
     : "Recently";
 
   return (
-    <div className="all_container">
-        <div className="heder_cover_container">
-            <label htmlFor="upload-cover" className="cover_image_label">
-                {user.cover_image ? (
-                    <img className="coverImg" src={`${SERVER_URL}${user.cover_image}`} alt="Cover" />
-                ) : (
-                    <img className="coverImg" src={coverImgDefault} alt="Default Cover" />
-                )}
-                
-                <div className="cover_edit_icon">
-                    <i className="fa-solid fa-camera"></i> Edit Cover
-                </div>
-                <input type="file" id="upload-cover" hidden accept="image/*" onChange={handleCoverChange} />
-            </label>
-
-            <div className="image_display_area d-flex align-items-center">
-                <label htmlFor="upload-photo" className="profile_image_wrapper">
-                    {user.profile_image ? (
-                        <img 
-                            src={`${SERVER_URL}${user.profile_image}`} 
-                            alt="Profile" 
-                            className="profile_circle_img"/>
+    <>
+        <div className="all_container">
+            <div className="heder_cover_container">
+                <label htmlFor="upload-cover" className="cover_image_label">
+                    {user.cover_image ? (
+                        <img className="coverImg" src={`${SERVER_URL}${user.cover_image}`} alt="Cover" />
                     ) : (
-                        <img className="profile_circle_img" src={profileImg} alt="Default Profile" />
+                        <img className="coverImg" src={coverImgDefault} alt="Default Cover" />
                     )}
-                    <div className="profile_img_overlay">
-                        <div className="camera_icon_bg">
-                            <i className="fa-solid fa-camera"></i>
-                        </div>
-                        <p className="overlay_text">Change Profile Photo</p>
+                    
+                    <div className="cover_edit_icon">
+                        <i className="fa-solid fa-camera"></i> Edit Cover
                     </div>
-                    <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
+                    <input type="file" id="upload-cover" hidden accept="image/*" onChange={handleCoverChange} />
                 </label>
-                
-                <div className="ps-4">
-                    <div className="d-flex align-items-center">
-                        <h2 className="poppins-semibold m-0">{user.first_name}</h2>
-                        <span className="userProfile_identity poppins-regular d-flex justify-content-center align-items-center ms-4">{user.identity}</span>
+
+                <div className="image_display_area d-flex align-items-center">
+                    <label htmlFor="upload-photo" className="profile_image_wrapper">
+                        {user.profile_image ? (
+                            <img 
+                                src={`${SERVER_URL}${user.profile_image}`} 
+                                alt="Profile" 
+                                className="profile_circle_img"/>
+                        ) : (
+                            <img className="profile_circle_img" src={profileImg} alt="Default Profile" />
+                        )}
+                        <div className="profile_img_overlay">
+                            <div className="camera_icon_bg">
+                                <i className="fa-solid fa-camera"></i>
+                            </div>
+                            <p className="overlay_text">Change Profile Photo</p>
+                        </div>
+                        <input type="file" id="upload-photo" hidden accept="image/*" onChange={handleFileChange} />
+                    </label>
+                    
+                    <div className="ps-4">
+                        <div className="d-flex align-items-center">
+                            <h2 className="poppins-semibold m-0">{user.first_name}</h2>
+                            <span className="userProfile_identity poppins-regular d-flex justify-content-center align-items-center ms-4">{user.identity}</span>
+                        </div>
+                        <p className="m-0 stutus_text poppins-regular">Joined {joinedDate} • Active now</p>
                     </div>
-                    <p className="m-0 stutus_text poppins-regular">Joined {joinedDate} • Active now</p>
                 </div>
             </div>
+            <EditProfile />
         </div>
-    </div>
+    </>
   );
 }
 
