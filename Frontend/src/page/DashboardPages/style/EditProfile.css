@@ -1,0 +1,17 @@
+
+.links_container {
+    cursor: pointer;
+    width: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.profile_link:hover {
+    color: #2E4453;
+}
+
+.under_line {
+  width: 43px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 6px;
+}
