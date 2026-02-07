@@ -102,7 +102,8 @@ exports.loginUsers = (req, res) => {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 identity: user.identity,
-                profile_image: user.profile_image
+                profile_image: user.profile_image,
+                cover_image: user.cover_image
             },
             token: token,
         })
@@ -127,7 +128,7 @@ exports.updateProfilePhoto = (req, res) => {
         
         res.json({ 
             message: "Profile photo updated successfully!",
-            profile_image: imageUrl 
+            profile_image: imageUrl
         });
     });
 };
