@@ -11,12 +11,10 @@ function EditProfile() {
 
                 <div className="links_container">
                     <p className="m-0 profile_link">Courses</p>
-                    <div className="under_line"></div>
                 </div>
 
                 <div className="links_container">
                     <p className="m-0 profile_link">Achievements</p>
-                    <div className="under_line"></div>
                 </div>
             </div>
         </>

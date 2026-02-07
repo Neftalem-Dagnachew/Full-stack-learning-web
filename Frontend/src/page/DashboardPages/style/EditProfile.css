@@ -1,7 +1,6 @@
 
 .links_container {
     cursor: pointer;
-    width: 40px;
     color: rgb(0, 0, 0);
 }
 
@@ -10,8 +9,22 @@
 }
 
 .under_line {
-  width: 43px;
+  width: 44px;
   height: 1px;
   background-color: rgb(0, 0, 0);
   margin-top: 6px;
 }
+
+/* .under_line_courses {
+  width: 55px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 6px;
+}
+
+.under_line_achev {
+  width: 97px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  margin-top: 6px;
+} */
