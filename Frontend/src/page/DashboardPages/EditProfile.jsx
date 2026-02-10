@@ -21,7 +21,7 @@ function EditProfile() {
                 </div>
 
                 <div className="mt-3">
-                    <div>
+                    <div className="editProfile_container">
                         
                     </div>
                 </div>
