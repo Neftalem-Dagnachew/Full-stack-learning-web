@@ -19,6 +19,12 @@ function EditProfile() {
                         <p className="m-0 profile_link">Achievements</p>
                     </div>
                 </div>
+
+                <div className="mt-3">
+                    <div>
+                        
+                    </div>
+                </div>
                 
             </div>
         </>
