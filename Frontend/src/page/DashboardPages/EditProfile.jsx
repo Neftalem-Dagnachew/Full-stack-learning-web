@@ -22,7 +22,9 @@ function EditProfile() {
 
                 <div className="mt-3">
                     <div className="editProfile_container">
-                        
+                        <div className="heders d-flex align-items-center">
+                            
+                        </div>
                     </div>
                 </div>
                 
