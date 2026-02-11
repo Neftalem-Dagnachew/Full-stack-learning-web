@@ -1,11 +1,11 @@
 
 .links_container {
-    cursor: pointer;
-    color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
 }
 
 .profile_link:hover {
-    color: #2E4453;
+  color: #2E4453;
 }
 
 .under_line {
