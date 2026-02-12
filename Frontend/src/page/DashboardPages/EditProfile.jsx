@@ -1,6 +1,11 @@
 import "./style/EditProfile.css"
 
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+
 function EditProfile() {
+
+    const { user } = useContext(AuthContext);
 
     return(
         <>
@@ -38,11 +43,11 @@ function EditProfile() {
                                 <p className="mb-4">Your identity</p>
                             </div>
                             <div className="profileValue_lists">
-                                <p className="mb-4">first name</p>
-                                <p className="mb-4">Last name</p>
-                                <p className="mb-4">Nickname</p>
-                                <p className="mb-4">phone number</p>
-                                <p className="mb-4">Your identity</p>
+                                <p className="mb-4">{user.first_name}</p>
+                                <p className="mb-4">{user.last_name}</p>
+                                <p className="mb-4">{user.nickname}</p>
+                                <p className="mb-4">{user.phone_numer}</p>
+                                <p className="mb-4">{user.identity}</p>
                             </div>
                         </div>
                     </div>
