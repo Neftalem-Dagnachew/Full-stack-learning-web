@@ -83,3 +83,8 @@ input:focus {
     border: none;
     border-radius: 10px;
 }
+
+.change_btn:hover {
+    background-color: #4D7C8E;
+    transition: all 0.2s;
+}
