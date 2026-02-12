@@ -102,6 +102,7 @@ exports.loginUsers = (req, res) => {
                 first_name: user.first_name,
                 last_name: user.last_name,
                 identity: user.identity,
+                nickname: user.nickname,
                 phone_numer: user.phone_numer,
                 profile_image: user.profile_image,
                 cover_image: user.cover_image
