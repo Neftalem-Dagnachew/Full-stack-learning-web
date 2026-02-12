@@ -2,3 +2,84 @@
     margin-left: 275px;
     padding-top: 70px;
 }
+
+.edit-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.edit-container h2 {
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+input:focus {
+  border-color: #0073ea;
+}
+
+.privacy {
+  font-size: 12px;
+  margin-top: 6px;
+  color: #777;
+}
+
+.public {
+  color: #4caf50;
+}
+
+.private {
+  color: #ff9800;
+}
+
+.privacy-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.change-btn {
+  background: none;
+  border: none;
+  color: #0073ea;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.change-btn:hover {
+  text-decoration: underline;
+}
+
+.change_btn {
+    width: 135px;
+    height: 37px;
+    background-color: #0073ea;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
