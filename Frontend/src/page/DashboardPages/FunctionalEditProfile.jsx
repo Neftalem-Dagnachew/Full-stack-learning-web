@@ -4,6 +4,10 @@ function FunctionalEditProfile() {
     return(
         <>
             <div className="all_container">
+                <div className="mt-4">
+                    <h1 className="m-0">Edit Profile</h1>
+                    <button className="goTo_profile_btn"><i class="fa-solid fa-user pe-4"></i>View Profile</button>
+                </div>
                 <div className="edit-container">
                     <h2>Edit "Details" Information</h2>
 
