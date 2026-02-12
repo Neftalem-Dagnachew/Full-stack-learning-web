@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom"
 import { useContext } from "react";
-import { AuthContext } from "../../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
-import "../DashboardPages/style/FunctionalEditProfile.css"
+import "../page/DashboardPages/style/FunctionalEditProfile.css"
 
 function EditProfileMeanu() {
 
@@ -10,7 +10,8 @@ function EditProfileMeanu() {
 
     return(
         <>
-            <div className="mt-4 edit_profile_manu_container">
+        <div className="all_container">
+            <div className="edit_profile_manu_container">
                     <h1 className="m-0">Edit Profile</h1>
                     <NavLink className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
                         <i class="fa-solid fa-user pe-4"></i>
@@ -32,6 +33,7 @@ function EditProfileMeanu() {
                         Cover Photo
                     </NavLink>
                 </div>
+            </div>
         </>
     )
 }
