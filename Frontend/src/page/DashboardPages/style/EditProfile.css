@@ -55,6 +55,12 @@
   padding: 0 20px;
 }
 
+.Edit_profile_btn:hover {
+  background-color: #46A7C9;
+  color: #F2f4f5;
+  transition: all 0.3s;
+}
+
 .all_edits {
   gap: 17%;
 }
