@@ -15,6 +15,12 @@ function FunctionalEditProfile() {
                     <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
                         Edit
                     </button>
+                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        Profile Photo
+                    </button>
+                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        Cover Photo
+                    </button>
                 </div>
                 <div className="edit-container">
                     <h2>Edit "Details" Information</h2>
