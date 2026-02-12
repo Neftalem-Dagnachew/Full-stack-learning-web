@@ -1,5 +1,6 @@
 import "./style/EditProfile.css"
 
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -30,7 +31,10 @@ function EditProfile() {
                         <div className="d-flex justify-content-start">
                             <div className="heders d-flex align-items-center justify-content-center">
                                 <h5 className="m-0">Details</h5>
-                                <button className="Edit_profile_btn">Edit</button>
+                                <Link to={`/my-dashboard/members/${user.nickname}/profile/edit`}
+                                    className="Edit_profile_btn d-flex align-items-center">
+                                    Edit
+                                </Link>
                             </div>
                         </div>
                         <hr className="m-0 mb-4" />
