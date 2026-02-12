@@ -3,6 +3,14 @@
     padding-top: 70px;
 }
 
+.goTo_profile_btn {
+    width: 135px;
+    height: 38px;
+    background-color: #f2f4f5;
+    border: none;
+    border-radius: 5px;
+}
+
 .edit-container {
   max-width: 700px;
   margin: 40px auto;
