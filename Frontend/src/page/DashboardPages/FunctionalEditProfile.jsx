@@ -1,38 +1,38 @@
 import "../DashboardPages/style/FunctionalEditProfile.css"
 
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 function FunctionalEditProfile() {
 
     const { user } = useContext(AuthContext);
-    const [isActive, setIsActive] = useState(false);
+    // const [isActive, setIsActive] = useState(false);
 
     return(
         <>
             <div className="all_container">
                 <div className="mt-4 edit_profile_manu_container">
                     <h1 className="m-0">Edit Profile</h1>
-                    <Link className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
+                    <NavLink className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
-                    </Link>
+                    </NavLink>
                 </div>
                 <div className="d-flex">
                 <div className="mt-5 edit_profile_manu_container">
-                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
-                        <i class="fa-regular fa-pen-to-square pe-4"></i>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}/profile/edit`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                        <i className="fa-regular fa-pen-to-square pe-4"></i>
                         Edit
-                    </button>
-                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                    </NavLink>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
                         <i class="fa-regular fa-address-book pe-4"></i>
                         Profile Photo
-                    </button>
-                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                    </NavLink>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
                         <i class="fa-regular fa-camera pe-4"></i>
                         Cover Photo
-                    </button>
+                    </NavLink>
                 </div>
                 <div className="edit-container">
                     <h2>Edit "Details" Information</h2>
