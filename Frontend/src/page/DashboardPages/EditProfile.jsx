@@ -25,7 +25,7 @@ function EditProfile() {
                         <div className="d-flex justify-content-start">
                             <div className="heders d-flex align-items-center justify-content-center">
                                 <h5 className="m-0">Details</h5>
-                                <p className="m-0">1234</p>
+                                <button className="Edit_profile_btn">Edit</button>
                             </div>
                         </div>
                     </div>
