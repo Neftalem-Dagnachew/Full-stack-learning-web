@@ -7,14 +7,14 @@ import { AuthContext } from "../../context/AuthContext";
 function FunctionalEditProfile() {
 
     const { user } = useContext(AuthContext);
-    const [ isActive, setIsActive ] = useState(false);
+    const [isActive, setIsActive] = useState(false);
 
     return(
         <>
             <div className="all_container">
                 <div className="mt-4 edit_profile_manu_container">
                     <h1 className="m-0">Edit Profile</h1>
-                    <Link className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
+                    <Link className={({ isActive }) => `goTo_profile_btn ${isActive ? "active" : ""}`} to={`/my-dashboard/members/${user.nickname}`}>
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
                     </Link>

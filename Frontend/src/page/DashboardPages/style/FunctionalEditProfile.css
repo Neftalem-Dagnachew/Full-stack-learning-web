@@ -13,6 +13,10 @@
   border-radius: 8px;
 }
 
+.goTo_profile_btn.active {
+    background-color: #0073ea;
+}
+
 .goTo_profile_btn:hover {
     background-color: #46A7C9;
     color: #fff;
