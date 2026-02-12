@@ -8,7 +8,7 @@ function FunctionalEditProfile() {
 
     return(
         <>
-            <div className="all_container">
+            {/* <div className="all_container"> */}
                 <div className="edit-container">
                     <h2>Edit "Details" Information</h2>
 
@@ -45,7 +45,7 @@ function FunctionalEditProfile() {
                     </div>
                     <button className="change_btn">Change</button>
                 </div>
-                </div>
+            {/* </div> */}
         </>
     )
 }

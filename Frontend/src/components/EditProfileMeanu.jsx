@@ -18,7 +18,6 @@ function EditProfileMeanu() {
                         View Profile
                     </NavLink>
                 </div>
-                <div className="d-flex"></div>
                 <div className="mt-5 edit_profile_manu_container">
                     <NavLink to={`/my-dashboard/members/${user.nickname}/profile/edit`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
                         <i className="fa-regular fa-pen-to-square pe-4"></i>

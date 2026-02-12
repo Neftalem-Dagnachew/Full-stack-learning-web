@@ -3,6 +3,11 @@
   padding-top: 70px;
 }
 
+.edit_form_layout {
+  margin-top: 215PX;
+  margin-left: 50px;
+}
+
 .goTo_profile_btn {
   display: inline-flex; /* or 'flex' if you want full width */
   align-items: center;
