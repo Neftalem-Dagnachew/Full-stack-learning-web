@@ -41,8 +41,7 @@
 
 .heders {
   width: 100%;
-  max-width: 841px;
+  max-width: 1200px;
   height: 77px;
-  gap: 700px;
-  border: 5px solid rgba(0, 0, 0, 0.1);
+  gap: 90%;
 }
