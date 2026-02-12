@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom"
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
+import "../DashboardPages/style/FunctionalEditProfile.css"
+
 function EditProfileMeanu() {
 
     const { user } = useContext(AuthContext);
