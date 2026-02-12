@@ -28,7 +28,7 @@ function EditProfile() {
                                 <button className="Edit_profile_btn">Edit</button>
                             </div>
                         </div>
-                        <hr />
+                        <hr className="m-0 p-0" />
                     </div>
                 </div>
                 
