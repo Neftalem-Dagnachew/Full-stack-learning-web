@@ -11,9 +11,9 @@ function FunctionalEditProfile() {
     return(
         <>
             <div className="all_container">
-                <div className="mt-4">
+                <div className="mt-4 edit_profile_manu_container">
                     <h1 className="m-0">Edit Profile</h1>
-                    <Link to={`/my-dashboard/members/${user.nickname}`} className="goTo_profile_btn">
+                    <Link className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
                     </Link>

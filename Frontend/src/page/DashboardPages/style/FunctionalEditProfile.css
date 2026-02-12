@@ -4,15 +4,17 @@
 }
 
 .goTo_profile_btn {
-    width: 135px;
-    height: 38px;
-    background-color: #f2f4f5;
-    border: none;
-    border-radius: 5px;
+  display: inline-flex; /* or 'flex' if you want full width */
+  align-items: center;
+  width: 150px;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
 }
 
 .goTo_profile_btn:hover {
-    background-color: #0073ea;
+    background-color: #46A7C9;
     color: #fff;
     transition: all 0.2s;
 }
