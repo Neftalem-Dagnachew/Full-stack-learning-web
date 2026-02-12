@@ -11,6 +11,12 @@
     border-radius: 5px;
 }
 
+.goTo_profile_btn:hover {
+    background-color: #0073ea;
+    color: #fff;
+    transition: all 0.2s;
+}
+
 .edit-container {
   max-width: 700px;
   margin: 40px auto;
