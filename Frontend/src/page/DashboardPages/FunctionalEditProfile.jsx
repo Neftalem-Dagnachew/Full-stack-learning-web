@@ -13,12 +13,15 @@ function FunctionalEditProfile() {
                 </div>
                 <div className="mt-5">
                     <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        <i class="fa-regular fa-pen-to-square pe-4"></i>
                         Edit
                     </button>
                     <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        <i class="fa-regular fa-address-book pe-4"></i>
                         Profile Photo
                     </button>
                     <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        <i class="fa-regular fa-camera pe-4"></i>
                         Cover Photo
                     </button>
                 </div>
