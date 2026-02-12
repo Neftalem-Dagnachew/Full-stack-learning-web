@@ -46,7 +46,7 @@ function EditProfile() {
                                 <p className="mb-4">{user.first_name}</p>
                                 <p className="mb-4">{user.last_name}</p>
                                 <p className="mb-4">{user.nickname}</p>
-                                <p className="mb-4">{user.phone_numer}</p>
+                                <p className="mb-4 text-primary-emphasis">+{user.phone_numer}</p>
                                 <p className="mb-4">{user.identity}</p>
                             </div>
                         </div>
