@@ -102,3 +102,16 @@ input:focus {
     background-color: #4D7C8E;
     transition: all 0.2s;
 }
+
+.edit_profile_manuBtn {
+    width: 205px;
+    height: 47px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.edit_profile_manuBtn:hover {
+    background-color: #f8f8f8;
+    transition: all 0.2s;
+}

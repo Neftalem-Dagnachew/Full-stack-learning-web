@@ -6,7 +6,15 @@ function FunctionalEditProfile() {
             <div className="all_container">
                 <div className="mt-4">
                     <h1 className="m-0">Edit Profile</h1>
-                    <button className="goTo_profile_btn"><i class="fa-solid fa-user pe-4"></i>View Profile</button>
+                    <button className="goTo_profile_btn">
+                        <i class="fa-solid fa-user pe-4"></i>
+                        View Profile
+                    </button>
+                </div>
+                <div className="mt-5">
+                    <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
+                        Edit
+                    </button>
                 </div>
                 <div className="edit-container">
                     <h2>Edit "Details" Information</h2>
