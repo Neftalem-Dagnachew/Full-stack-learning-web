@@ -10,6 +10,7 @@ import Dashboard from "./page/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
 import Profile from "./page/DashboardPages/profile";
+import FunctionalEditProfile from "./page/DashboardPages/FunctionalEditProfile";
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
         <Route path="/register" element={<Register />}/>
         <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
-          <Route path="members/:nickname" element={<Profile />} /> 
+          <Route path="members/:nickname" element={<Profile />} />
+          <Route path="members/:nickname/profile/edit" element={<FunctionalEditProfile />} />
         </Route>
       </Routes>
     </>
