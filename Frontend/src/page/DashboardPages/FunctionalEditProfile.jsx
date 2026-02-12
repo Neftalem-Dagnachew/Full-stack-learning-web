@@ -1,12 +1,13 @@
 import "../DashboardPages/style/FunctionalEditProfile.css"
 
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 function FunctionalEditProfile() {
 
     const { user } = useContext(AuthContext);
+    const [ isActive, setIsActive ] = useState(false);
 
     return(
         <>
