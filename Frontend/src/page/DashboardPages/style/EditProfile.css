@@ -43,5 +43,14 @@
   width: 100%;
   max-width: 1200px;
   height: 77px;
-  gap: 90%;
+  gap: 88%;
+}
+
+.Edit_profile_btn {
+  width: 68px;
+  height: 36px;
+  background-color: #F2f4f5;
+  border: none;
+  border-radius: 5px;
+  padding: 0 20px;
 }
