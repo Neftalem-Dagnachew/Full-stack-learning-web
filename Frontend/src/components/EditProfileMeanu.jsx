@@ -1,0 +1,37 @@
+import { NavLink } from "react-router-dom"
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+
+function EditProfileMeanu() {
+
+    const { user } = useContext(AuthContext);
+
+    return(
+        <>
+            <div className="mt-4 edit_profile_manu_container">
+                    <h1 className="m-0">Edit Profile</h1>
+                    <NavLink className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
+                        <i class="fa-solid fa-user pe-4"></i>
+                        View Profile
+                    </NavLink>
+                </div>
+                <div className="d-flex"></div>
+                <div className="mt-5 edit_profile_manu_container">
+                    <NavLink to={`/my-dashboard/members/${user.nickname}/profile/edit`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                        <i className="fa-regular fa-pen-to-square pe-4"></i>
+                        Edit
+                    </NavLink>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                        <i class="fa-regular fa-address-book pe-4"></i>
+                        Profile Photo
+                    </NavLink>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                        <i class="fa-regular fa-camera pe-4"></i>
+                        Cover Photo
+                    </NavLink>
+                </div>
+        </>
+    )
+}
+
+export default EditProfileMeanu;

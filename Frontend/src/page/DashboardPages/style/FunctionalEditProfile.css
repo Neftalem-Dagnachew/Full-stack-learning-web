@@ -62,27 +62,6 @@ input:focus {
   border-color: #0073ea;
 }
 
-.privacy {
-  font-size: 12px;
-  margin-top: 6px;
-  color: #777;
-}
-
-.public {
-  color: #4caf50;
-}
-
-.private {
-  color: #ff9800;
-}
-
-.privacy-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 6px;
-}
-
 .change-btn {
   background: none;
   border: none;
