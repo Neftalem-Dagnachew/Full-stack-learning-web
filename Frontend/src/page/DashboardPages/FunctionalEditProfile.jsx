@@ -1,15 +1,19 @@
 import "../DashboardPages/style/FunctionalEditProfile.css"
 
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+
 function FunctionalEditProfile() {
     return(
         <>
             <div className="all_container">
                 <div className="mt-4">
                     <h1 className="m-0">Edit Profile</h1>
-                    <button className="goTo_profile_btn">
+                    <Link className="goTo_profile_btn">
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
-                    </button>
+                    </Link>
                 </div>
                 <div className="d-flex">
                 <div className="mt-5 edit_profile_manu_container">
