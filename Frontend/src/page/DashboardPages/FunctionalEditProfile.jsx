@@ -14,7 +14,7 @@ function FunctionalEditProfile() {
             <div className="all_container">
                 <div className="mt-4 edit_profile_manu_container">
                     <h1 className="m-0">Edit Profile</h1>
-                    <Link className={({ isActive }) => `goTo_profile_btn ${isActive ? "active" : ""}`} to={`/my-dashboard/members/${user.nickname}`}>
+                    <Link className="goTo_profile_btn" to={`/my-dashboard/members/${user.nickname}`}>
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
                     </Link>
