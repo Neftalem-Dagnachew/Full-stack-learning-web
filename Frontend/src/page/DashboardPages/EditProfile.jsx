@@ -30,14 +30,14 @@ function EditProfile() {
                         </div>
                         <hr className="m-0 mb-4" />
                         <div className="d-flex all_edits">
-                            <div>
+                            <div className="profile_lists">
                                 <p className="mb-4">first name</p>
                                 <p className="mb-4">Last name</p>
                                 <p className="mb-4">Nickname</p>
                                 <p className="mb-4">phone number</p>
                                 <p className="mb-4">Your identity</p>
                             </div>
-                            <div>
+                            <div className="profileValue_lists">
                                 <p className="mb-4">first name</p>
                                 <p className="mb-4">Last name</p>
                                 <p className="mb-4">Nickname</p>
