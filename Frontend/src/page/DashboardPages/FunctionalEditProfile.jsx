@@ -5,12 +5,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 
 function FunctionalEditProfile() {
+
+    const { user } = useContext(AuthContext);
+
     return(
         <>
             <div className="all_container">
                 <div className="mt-4">
                     <h1 className="m-0">Edit Profile</h1>
-                    <Link className="goTo_profile_btn">
+                    <Link to={`/my-dashboard/members/${user.nickname}`} className="goTo_profile_btn">
                         <i class="fa-solid fa-user pe-4"></i>
                         View Profile
                     </Link>
