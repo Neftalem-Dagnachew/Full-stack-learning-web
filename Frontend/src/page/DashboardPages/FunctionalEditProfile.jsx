@@ -11,7 +11,8 @@ function FunctionalEditProfile() {
                         View Profile
                     </button>
                 </div>
-                <div className="mt-5">
+                <div className="d-flex">
+                <div className="mt-5 edit_profile_manu_container">
                     <button className="edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4">
                         <i class="fa-regular fa-pen-to-square pe-4"></i>
                         Edit
@@ -60,6 +61,7 @@ function FunctionalEditProfile() {
                         />
                     </div>
                     <button className="change_btn">Change</button>
+                </div>
                 </div>
             </div>
         </>
