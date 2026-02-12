@@ -116,6 +116,7 @@ input:focus {
   border-radius: 5px;
   background-color: #fff;
   text-decoration: none;
+  color: #000;
 }
 
 .edit_profile_manuBtn:hover {

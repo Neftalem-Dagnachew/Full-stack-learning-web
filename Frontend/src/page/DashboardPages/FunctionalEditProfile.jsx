@@ -7,7 +7,6 @@ import { AuthContext } from "../../context/AuthContext";
 function FunctionalEditProfile() {
 
     const { user } = useContext(AuthContext);
-    // const [isActive, setIsActive] = useState(false);
 
     return(
         <>
