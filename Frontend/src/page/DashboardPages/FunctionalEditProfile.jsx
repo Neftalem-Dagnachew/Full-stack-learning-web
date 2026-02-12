@@ -13,7 +13,6 @@ function FunctionalEditProfile() {
                         <input
                         type="text"
                         />
-                        <span className="privacy public">Public</span>
                     </div>
 
                     {/* Last Name */}
@@ -22,9 +21,6 @@ function FunctionalEditProfile() {
                         <input
                         type="text"
                         />
-                        <div className="privacy-row">
-                        <span className="privacy public">Public</span>
-                        </div>
                     </div>
 
                     {/* Nickname */}
@@ -33,7 +29,6 @@ function FunctionalEditProfile() {
                         <input
                         type="text"
                         />
-                        <span className="privacy public">Public</span>
                     </div>
 
                     {/* Phone */}
@@ -42,10 +37,6 @@ function FunctionalEditProfile() {
                         <input
                         type="text"
                         />
-                        <div className="privacy-row">
-                        <span className="privacy private">Only Me</span>
-                        <button className="change-btn">Change</button>
-                        </div>
                     </div>
                     <button className="change_btn">Change</button>
                 </div>
