@@ -28,6 +28,7 @@ function EditProfile() {
                                 <button className="Edit_profile_btn">Edit</button>
                             </div>
                         </div>
+                        <hr />
                     </div>
                 </div>
                 
