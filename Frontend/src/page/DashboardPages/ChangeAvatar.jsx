@@ -1,4 +1,6 @@
 
+import "../DashboardPages/style/ChangeAvatar.css"
+
 function ChangeAvatar() {
     return(
         <>
