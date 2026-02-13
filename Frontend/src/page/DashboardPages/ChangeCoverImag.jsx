@@ -1,4 +1,6 @@
 
+import "../DashboardPages/style/ChangeCoverImag.css"
+
 function ChangeCoverImag() {
     return(
         <>
