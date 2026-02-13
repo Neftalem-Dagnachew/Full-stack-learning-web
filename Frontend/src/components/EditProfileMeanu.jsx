@@ -23,11 +23,11 @@ function EditProfileMeanu() {
                         <i className="fa-regular fa-pen-to-square pe-4"></i>
                         Edit
                     </NavLink>
-                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}/profile/edit/change-avatar`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
                         <i class="fa-regular fa-address-book pe-4"></i>
                         Profile Photo
                     </NavLink>
-                    <NavLink to={`/my-dashboard/members/${user.nickname}`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
+                    <NavLink to={`/my-dashboard/members/${user.nickname}/profile/edit/change-cover-image`} end className={({ isActive }) => `edit_profile_manuBtn d-flex justify-content-start align-items-center ps-4 ${isActive ? "active" : ""}`}>
                         <i class="fa-regular fa-camera pe-4"></i>
                         Cover Photo
                     </NavLink>
