@@ -113,4 +113,5 @@ input:focus {
 
 .edit_profile_manuBtn.active {
   background-color: #0073ea;
+  color: #fff;
 }
