@@ -4,7 +4,11 @@ import "../DashboardPages/style/ChangeAvatar.css"
 function ChangeAvatar() {
     return(
         <>
-            <h1>change-avatar</h1>
+            <div>
+                <div className="changeavatar_container">
+                    
+                </div>
+            </div>
         </>
     )
 }
