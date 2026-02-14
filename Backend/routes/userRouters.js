@@ -14,6 +14,7 @@ router.post("/update-cover", auth, upload.single('cover_image'), userController.
 
 // delet user photos
 router.delete("/delete-photo", auth, userController.deleteProfilePhoto);
+router.delete("/delete-cover", auth, userController.deleteCoverPhoto);
 
 // get user
 router.get("/get", userController.getUsers)

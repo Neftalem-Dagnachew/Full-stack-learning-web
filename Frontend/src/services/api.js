@@ -120,9 +120,25 @@ export async function updateProfile(formData) {
 
 export async function deleteProfilePhoto() {
 
-  const token = localStorage.getItem("token"); // ✅ get token
+  const token = localStorage.getItem("token"); // get token
   if (!token) throw new Error("No token found");
   const res = await fetch(`${API_URL}/users/delete-photo`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    }
+  });
+
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+  
+}
+
+export async function deleteCoverPhoto() {
+
+  const token = localStorage.getItem("token"); // get token
+  if (!token) throw new Error("No token found");
+  const res = await fetch(`${API_URL}/users/delete-cover`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
