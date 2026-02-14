@@ -145,3 +145,17 @@ exports.updateCoverPhoto = (req, res) => {
         res.json({ message: "Cover updated", cover_image: coverPath });
     });
 };
+
+exports.updateProfile = (req, res) => {
+    const { first_name, last_name, nickname, phone_numer, identity } = req.body;
+
+    const sql = "UPDATE users SET first_name = ?, last_name = ?, nickname = ?, phone_numer = ?, identity = ? WHERE id = ?";
+
+    db.query(sql, [ first_name, last_name, nickname, phone_numer, identity ], (err, result) => {
+        if(err) {
+            console.log(err)
+            return res.status(500).json({ message: "Database error"});
+        }
+        res.json({ message: "Profile updated successfully" });
+    })
+}

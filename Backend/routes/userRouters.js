@@ -5,6 +5,9 @@ const userController = require("../controllers/userController");
 const auth = require("../middleware/auth")
 const upload = require("../middleware/upload")
 
+// update users
+router.put("/update-profile", auth, userController.updateProfile);
+
 // for uplode photo
 router.put("/update-photo", auth, upload.single("image"), userController.updateProfilePhoto);
 router.post("/update-cover", auth, upload.single('cover_image'), userController.updateCoverPhoto);
