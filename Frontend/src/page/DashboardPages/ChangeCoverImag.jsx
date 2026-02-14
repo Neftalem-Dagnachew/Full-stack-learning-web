@@ -13,10 +13,10 @@ function ChangeCoverImag() {
             await deleteProfilePhoto();
             const updatedUser = await getMe();
             setUser(updatedUser);
-            alert("Profile photo deleted ✅");
+            alert("Profile photo deleted");
         } catch (err) {
             console.error(err);
-            alert("Failed to delete profile photo ❌");
+            alert("Failed to delete profile photo");
         }
     }
 
