@@ -147,11 +147,12 @@ exports.updateCoverPhoto = (req, res) => {
 };
 
 exports.updateProfile = (req, res) => {
+    const userId = req.user.id;
     const { first_name, last_name, nickname, phone_numer, identity } = req.body;
 
     const sql = "UPDATE users SET first_name = ?, last_name = ?, nickname = ?, phone_numer = ?, identity = ? WHERE id = ?";
 
-    db.query(sql, [ first_name, last_name, nickname, phone_numer, identity ], (err, result) => {
+    db.query(sql, [ first_name, last_name, nickname, phone_numer, identity, userId ], (err, result) => {
         if(err) {
             console.log(err)
             return res.status(500).json({ message: "Database error"});

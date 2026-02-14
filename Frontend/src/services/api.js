@@ -99,3 +99,19 @@ export const updateCoverPhoto = async (file) => {
     throw error;
   }
 };
+
+export async function updateProfile(formData) {
+
+  const res = await fetch(`${API_URL}/users/update-profile`, {
+    method: "PUT",
+    headers: {
+      "Content-type" : "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(formData)
+  });
+
+  if(!res.ok) throw new Error("not Updated")
+  return res.json();
+  
+}
