@@ -100,7 +100,9 @@ export const updateCoverPhoto = async (file) => {
   }
 };
 
-export async function updateProfile(formData, token) {
+export async function updateProfile(formData) {
+
+  const token = localStorage.getItem("token");
 
   const res = await fetch(`${API_URL}/users/update-profile`, {
     method: "PUT",
