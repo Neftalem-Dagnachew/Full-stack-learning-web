@@ -14,7 +14,7 @@ function SidebarMenu() {
             <div className="all_sidebar">
                 <div className="main_sidebar_container">
                     <div className="d-flex align-items-center justify-content-center bar_icon_container">
-                        <i class="fa-solid fa-bars bars_icon"></i>
+                        <i className="fa-solid fa-bars bars_icon"></i>
                     </div>
                 </div>
                 <div className="sidebar_links_containers">
@@ -23,7 +23,7 @@ function SidebarMenu() {
                     {/* onClick={() => {
                         setIsActive("dashboard1")
                     }}>  */}
-                        <i class="fa-brands fa-windows btn_icons pe-4"></i>
+                        <i className="fa-brands fa-windows btn_icons pe-4"></i>
                         My Dashboard
                     </NavLink>
 
@@ -31,7 +31,7 @@ function SidebarMenu() {
                     {/* onClick={() => {
                         setIsActive("dashboard2")
                         }}>  */}
-                        <i class="fa-solid fa-user btn_icons pe-4"></i>
+                        <i className="fa-solid fa-user btn_icons pe-4"></i>
                         Profile
                     </NavLink>
 
@@ -39,13 +39,13 @@ function SidebarMenu() {
                         <p className="m-0 poppins-extralight heder_text">Learn</p>
                         <NavLink to="/" id="menu_btn2" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard3" ? "active" : ""}`} onClick={() => {
                             setIsActive("dashboard3")}}> 
-                            <i class="fa-solid fa-graduation-cap btn_icons pe-4"></i>
+                            <i className="fa-solid fa-graduation-cap btn_icons pe-4"></i>
                             Races
                         </NavLink>
 
                         <NavLink to="/" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard4" ? "active" : ""}`} onClick={() => {
                             setIsActive("dashboard4")}}> 
-                            <i class="fa-solid fa-crown btn_icons pe-4"></i>
+                            <i className="fa-solid fa-crown btn_icons pe-4"></i>
                             Achievements
                         </NavLink>
                     </div>
@@ -57,18 +57,18 @@ function SidebarMenu() {
                     <p className="m-0 poppins-extralight heder_text">Account</p>
                     <NavLink to="/" id="btn_Setting" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard5" ? "active" : ""}`} onClick={() => {
                         setIsActive("dashboard5")}}> 
-                        <i class="fa-solid fa-gear btn_icons pe-4"></i>
+                        <i className="fa-solid fa-gear btn_icons pe-4"></i>
                         Settings
                     </NavLink>
 
                     <NavLink to="/" id="menu_btn_Billing" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard6" ? "active" : ""}`} onClick={() => {
                         setIsActive("dashboard6")}}> 
-                        <i class="fa-solid fa-credit-card btn_icons pe-4"></i>
+                        <i className="fa-solid fa-credit-card btn_icons pe-4"></i>
                         Billing
                     </NavLink>
 
                     <button to="/" className="menu_btn ps-2 align-items-center pe-5 logout_btn" onClick={logout}> 
-                        <i class="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
+                        <i className="fa-solid fa-arrow-right-from-bracket btn_icons pe-4"></i>
                         Log Out
                     </button>
 

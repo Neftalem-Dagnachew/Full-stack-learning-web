@@ -2,9 +2,24 @@ import "../DashboardPages/style/ChangeCoverImag.css"
 
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
-import { deleteProfilePhoto } from "../../services/api";
+import { deleteProfilePhoto, getMe } from "../../services/api";
 
 function ChangeCoverImag() {
+
+    const { user, setUser } = useContext(AuthContext);
+
+    const handleDeleteProfile = async () => {
+        try {
+            await deleteProfilePhoto();
+            const updatedUser = await getMe();
+            setUser(updatedUser);
+            alert("Profile photo deleted ✅");
+        } catch (err) {
+            console.error(err);
+            alert("Failed to delete profile photo ❌");
+        }
+    }
+
     return(
         <>
             <div className="cover-container">
@@ -12,7 +27,7 @@ function ChangeCoverImag() {
                 <div className="d-flex justify-content-center gap-5">
                     <div>
                         <h2 className="cover-title m-0 mb-2">Delate-Profile-photo</h2>
-                        <button className="delete-btn">
+                        <button type="button" className="delete-btn" onClick={handleDeleteProfile}>
                             Delete My Profile Photo
                         </button>
                     </div>
