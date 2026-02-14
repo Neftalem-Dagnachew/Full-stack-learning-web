@@ -36,10 +36,19 @@ exports.getMe = (req, res) => {
 }
 
 exports.registerUsers = async (req, res) => {
+
+  const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
   const { email, password, first_name, last_name, nickname, phone_numer, identity } = req.body;
 
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required" });
+  }
+
+  if (!strongPasswordRegex.test(password)) {
+    return res.status(400).json({
+      message: "Password must be at least 8 characters long, contain uppercase, lowercase, and a number"
+    });
   }
 
   const hashed = await bcrypt.hash(password, 10);
