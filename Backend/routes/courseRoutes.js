@@ -4,5 +4,6 @@ const courseController = require('../controllers/courseController');
 const { auth } = require('../middleware/authMiddleware');
 
 router.get('/search', auth, courseController.getCoursesByFilter);
+router.post('/add', auth, courseController.addCourse);
 
 module.exports = router;

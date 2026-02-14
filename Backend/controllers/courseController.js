@@ -15,3 +15,17 @@ exports.getCoursesByFilter = (req, res) => {
         res.json(results);
     });
 };
+
+exports.addCourse = (req, res) => {
+    const { grade_level, subject_name, title, video_url, description } = req.body;
+
+    const sql = "INSERT INTO courses (grade_level, subject_name, title, video_url, description) VALUES (?, ?, ?, ?, ?)";
+    
+    db.query(sql, [grade_level, subject_name, title, video_url, description], (err, result) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({ error: "Error the course not added" });
+        }
+        res.json({ message: "successfully add the cours!", id: result.insertId });
+    });
+};
