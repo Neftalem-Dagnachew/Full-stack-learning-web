@@ -1,6 +1,7 @@
 import "../DashboardPages/style/FunctionalEditProfile.css"
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
+import { updateProfile } from "../../services/api";
 
 function FunctionalEditProfile() {
 

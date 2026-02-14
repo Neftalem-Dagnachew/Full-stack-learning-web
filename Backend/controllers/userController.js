@@ -157,6 +157,6 @@ exports.updateProfile = (req, res) => {
             console.log(err)
             return res.status(500).json({ message: "Database error"});
         }
-        res.json({ message: "Profile updated successfully" });
+        res.json({ message: "Profile updated successfully", user: { first_name, last_name, nickname, phone_numer, identity } });
     })
 }

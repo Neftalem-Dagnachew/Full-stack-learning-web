@@ -100,7 +100,7 @@ export const updateCoverPhoto = async (file) => {
   }
 };
 
-export async function updateProfile(formData) {
+export async function updateProfile(formData, token) {
 
   const res = await fetch(`${API_URL}/users/update-profile`, {
     method: "PUT",
@@ -111,7 +111,7 @@ export async function updateProfile(formData) {
     body: JSON.stringify(formData)
   });
 
-  if(!res.ok) throw new Error("not Updated")
+  if(!res.ok) throw new Error("not Updated");
   return res.json();
   
 }
