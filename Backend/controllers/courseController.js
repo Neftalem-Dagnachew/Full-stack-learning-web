@@ -1,18 +1,15 @@
 const db = require('../config/db');
 
+// controllers/courseController.js
 exports.getCoursesByFilter = (req, res) => {
-    const { grade, subject } = req.query;
+    const { grade_level, subject_name } = req.query;
 
     const sql = "SELECT * FROM courses WHERE grade_level = ? AND subject_name = ?";
     
-    db.query(sql, [grade, subject], (err, results) => {
-        if (err) {
-            return res.status(500).json({ error: "Database error occurred" });
-        }
-        if (results.length === 0) {
-            return res.status(404).json({ message: "don't have courses" });
-        }
-        res.json(results);
+    db.query(sql, [grade_level, subject_name], (err, results) => {
+        if (err) return res.status(500).json({ error: err.message });
+        
+        res.status(200).json(results);
     });
 };
 

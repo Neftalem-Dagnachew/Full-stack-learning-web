@@ -155,7 +155,7 @@ export async function deleteCoverPhoto() {
 export async function getCourses(grade, subject) {
   const token = localStorage.getItem("token");
 
-  const res = await fetch(`${API_URL}/courses/search?grade_level=${grade}&subject_name=${subject}`, {
+  const res = await fetch(`${API_URL}/api/courses/search?grade_level=${grade}&subject_name=${subject}`, {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,

@@ -14,6 +14,8 @@ import FunctionalEditProfile from "./page/DashboardPages/FunctionalEditProfile";
 import EditProfileLayout from "./layouts/EditProfileLayout";
 import ChangeCoverImag from "./page/DashboardPages/ChangeCoverImag";
 
+import CourseDashboard from "./page/CourseDashboardPage/CourseDashboard";
+
 function App() {
 
   return(
@@ -31,6 +33,7 @@ function App() {
             <Route index element={<FunctionalEditProfile />} />
             <Route path="change-cover-image" element={<ChangeCoverImag />} />
           </Route>
+          <Route path="course-dashboard" element={<CourseDashboard />}/>
         </Route>
       </Routes>
     </>
