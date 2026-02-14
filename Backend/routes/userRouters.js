@@ -12,6 +12,9 @@ router.put("/update-profile", auth, userController.updateProfile);
 router.put("/update-photo", auth, upload.single("image"), userController.updateProfilePhoto);
 router.post("/update-cover", auth, upload.single('cover_image'), userController.updateCoverPhoto);
 
+// delet user photos
+router.delete("/delete-photo", auth, userController.deleteProfilePhoto);
+
 // get user
 router.get("/get", userController.getUsers)
 router.get("/getMe", auth, userController.getMe)

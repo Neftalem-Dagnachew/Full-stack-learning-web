@@ -117,3 +117,18 @@ export async function updateProfile(formData) {
   return res.json();
   
 }
+
+export async function deleteProfilePhoto() {
+
+  const token = localStorage.setItem("token");
+  const res = await fetch(`${API_URL}/users/delete-photo`, {
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${token}`,
+    }
+  });
+
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+  
+}
