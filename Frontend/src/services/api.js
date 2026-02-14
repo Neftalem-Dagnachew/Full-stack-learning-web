@@ -149,3 +149,43 @@ export async function deleteCoverPhoto() {
   return res.json();
   
 }
+
+// --- Course Related Functions ---
+
+export async function getCourses(grade, subject) {
+  const token = localStorage.getItem("token");
+
+  const res = await fetch(`${API_URL}/courses/search?grade_level=${grade}&subject_name=${subject}`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.message || "can not get course");
+  }
+
+  return res.json();
+}
+
+export async function addCourse(courseData) {
+  const token = localStorage.getItem("token");
+
+  const res = await fetch(`${API_URL}/courses/add`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+    body: JSON.stringify(courseData),
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.message || "can nnot add the course");
+  }
+
+  return res.json();
+}
