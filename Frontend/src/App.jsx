@@ -11,9 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./layouts/dashboardLayout";
 import Profile from "./page/DashboardPages/profile";
 import FunctionalEditProfile from "./page/DashboardPages/FunctionalEditProfile";
-import ChangeAvatar from "./page/DashboardPages/ChangeAvatar";
 import EditProfileLayout from "./layouts/EditProfileLayout";
-import ChangeCoverImag from "./page/DashboardPages/ChangeCoverImag";
 
 function App() {
 
@@ -30,8 +28,6 @@ function App() {
           <Route path="members/:nickname" element={<Profile />}/>
           <Route path="members/:nickname/profile/edit" element={<EditProfileLayout />}>
             <Route index element={<FunctionalEditProfile />} />
-            <Route path="change-avatar" element={<ChangeAvatar />} />
-            <Route path="change-cover-image" element={<ChangeCoverImag />} />
           </Route>
         </Route>
       </Routes>
