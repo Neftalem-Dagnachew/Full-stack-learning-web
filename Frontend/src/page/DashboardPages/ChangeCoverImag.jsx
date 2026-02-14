@@ -1,5 +1,9 @@
 import "../DashboardPages/style/ChangeCoverImag.css"
 
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
+import { deleteProfilePhoto } from "../../services/api";
+
 function ChangeCoverImag() {
     return(
         <>
