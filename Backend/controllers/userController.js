@@ -160,3 +160,23 @@ exports.updateProfile = (req, res) => {
         res.json({ message: "Profile updated successfully", user: { first_name, last_name, nickname, phone_numer, identity } });
     })
 }
+
+exports.deleteProfilePhoto = (req, res) => {
+    const userId = req.user.id;
+
+    const sql = "UPDATE users SET profile_image = NULL WHERE id = ?";
+    db.query(sql, [userId], (err, result) => {
+        if (err) return res.status(500).json({ message: "Database error" });
+        res.json({ message: "Profile photo deleted successfully!" });
+    })
+}
+
+exports.deleteCoverPhoto = (req, res) => {
+  const userId = req.user.id;
+
+  const sql = "UPDATE users SET cover_image = NULL WHERE id = ?";
+  db.query(sql, [userId], (err, result) => {
+    if (err) return res.status(500).json({ message: "Database error" });
+    res.json({ message: "Cover photo deleted successfully!" });
+  });
+};
