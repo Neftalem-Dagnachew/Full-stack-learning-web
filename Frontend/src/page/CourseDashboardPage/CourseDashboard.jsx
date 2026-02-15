@@ -34,7 +34,7 @@ const CourseDashboard = () => {
         <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto' }}>
             <h2>ሰላም {user?.first_name || 'ተማሪ'}!choice your course </h2>
 
-            {/* --- የመምረጫ ክፍል (Filter Section) --- */}
+            {/* ---(Filter Section) --- */}
             <form onSubmit={handleSearch} style={{ display: 'flex', gap: '15px', marginBottom: '30px', flexWrap: 'wrap' }}>
                 <select 
                     value={grade} 
