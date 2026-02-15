@@ -9,3 +9,9 @@
   height: 75vh;
   background-color: #f1f7fa;
 }
+
+.grade_select {
+  width: 129px;
+  height: 40px;
+  padding-left: 12px;
+}

@@ -10,7 +10,7 @@ function CourseDashboard() {
                     <div>
                         <h3>Educational standards</h3>
                         <select className="grade_select" name="" id="">
-                            <option value="">Grade choice</option>
+                            <option value="">All rooms</option>
                             <option value="Grade 9">Grade 9</option>
                             <option value="Grade 10">Grade 10</option>
                             <option value="Grade 11">Grade 11</option>
