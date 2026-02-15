@@ -14,4 +14,14 @@
   width: 129px;
   height: 40px;
   padding-left: 12px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.subject_select {
+  width: 129px;
+  height: 40px;
+  padding-left: 12px;
+  outline: none;
+  border-radius: 5px;
 }
