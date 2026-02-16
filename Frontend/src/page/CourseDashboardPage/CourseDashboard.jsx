@@ -29,8 +29,8 @@ function CourseDashboard() {
                         </select>
                     </div>
 
-                    <div className="get_course_btn pt-5">
-                        <button>Get Course</button>
+                    <div className="pt-5">
+                        <button className="get_course_btn">Get Course</button>
                     </div>
 
                 </div>

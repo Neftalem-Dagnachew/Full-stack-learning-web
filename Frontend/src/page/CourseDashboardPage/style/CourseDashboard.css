@@ -25,3 +25,12 @@
   outline: none;
   border-radius: 5px;
 }
+
+.get_course_btn {
+  width: 167px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #73d0ff;
+  background-color: #D4E9EF;
+  color: #013C5A;
+}
