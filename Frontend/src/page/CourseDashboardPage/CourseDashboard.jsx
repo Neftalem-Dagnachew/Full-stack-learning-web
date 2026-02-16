@@ -56,7 +56,7 @@ function CourseDashboard() {
 
 
                 <div className="get_course_container">
-
+                    <div className="course_cards"></div>
                 </div>
 
             </div>
