@@ -55,23 +55,27 @@ function CourseDashboard() {
                 </form>
 
 
-                <div className="get_course_container">
+                { courses.length > 0 ? (courses.map((course) => (
+
+                    <div className="get_course_container d-flex justify-content-center">
                     <div className="course_cards">
                         <div className="w-100 h-50">
                             
                          </div>
-                        <div className="h-50 gap-5 d-flex justify-content-center flex-column">
-                            <div>
-                                <h4>Grade 9 Biology Unit</h4>
-                                <h4>6: Ecology</h4>
+                        <div className="h-50 gap-3 d-flex justify-content-center flex-column">
+                            <div className="ps-3">
+                                <h4>{course.title}</h4>
+                                <h4>{course.description}</h4>
                             </div>
 
-                            <button className="see_course_btn">See</button>
+                            <button className="see_course_btn ms-3">See</button>
 
                         </div>
 
                     </div>
                 </div>
+                    
+                ))) : ( <p>{loading ? "Loading..." : "Don't have course"}</p> )}
 
             </div>
         </>
