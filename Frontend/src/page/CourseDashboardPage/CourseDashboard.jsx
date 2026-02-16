@@ -56,7 +56,21 @@ function CourseDashboard() {
 
 
                 <div className="get_course_container">
-                    <div className="course_cards"></div>
+                    <div className="course_cards">
+                        <div className="w-100 h-50">
+                            
+                         </div>
+                        <div className="h-50 gap-5 d-flex justify-content-center flex-column">
+                            <div>
+                                <h4>Grade 9 Biology Unit</h4>
+                                <h4>6: Ecology</h4>
+                            </div>
+
+                            <button className="see_course_btn">See</button>
+
+                        </div>
+
+                    </div>
                 </div>
 
             </div>

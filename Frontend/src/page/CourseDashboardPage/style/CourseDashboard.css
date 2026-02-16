@@ -2,6 +2,7 @@
 .course_layout {
   margin-left: 140px;
   padding: 70px 0px 0px 90px;
+  overflow: hidden;
 }
 
 .CourseDashboard_container {
@@ -47,7 +48,7 @@
 .get_course_container {
   margin-top: 100px;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 }
 
 .course_cards {
@@ -55,4 +56,19 @@
   height: 440px;
   border-radius: 20px;
   background-color: #f1f7fa;
+  padding: 10px 0px 20px 0px;
+}
+
+.temblen_container {
+  width: 255px;
+  height: 100px;
+}
+
+.see_course_btn {
+  width: 90px;
+  height: 45px;
+  background-color: #D4E9EF;
+  color: #013C5A;
+  border: none;
+  border-radius: 20px;
 }
