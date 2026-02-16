@@ -34,6 +34,11 @@ function CourseDashboard() {
                     </div>
 
                 </div>
+
+                <div className="get_course_container">
+                    
+                </div>
+
             </div>
         </>
     )
