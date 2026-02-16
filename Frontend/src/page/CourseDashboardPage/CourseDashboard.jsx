@@ -28,7 +28,7 @@ function CourseDashboard() {
 
                         <div className="text-center">
                             <h3>Educational standards</h3>
-                            <select className="grade_select" name="" id="">
+                            <select value={grade} onChange={(e) => setGrade(e.target.value)} className="grade_select">
                                 <option value="">All rooms</option>
                                 <option value="Grade 9">Grade 9</option>
                                 <option value="Grade 10">Grade 10</option>
@@ -39,7 +39,7 @@ function CourseDashboard() {
 
                         <div className="text-center">
                             <h3>Type of education</h3>
-                            <select className="subject_select" name="" id="">
+                            <select value={subject} onChange={(e) => setSubject(e.target.value)} className="subject_select">
                                 <option value="">All subject</option>
                                 <option value="Maths">Maths</option>
                                 <option value="Physics">Physics</option>
@@ -49,7 +49,7 @@ function CourseDashboard() {
                         </div>
 
                         <div className="pt-5">
-                            <button type="submit" className="get_course_btn">Get Course.</button>
+                            <button type="submit" disabled={loading} className="get_course_btn">{ loading ? "Getting.." : "Get Course" }</button>
                         </div>
                     </div>
                 </form>
