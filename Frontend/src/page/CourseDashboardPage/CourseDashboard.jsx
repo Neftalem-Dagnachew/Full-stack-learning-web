@@ -30,7 +30,7 @@ function CourseDashboard() {
                     </div>
 
                     <div className="pt-5">
-                        <button className="get_course_btn">Get Course</button>
+                        <button className="get_course_btn">Get Course.</button>
                     </div>
 
                 </div>

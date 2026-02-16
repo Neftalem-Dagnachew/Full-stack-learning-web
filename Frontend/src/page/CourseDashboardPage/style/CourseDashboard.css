@@ -34,3 +34,10 @@
   background-color: #D4E9EF;
   color: #013C5A;
 }
+
+.get_course_btn:hover {
+  background-color: #013C5A;
+  border: none;
+  color: #fff;
+  transition: all 0.3s;
+}
