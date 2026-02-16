@@ -75,7 +75,7 @@ function CourseDashboard() {
                     </div>
                 </div>
                     
-                ))) : ( <p>{loading ? "Loading..." : "Don't have course"}</p> )}
+                ))) : ( <h1 className="mt-4 text-primary-emphasis text-center">{loading ? "Loading..." : "Don't have course"}</h1> )}
 
             </div>
         </>
