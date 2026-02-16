@@ -1,5 +1,9 @@
 
 import "../CourseDashboardPage/style/CourseDashboard.css"
+import { useContext, useState } from "react";
+import { getCourses } from "../../services/api";
+import { AuthContext } from "../../context/AuthContext";
+import { CourseContext } from "../../context/CourseContext";
 
 function CourseDashboard() {
     return(
@@ -36,7 +40,7 @@ function CourseDashboard() {
                 </div>
 
                 <div className="get_course_container">
-                    
+
                 </div>
 
             </div>
