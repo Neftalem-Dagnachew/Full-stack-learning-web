@@ -72,3 +72,9 @@
   border: none;
   border-radius: 20px;
 }
+
+.see_course_btn:hover {
+  background-color: #013C5A;
+  color: #fff;
+  transition: all 0.3s;
+}
