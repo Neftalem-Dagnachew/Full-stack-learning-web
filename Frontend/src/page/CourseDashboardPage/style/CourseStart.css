@@ -3,3 +3,12 @@
     margin-left: 140px;
     padding: 70px 0px 0px 90px;
 }
+
+.header_course_start {
+    height: 50vh;
+    background-color: #464f63;
+}
+
+.header_text_course {
+    width: 600px;
+}
