@@ -15,6 +15,7 @@ import EditProfileLayout from "./layouts/EditProfileLayout";
 import ChangeCoverImag from "./page/DashboardPages/ChangeCoverImag";
 
 import CourseDashboard from "./page/CourseDashboardPage/CourseDashboard";
+import CourseStart from "./page/CourseDashboardPage/CourseStart";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="change-cover-image" element={<ChangeCoverImag />} />
           </Route>
           <Route path="course-dashboard" element={<CourseDashboard />}/>
+          <Route path="course/start" element={<CourseStart />}/>
         </Route>
       </Routes>
     </>
