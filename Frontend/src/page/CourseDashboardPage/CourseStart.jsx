@@ -10,6 +10,7 @@ function CourseStart() {
                         <p className="m-0">9th grade</p>
                         <h1 className="header_text_course">Grade 9 Maths Unit 9: Statistics and Probability</h1>
                     </div>
+                    <div className="w-25"></div>
                 </div>
             </div>
         </>

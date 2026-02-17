@@ -7,6 +7,7 @@
 .header_course_start {
     height: 50vh;
     background-color: #464f63;
+    gap: 20%;
 }
 
 .header_text_course {
