@@ -11,8 +11,16 @@ function CourseStart() {
                         <h1 className="header_text_course">Grade 9 Maths Unit 9: Statistics and Probability</h1>
                     </div>
                     <div className="getStart_container w-25">
-                        <div className="getStart_heder w-100">
-
+                        <div className="getStart_heder w-100"></div>
+                        <div className="pt-5 getStart_bottom w-100 h-50">
+                            <div className="d-flex flex-column gap-4 text-center">
+                                <button className="task_courseBtn w-100">Take this Course</button>
+                                <p>free</p>
+                            </div>
+                            <div>
+                                <h5>Course Includes</h5>
+                                <p>11 Lessons</p>
+                            </div>
                         </div>
                     </div>
                 </div>
