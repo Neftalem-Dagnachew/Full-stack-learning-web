@@ -13,3 +13,11 @@
 .header_text_course {
     width: 600px;
 }
+
+.getStart_container {
+    background-color: #fff;
+    height: 482px;
+    position: fixed;
+    right: 20px;
+    top: 190px;
+}
