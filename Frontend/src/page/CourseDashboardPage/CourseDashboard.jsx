@@ -1,7 +1,7 @@
 
 import "../CourseDashboardPage/style/CourseDashboard.css"
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { CourseContext } from "../../context/CourseContext";
 
@@ -69,7 +69,7 @@ function CourseDashboard() {
                                 <h4>{course.description}</h4>
                             </div>
 
-                            <NavLink to={`/course/${course.grade_level}/${course.subject_name}`} className="see_course_btn ms-3">See</NavLink>
+                            <Link to={`/my-dashboard/course/${course.grade_level}/${course.subject_name}`}className="see_course_btn ms-3">See</Link>
 
                         </div>
 
