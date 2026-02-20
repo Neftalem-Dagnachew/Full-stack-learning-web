@@ -11,7 +11,9 @@ function CourseStart() {
                         <h1 className="header_text_course">Grade 9 Maths Unit 9: Statistics and Probability</h1>
                     </div>
                     <div className="getStart_container w-25">
-                        1234
+                        <div className="getStart_heder w-100">
+
+                        </div>
                     </div>
                 </div>
             </div>

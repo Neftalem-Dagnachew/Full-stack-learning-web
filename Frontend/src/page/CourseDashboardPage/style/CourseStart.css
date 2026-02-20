@@ -15,9 +15,14 @@
 }
 
 .getStart_container {
-    background-color: #fff;
+    background-color: #ffffff;
     height: 482px;
     position: fixed;
     right: 20px;
     top: 190px;
+}
+
+.getStart_heder {
+    background-color: #647385;
+    height: 202px;
 }
