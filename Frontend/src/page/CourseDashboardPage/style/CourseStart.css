@@ -43,3 +43,8 @@
     background-color: #00A2E8;
     color: #ffffff;
 }
+
+.task_courseBtn:hover {
+    background-color: #14aff1;
+    transition: all 0.6s;
+}
