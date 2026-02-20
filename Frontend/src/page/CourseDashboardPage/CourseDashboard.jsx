@@ -69,7 +69,7 @@ function CourseDashboard() {
                                 <h4>{course.description}</h4>
                             </div>
 
-                            <Link to={`/my-dashboard/course/${course.grade_level}/${course.subject_name}`}className="see_course_btn ms-3">See</Link>
+                            <Link to={`/my-dashboard/course/${course.grade_level}/${course.subject_name}`}className="see_course_btn d-flex align-items-center justify-content-center ms-3">See</Link>
 
                         </div>
 
