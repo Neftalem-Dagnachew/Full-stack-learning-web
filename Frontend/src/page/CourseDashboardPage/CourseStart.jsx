@@ -1,7 +1,13 @@
 
 import "../CourseDashboardPage/style/CourseStart.css"
 
+import { AuthContext } from "../../context/AuthContext";
+import { useContext } from "react";
+
 function CourseStart() {
+
+    const { user } = useContext(AuthContext);
+
     return(
         <>
             <div className="all_course_start_container">
