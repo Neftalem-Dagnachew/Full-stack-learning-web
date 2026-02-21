@@ -58,6 +58,7 @@
     height: 60px;
     border-radius: 5px;
     padding-left: 20px;
+    padding-right: 20px;
 }
 
 .lessons_button {
@@ -68,4 +69,13 @@
 .lock_i {
     color: #647385;
     font-size: 13px;
+}
+
+.status-circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid #cfcfcf;
+  background-color: transparent;
+  cursor: pointer;
 }
