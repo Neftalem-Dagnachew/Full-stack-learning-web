@@ -1,0 +1,9 @@
+
+.circle_lesson {
+  width: 220px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #cfcfcf;
+  background-color: transparent;
+  cursor: pointer;
+}

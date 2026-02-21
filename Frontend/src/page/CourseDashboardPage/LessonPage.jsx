@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import "../CourseDashboardPage/style/LessonPage.css"
 
 function LessonPage() {
     const { state } = useLocation();
@@ -8,7 +9,8 @@ function LessonPage() {
     if (!course) return <p>Course not found</p>;
 
     return (
-        <h1>23456</h1>
+        <div className="all_course_start_container">
+        </div>
     );
 }
 

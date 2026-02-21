@@ -3,7 +3,7 @@ import "../CourseDashboardPage/style/CourseStart.css"
 
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function CourseStart() {
@@ -16,6 +16,15 @@ function CourseStart() {
     const [isEnrolled, setIsEnrolled] = useState(() => {
         return localStorage.getItem("isEnrolled") === "true";
     });
+
+    const [progress, setProgress] = useState(0);
+
+    useEffect(() => {
+    const savedProgress = localStorage.getItem(`progress_${course?.id}`);
+    if (savedProgress) {
+        setProgress(JSON.parse(savedProgress));
+    }
+}, [course?.id]);
 
     function handleClick(e) {
         e.preventDefault();
