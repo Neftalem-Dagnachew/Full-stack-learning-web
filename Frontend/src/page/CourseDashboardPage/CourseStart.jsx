@@ -44,19 +44,21 @@ function CourseStart() {
                 <div className="lessons_button_container d-flex flex-column gap-2 w-50">
                     <h4>Course Content</h4>
                     {isEnrolled ? (
-                    <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
-                        <div>
-                            <Link className="lessons_button">{course.grade_level} {course.title}</Link>
-                            {/* <i class="fa-solid fa-lock ps-3 lock_i"></i> */}
-                        </div>
-                        <span className="status-circle"></span>
-                    </div>
+                        <>
+                            <div className="w-100 complete_container d-flex align-items-center justify-content-center">
+                                <p className="m-0 pe-4">0% Complete</p>
+                                <hr className="w-50 m-0" />
+                            </div>
+                            <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
+                                <div>
+                                    <Link className="lessons_button">{course.grade_level} {course.title}</Link>
+                                    {/* <i class="fa-solid fa-lock ps-3 lock_i"></i> */}
+                                </div>
+                                <span className="status-circle"></span>
+                            </div>
+                        </>
                     ) : (
                     <>
-                        <div className="w-100 complete_container d-flex align-items-center justify-content-center">
-                            <p className="m-0 pe-4">0% Complete</p>
-                            <hr className="w-50 m-0" />
-                        </div>
                         <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
                             <div>
                                 <Link className="lessons_button">{course.grade_level} {course.title}</Link>
