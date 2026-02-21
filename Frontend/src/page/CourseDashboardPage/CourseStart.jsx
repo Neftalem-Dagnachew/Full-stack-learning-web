@@ -75,7 +75,11 @@ function CourseStart() {
                     <>
                         <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
                             <div>
-                                <Link className="lessons_button">{course.grade_level} {course.title}</Link>
+                                <Link className=
+                                    {`lessons_button ${!isEnrolled ? "locked" : ""}`}
+                                    to={isEnrolled ? "/lesson-page" : "#"}
+                                    onClick={(e) => !isEnrolled && e.preventDefault()}>{course.grade_level} {course.title}
+                                </Link>
                                 <i class="fa-solid fa-lock ps-3 lock_i"></i>
                             </div>
                             <span className="status-circle"></span>
