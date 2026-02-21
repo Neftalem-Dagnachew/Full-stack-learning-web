@@ -37,8 +37,7 @@ function SidebarMenu() {
 
                     <div className="pt-3">
                         <p className="m-0 poppins-extralight heder_text">Learn</p>
-                        <NavLink to="/" id="menu_btn2" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard3" ? "active" : ""}`} onClick={() => {
-                            setIsActive("dashboard3")}}> 
+                        <NavLink to="/my-dashboard/course-dashboard" end id="menu_btn2" className={({ isActive }) => `menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`}>
                             <i className="fa-solid fa-graduation-cap btn_icons pe-4"></i>
                             Races
                         </NavLink>
