@@ -48,7 +48,7 @@ function CourseStart() {
                                     <button className="task_courseBtn w-100">Start Course</button>
                                 ) : (
                                     <>
-                                        <button className="task_courseBtn w-100">Not Enrolled</button>
+                                        <button className="notEnrolled_btn w-100">Not Enrolled</button>
                                         <button className="task_courseBtn w-100" onClick={handleClick}>Take this course</button>
                                     </>
                                 )}

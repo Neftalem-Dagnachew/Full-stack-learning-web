@@ -36,8 +36,15 @@
     padding: 0px 30px;
 }
 
-.task_courseBtn {
+.notEnrolled_btn {
     height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F2F4F5;
+}
+
+.task_courseBtn {
+    height: 35px;
     border-radius: 20px;
     border: none;
     background-color: #00A2E8;
