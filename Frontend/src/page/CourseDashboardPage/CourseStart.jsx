@@ -3,18 +3,26 @@ import "../CourseDashboardPage/style/CourseStart.css"
 
 import { CourseContext } from "../../context/CourseContext";
 import { useContext } from "react";
+import { useLocation, useParams } from "react-router-dom";
 
 function CourseStart() {
 
-    const { grade, setGrade, subject, setSubject, courses, loading, feachCourses } = useContext(CourseContext);
+    const { state } = useLocation();
+  const { grade_level } = useParams();
+
+  const course = state?.course;
+
+  if (!course) {
+    return <p>No course data available</p>;
+  }
 
     return(
         <>
             <div className="all_course_start_container">
                 <div className="header_course_start d-flex align-items-center w-100 ">
                     <div className="ps-5 text-white">
-                        <p>{courses.grade_level}</p>
-                        <h1 className="header_text_course">Grade 9 Maths Unit 9: Statistics and Probability</h1>
+                        <p className="m-0">{course.grade_level || grade_level}</p>
+                        <h1 className="header_text_course">{course.title}:<span>{course.grade_level}</span></h1>
                     </div>
                     <div className="getStart_container w-25">
                         <div className="getStart_heder w-100"></div>
