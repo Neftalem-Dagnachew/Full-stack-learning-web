@@ -85,3 +85,10 @@
     height: 80px;
     color: #019E7c;
 }
+
+.Unrole {
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background-color: #0984Ec;
+}

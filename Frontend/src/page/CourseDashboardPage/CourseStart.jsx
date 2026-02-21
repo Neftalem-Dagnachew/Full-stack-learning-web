@@ -28,9 +28,9 @@ function CourseStart() {
         setIsEnrolled(false);
     }
 
-  if (!course) {
-    return <p>No course data available</p>;
-  }
+    if (!course) {
+        return <p>No course data available</p>;
+    }
 
     return(
         <>
@@ -58,7 +58,7 @@ function CourseStart() {
                     <h4>Course Content</h4>
                     {isEnrolled ? (
                         <>
-                            <button onClick={unrole}>Unrole</button>
+                            <button className="Unrole w-25" onClick={unrole}>Unrole</button>
                             <div className="w-100 complete_container d-flex align-items-center justify-content-center">
                                 <p className="m-0 pe-4">0% Complete</p>
                                 <hr className="w-50 m-0" />
