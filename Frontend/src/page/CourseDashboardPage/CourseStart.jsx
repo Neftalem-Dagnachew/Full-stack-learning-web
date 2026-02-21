@@ -4,6 +4,7 @@ import "../CourseDashboardPage/style/CourseStart.css"
 
 import { useLocation, useParams } from "react-router-dom";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function CourseStart() {
 
@@ -40,9 +41,12 @@ function CourseStart() {
                         </div>
                     </div>
                 </div>
-                <div className="pt-5 ps-4">
+                <div className="lessons_button_container d-flex flex-column gap-2 w-50">
                     <h4>Course Content</h4>
-                    
+                    <div className="w-100 all_lessons_button d-flex align-items-center">
+                        <Link className="lessons_button"></Link>
+                    </div>
+
                 </div>
             </div>
         </>

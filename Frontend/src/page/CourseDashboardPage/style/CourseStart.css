@@ -48,3 +48,19 @@
     background-color: #14aff1;
     transition: all 0.6s;
 }
+
+.lessons_button_container {
+    padding: 70px 0px 0px 30px;
+}
+
+.all_lessons_button {
+    background-color: #647385;
+    height: 60px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.lessons_button {
+    text-decoration: none;
+    color: black;
+}
