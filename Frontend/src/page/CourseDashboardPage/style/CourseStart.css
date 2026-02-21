@@ -92,3 +92,8 @@
     border-radius: 30px;
     background-color: #0984Ec;
 }
+
+.Unrole:hover {
+    color: #ffffff;
+    transition: all 0.3s;
+}
