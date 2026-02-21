@@ -45,7 +45,7 @@ function CourseStart() {
                     <h4>Course Content</h4>
                     <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
                         <div>
-                            <Link className="lessons_button">{course.title}</Link>
+                            <Link className="lessons_button">{course.grade_level} {course.title}</Link>
                             <i class="fa-solid fa-lock ps-3 lock_i"></i>
                         </div>
                         <span className="status-circle"></span>
