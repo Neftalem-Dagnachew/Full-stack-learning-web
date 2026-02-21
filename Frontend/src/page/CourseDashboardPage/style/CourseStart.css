@@ -79,3 +79,9 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.complete_container {
+    background-color: #92A4B70D;
+    height: 80px;
+    color: #019E7c;
+}
