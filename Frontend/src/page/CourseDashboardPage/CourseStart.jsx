@@ -44,7 +44,15 @@ function CourseStart() {
                         <div className="getStart_heder w-100"></div>
                         <div className="pt-5 getStart_bottom w-100 h-50">
                             <div className="d-flex flex-column gap-4 text-center">
-                                <button className="task_courseBtn w-100" onClick={handleClick}>Take this Course</button>
+                                {isEnrolled ? (
+                                    <button className="task_courseBtn w-100">Start Course</button>
+                                ) : (
+                                    <>
+                                        <button className="task_courseBtn w-100">Not Enrolled</button>
+                                        <button className="task_courseBtn w-100" onClick={handleClick}>Take this course</button>
+                                    </>
+                                )}
+                                {/* <button className="task_courseBtn w-100" onClick={handleClick}>Take this Course</button> */}
                                 <p>free</p>
                             </div>
                             <div>
