@@ -1,14 +1,16 @@
 
 import "../CourseDashboardPage/style/CourseStart.css"
 
-import { CourseContext } from "../../context/CourseContext";
-import { useContext } from "react";
+
 import { useLocation, useParams } from "react-router-dom";
+import { useState } from "react";
 
 function CourseStart() {
 
     const { state } = useLocation();
-  const { grade_level } = useParams();
+    // const { grade_level } = useParams();
+
+    const [isEnrolled, setIsEnrolled] = useState(false);
 
   const course = state?.course;
 
@@ -28,7 +30,7 @@ function CourseStart() {
                         <div className="getStart_heder w-100"></div>
                         <div className="pt-5 getStart_bottom w-100 h-50">
                             <div className="d-flex flex-column gap-4 text-center">
-                                <button className="task_courseBtn w-100">Take this Course</button>
+                                <button className="task_courseBtn w-100" onClick={() => setIsEnrolled(true)}>Take this Course</button>
                                 <p>free</p>
                             </div>
                             <div>
@@ -38,9 +40,9 @@ function CourseStart() {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="pt-5 ps-4">
                     <h4>Course Content</h4>
-                    <h5></h5>
+                    
                 </div>
             </div>
         </>
