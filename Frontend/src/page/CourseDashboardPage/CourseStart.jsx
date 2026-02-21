@@ -11,9 +11,17 @@ function CourseStart() {
     const { state } = useLocation();
     // const { grade_level } = useParams();
 
-    const [isEnrolled, setIsEnrolled] = useState(false);
+    const [isEnrolled, setIsEnrolled] = useState(() => {
+        return localStorage.getItem("isEnrolled") === "true";
+    });
 
-  const course = state?.course;
+    const course = state?.course;
+
+    function handleClick(e) {
+        e.preventDefault();
+        setIsEnrolled(true);
+        localStorage.setItem("isEnrolled", "true");
+    }
 
   if (!course) {
     return <p>No course data available</p>;
@@ -31,7 +39,7 @@ function CourseStart() {
                         <div className="getStart_heder w-100"></div>
                         <div className="pt-5 getStart_bottom w-100 h-50">
                             <div className="d-flex flex-column gap-4 text-center">
-                                <button className="task_courseBtn w-100" onClick={() => setIsEnrolled(true)}>Take this Course</button>
+                                <button className="task_courseBtn w-100" onClick={handleClick}>Take this Course</button>
                                 <p>free</p>
                             </div>
                             <div>
