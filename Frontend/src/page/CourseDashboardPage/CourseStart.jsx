@@ -2,20 +2,20 @@
 import "../CourseDashboardPage/style/CourseStart.css"
 
 
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function CourseStart() {
 
     const { state } = useLocation();
+    const navigate = useNavigate();
+    const course = state?.course;
     // const { grade_level } = useParams();
 
     const [isEnrolled, setIsEnrolled] = useState(() => {
         return localStorage.getItem("isEnrolled") === "true";
     });
-
-    const course = state?.course;
 
     function handleClick(e) {
         e.preventDefault();
@@ -27,6 +27,8 @@ function CourseStart() {
         localStorage.removeItem("isEnrolled");
         setIsEnrolled(false);
     }
+
+    const lessonPath = `/my-dashboard/course/${course?.id}/${course?.grade_level}/${course?.subject_name}/lesson`;
 
     if (!course) {
         return <p>No course data available</p>;
@@ -45,14 +47,13 @@ function CourseStart() {
                         <div className="pt-5 getStart_bottom w-100 h-50">
                             <div className="d-flex flex-column gap-4 text-center">
                                 {isEnrolled ? (
-                                    <button className="task_courseBtn w-100">Start Course</button>
+                                    <button className="task_courseBtn w-100" onClick={() => navigate(lessonPath, { state: { course } })}>Start Course</button>
                                 ) : (
                                     <>
                                         <button className="notEnrolled_btn w-100">Not Enrolled</button>
                                         <button className="task_courseBtn w-100" onClick={handleClick}>Take this course</button>
                                     </>
                                 )}
-                                {/* <button className="task_courseBtn w-100" onClick={handleClick}>Take this Course</button> */}
                                 <p>free</p>
                             </div>
                             <div>
@@ -73,7 +74,13 @@ function CourseStart() {
                             </div>
                             <div className="w-100 all_lessons_button d-flex align-items-center justify-content-between">
                                 <div>
-                                    <Link className="lessons_button">{course.grade_level} {course.title}</Link>
+                                    <Link className=
+                                    {`lessons_button`}
+                                    to={isEnrolled ? lessonPath : "#" }
+                                    state={{ course: course }}
+                                    onClick={(e) => !isEnrolled && e.preventDefault()}>
+                                        {course.grade_level} {course.title}
+                                </Link>
                                     {/* <i class="fa-solid fa-lock ps-3 lock_i"></i> */}
                                 </div>
                                 <span className="status-circle"></span>
@@ -85,7 +92,6 @@ function CourseStart() {
                             <div>
                                 <Link className=
                                     {`lessons_button ${!isEnrolled ? "locked" : ""}`}
-                                    to={isEnrolled ? "/lesson-page" : "#"}
                                     onClick={(e) => !isEnrolled && e.preventDefault()}>{course.grade_level} {course.title}
                                 </Link>
                                 <i class="fa-solid fa-lock ps-3 lock_i"></i>

@@ -16,6 +16,7 @@ import ChangeCoverImag from "./page/DashboardPages/ChangeCoverImag";
 
 import CourseDashboard from "./page/CourseDashboardPage/CourseDashboard";
 import CourseStart from "./page/CourseDashboardPage/CourseStart";
+import LessonPage from "./page/CourseDashboardPage/LessonPage";
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           </Route>
           <Route path="course-dashboard" element={<CourseDashboard />}/>
           <Route path="course/:id/:grade_level/:subject_name" element={<CourseStart />}/>
+          <Route path="course/:id/:grade_level/:subject_name/lesson" element={<LessonPage />}/>
         </Route>
       </Routes>
     </>
