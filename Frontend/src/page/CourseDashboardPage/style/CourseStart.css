@@ -54,7 +54,7 @@
 }
 
 .all_lessons_button {
-    background-color: #647385;
+    background-color: #92A4B70D;
     height: 60px;
     border-radius: 5px;
     padding-left: 20px;
@@ -62,5 +62,10 @@
 
 .lessons_button {
     text-decoration: none;
-    color: black;
+    color: rgb(41, 40, 40);
+}
+
+.lock_i {
+    color: #647385;
+    font-size: 13px;
 }

@@ -44,7 +44,7 @@ function CourseStart() {
                 <div className="lessons_button_container d-flex flex-column gap-2 w-50">
                     <h4>Course Content</h4>
                     <div className="w-100 all_lessons_button d-flex align-items-center">
-                        <Link className="lessons_button"></Link>
+                        <Link className="lessons_button">{course.title}</Link> <i class="fa-solid fa-lock ps-3 lock_i"></i>
                     </div>
 
                 </div>
