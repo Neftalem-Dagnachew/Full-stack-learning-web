@@ -8,23 +8,12 @@ import { CourseContext } from "../../context/CourseContext";
 function CourseDashboard() {
 
     const { user } = useContext(AuthContext);
-    const { grade, setGrade, subject, setSubject, courses, loading, feachCourses } = useContext(CourseContext);
-
-    const handleSubimt = async (e) => {
-        e.preventDefault();
-
-        try {
-            await feachCourses(grade, subject);
-        } catch (err) {
-            alert(err.message);
-        }
-
-    }
+    const { grade, setGrade, subject, setSubject, courses, loading } = useContext(CourseContext);
 
     return(
         <>
             <div className="course_layout">
-                <form onSubmit={handleSubimt}>
+                {/* <form onSubmit={handleSubimt}> */}
                     <div className="CourseDashboard_container gap-4 d-flex align-items-center justify-content-center">
 
                         <div className="text-center">
@@ -53,7 +42,7 @@ function CourseDashboard() {
                             <button type="submit" disabled={loading} className="get_course_btn">{ loading ? "Getting.." : "Get Course" }</button>
                         </div>
                     </div>
-                </form>
+                {/* </form> */}
 
 
                 { courses.length > 0 ? (courses.map((course) => (
