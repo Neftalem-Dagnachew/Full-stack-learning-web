@@ -14,7 +14,8 @@ function LessonPage() {
                 <div className="pe-4">
                     <button className="mb-4 backTo_course_btn">Back to course</button>
                     <h3>Grade 9 Biology Unit 6: Ecology</h3>
-                    <hr className="hr_complit"/>
+                    <hr className="hr_complit mb-3"/>
+                    <p>0%  Complete</p>
                 </div> 
             </div>
         </div>
