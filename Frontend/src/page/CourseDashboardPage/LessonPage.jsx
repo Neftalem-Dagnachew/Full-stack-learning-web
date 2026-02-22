@@ -18,7 +18,7 @@ function LessonPage() {
                     <p className="m-0">0%  Complete</p>
                     <hr className="hr_container" />
                     <div>
-                        <p className="lessons_menu ps-4 d-flex justify-content-start align-items-center">{course.grade_level} {course.subject_name} {course.title}</p>
+                        <p className="lessons_menu ps-4 d-flex justify-content-start align-items-center">{course.grade_level} {course.subject_name} {course.title} <span className="status-circle ms-5"></span></p>
                     </div>
                 </div> 
             </div>
