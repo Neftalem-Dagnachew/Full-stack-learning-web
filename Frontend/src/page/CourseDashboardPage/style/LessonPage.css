@@ -42,3 +42,7 @@
   height: 50px;
   cursor: pointer;
 }
+
+.lessons_menu:hover {
+  color: #00A2E8;
+}
