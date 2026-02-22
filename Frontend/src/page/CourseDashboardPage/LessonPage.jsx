@@ -22,6 +22,9 @@ function LessonPage() {
                     </div>
                 </div> 
             </div>
+            <div className="video_lesson_container">
+                
+            </div>
         </div>
     );
 }

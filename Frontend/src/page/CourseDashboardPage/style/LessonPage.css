@@ -46,3 +46,10 @@
 .lessons_menu:hover {
   color: #00A2E8;
 }
+
+/*  */
+
+.video_lesson_container {
+  margin-left: 370px;
+  padding: 50px 0px 0px 90px;
+}
