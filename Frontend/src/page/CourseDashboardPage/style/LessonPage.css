@@ -9,3 +9,18 @@
   overflow-y: scroll;
   position: fixed;
 }
+
+.backTo_course_btn {
+  background-color: #00000008;
+  color: #9B9C9F;
+  border: none;
+  font-size: 12px;
+  width: 127px;
+  height: 32px;
+  border-radius: 5px;
+}
+
+.backTo_course_btn:hover {
+  background-color: #0000000F;
+  transition: all 0.2s;
+}

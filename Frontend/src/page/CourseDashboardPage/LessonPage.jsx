@@ -12,7 +12,7 @@ function LessonPage() {
         <div className="all_course_lesson_container">
             <div className="course_lesson_container ps-4 pt-5 w-25">
                 <div>
-                    <button className="mb-4">Back to course</button>
+                    <button className="mb-4 backTo_course_btn">Back to course</button>
                     <h3>Grade 9 Biology Unit 6: Ecology</h3>
                 </div> 
             </div>
