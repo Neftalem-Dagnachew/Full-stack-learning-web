@@ -9,7 +9,10 @@ function LessonPage() {
     if (!course) return <p>Course not found</p>;
 
     return (
-        <div className="all_course_start_container">
+        <div className="all_course_lesson_container">
+            <div className="course_lesson_container w-25">
+                
+            </div>
         </div>
     );
 }

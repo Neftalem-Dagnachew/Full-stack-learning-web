@@ -1,9 +1,11 @@
 
-.circle_lesson {
-  width: 220px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid #cfcfcf;
-  background-color: transparent;
-  cursor: pointer;
+.all_course_lesson_container {
+  margin-left: 140px;
+  padding: 70px 0px 0px 90px;
+}
+
+.course_lesson_container {
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
 }
