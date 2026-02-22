@@ -24,3 +24,9 @@
   background-color: #0000000F;
   transition: all 0.2s;
 }
+
+.hr_complit {
+  border: none;
+  height: 3px;
+  background-color: #5A5A5A;
+}
