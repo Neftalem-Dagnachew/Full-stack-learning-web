@@ -27,7 +27,8 @@ function LessonPage() {
                     <hr />
                     <p className="mb-5">Lesson 1 of 11</p>
                     <div className="video_warap w-100 h-100">
-                        <h1>{course.grade_level} {course.subject_name} {course.title}</h1>
+                        <h1 className="mb-5">{course.grade_level} {course.subject_name} {course.title}</h1>
+                        <iframe className="video_cource w-100 " title="Course Video" src={`https://www.youtube.com/embed/${course.video_url}`} frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
