@@ -13,10 +13,13 @@ function LessonPage() {
             <div className="course_lesson_container ps-4 pt-5 w-25">
                 <div className="pe-4">
                     <button className="mb-4 backTo_course_btn">Back to course</button>
-                    <h3>Grade 9 Biology Unit 6: Ecology</h3>
+                    <h3>{course.grade_level} {course.subject_name} {course.title}</h3>
                     <hr className="hr_complit mb-3"/>
                     <p className="m-0">0%  Complete</p>
                     <hr className="hr_container" />
+                    <div>
+                        <p className="lessons_menu ps-4 d-flex justify-content-start align-items-center">{course.grade_level} {course.subject_name} {course.title}</p>
+                    </div>
                 </div> 
             </div>
         </div>
