@@ -44,10 +44,8 @@ function CourseDashboard() {
                     </div>
                 {/* </form> */}
 
-
+                <div className="get_course_container gap-4 d-flex justify-content-center">
                 { courses.length > 0 ? (courses.map((course) => (
-
-                    <div className="get_course_container d-flex justify-content-center">
                     <div className="course_cards">
                         <div className="w-100 h-50">
                             
@@ -64,9 +62,9 @@ function CourseDashboard() {
                         </div>
 
                     </div>
-                </div>
                     
                 ))) : ( <h1 className="mt-4 text-primary-emphasis text-center">{loading ? "Loading..." : "Don't have course"}</h1> )}
+                </div>
 
             </div>
         </>
