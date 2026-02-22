@@ -23,7 +23,13 @@ function LessonPage() {
                 </div> 
             </div>
             <div className="video_lesson_container">
-                
+                <div className="video_container w-100 h-100 d-flex flex-column ">
+                    <hr />
+                    <p className="mb-5">Lesson 1 of 11</p>
+                    <div className="video_warap w-100 h-100">
+                        <h1>{course.grade_level} {course.subject_name} {course.title}</h1>
+                    </div>
+                </div>
             </div>
         </div>
     );
