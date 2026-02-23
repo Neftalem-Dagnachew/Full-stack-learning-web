@@ -4,6 +4,7 @@ import "../CourseDashboardPage/style/LessonPage.css"
 function LessonPage() {
     const { state } = useLocation();
     const navigate = useNavigate();
+    // const { grade_level, subject_name } = useParams();
     const course = state?.course;
 
     if (!course) return <p>Course not found</p>;

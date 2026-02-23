@@ -45,25 +45,24 @@ function CourseDashboard() {
                 {/* </form> */}
 
                 <div className="get_course_container gap-4 d-flex justify-content-center">
-                { courses.length > 0 ? (courses.map((course) => (
-                    <div className="course_cards">
-                        <div className="w-100 h-50">
-                            
-                         </div>
-                        <div className="h-50 gap-3 d-flex justify-content-center flex-column">
-                            <div className="ps-3">
-                                <h4>{course.title}</h4>
-                                <h4>{course.description}</h4>
+                {courses.map((course) => (
+                        <div key={course.unit_id} className="course_cards">
+                            <div className="h-50 gap-3 d-flex justify-content-center flex-column">
+                                <div className="ps-3">
+                                    <h4>{course.unit_title}</h4>
+                                    <p>{course.lessons.length} Lessons Included</p>
+                                </div>
+
+                                <Link 
+                                    to={`/my-dashboard/course/${course.unit_id}/${grade}/${subject}`}
+                                    state={{ course }}
+                                    className="see_course_btn d-flex align-items-center justify-content-center ms-3"
+                                >
+                                    See Course
+                                </Link>
                             </div>
-
-                            <Link to={`/my-dashboard/course/${course.id}/${course.grade_level}/${course.subject_name}`}
-                            state={{ course }} className="see_course_btn d-flex align-items-center justify-content-center ms-3">See</Link>
-
                         </div>
-
-                    </div>
-                    
-                ))) : ( <h1 className="mt-4 text-primary-emphasis text-center">{loading ? "Loading..." : "Don't have course"}</h1> )}
+                    ))}
                 </div>
 
             </div>
