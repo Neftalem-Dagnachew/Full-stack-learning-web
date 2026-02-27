@@ -1,4 +1,6 @@
 
+# env files
 .env
 
+# database configuration file
 config/db.js
