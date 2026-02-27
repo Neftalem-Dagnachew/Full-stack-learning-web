@@ -1,0 +1,20 @@
+
+.chat_window_container {
+    background-color: aqua;
+    width: 400px;
+    height: 20vh;
+    position: fixed;
+    z-index: 100;
+    left: 950px;
+}
+
+.chat_component {
+    position: fixed;
+    bottom: 150px;
+}
+
+.chat_toggle_btn {
+    position: fixed;
+    right: 0px;
+    display: flex;
+}

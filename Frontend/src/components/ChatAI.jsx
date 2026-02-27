@@ -5,21 +5,22 @@ import { useState } from "react";
 
 function ChatComponent() {
 
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
 
   return(
     <>
-      <div className="all_container d-flex">
-        <div className="chat_component w-50 mt-5 d-flex gap-5">
-          {isOpen && (
+      {/* <div className="all_container"> */}
+        <div className="chat_component">
+          {openMenu && (
             <div className="chat_window_container">
-              we
+              <h1>go</h1>
             </div>
           )}
 
-          <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close Chat" : "Open Chat"}</button>
+          <button className="chat_toggle_btn" onClick={() => setOpenMenu(!openMenu)}>{openMenu ? "Close Chat" : "Open Chat"}</button>
         </div>
-      </div>
+        {/* </div> */}
     </>
   )
 }
