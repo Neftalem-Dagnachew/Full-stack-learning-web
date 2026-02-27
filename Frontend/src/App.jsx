@@ -17,6 +17,7 @@ import ChangeCoverImag from "./page/DashboardPages/ChangeCoverImag";
 import CourseDashboard from "./page/CourseDashboardPage/CourseDashboard";
 import CourseStart from "./page/CourseDashboardPage/CourseStart";
 import LessonPage from "./page/CourseDashboardPage/LessonPage";
+import ChatAI from "./components/ChatAI";
 
 function App() {
 
@@ -25,11 +26,13 @@ function App() {
       <Routes>
         <Route path='/' element={<MainLayout />}> 
           <Route index element={<Introduction />}/>
+          <Route path="ask-ai" element={<ChatAI />} /> 
         </Route>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
+          <Route path="members/:nickname" element={<Profile />}/>
           <Route path="members/:nickname" element={<Profile />}/>
           <Route path="members/:nickname/profile/edit" element={<EditProfileLayout />}>
             <Route index element={<FunctionalEditProfile />} />
