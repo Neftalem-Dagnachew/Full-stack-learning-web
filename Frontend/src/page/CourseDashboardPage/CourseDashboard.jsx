@@ -46,8 +46,8 @@ function CourseDashboard() {
 
                 <div className="get_course_container gap-4 d-flex justify-content-center">
                 {courses.map((course) => (
-                        <div key={course.unit_id} className="course_cards">
-                            <div className="h-50 gap-3 d-flex justify-content-center flex-column">
+                        <div key={course.unit_id} className="course_cards d-flex align-items-center">
+                            <div className="h-50 gap-3 d-flex flex-column">
                                 <div className="ps-3">
                                     <h4>{course.unit_title}</h4>
                                     <p>{course.lessons.length} Lessons Included</p>
