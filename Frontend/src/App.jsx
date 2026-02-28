@@ -26,12 +26,12 @@ function App() {
       <Routes>
         <Route path='/' element={<MainLayout />}> 
           <Route index element={<Introduction />}/>
-          <Route path="ask-ai" element={<ChatAI />} /> 
         </Route>
         <Route path="/login" element={<Login />}/>
         <Route path="/register" element={<Register />}/>
         <Route path="/my-dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
           <Route index element={<Dashboard />} />
+          <Route path="ask-ai" element={<ChatAI />} />
           <Route path="members/:nickname" element={<Profile />}/>
           <Route path="members/:nickname" element={<Profile />}/>
           <Route path="members/:nickname/profile/edit" element={<EditProfileLayout />}>
