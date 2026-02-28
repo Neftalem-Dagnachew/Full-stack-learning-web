@@ -28,3 +28,52 @@
   border-radius: 20px;
   cursor: pointer;
 }
+
+.chat-container {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+
+.chat-box {
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  overflow-y: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.ai {
+  justify-content: flex-start;
+}
+
+.bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.message.user .bubble {
+  background: #007bff;
+  color: white;
+  border-bottom-right-radius: 5px;
+}
+
+.message.ai .bubble {
+  background: #e4e6eb;
+  color: black;
+  border-bottom-left-radius: 5px;
+}
