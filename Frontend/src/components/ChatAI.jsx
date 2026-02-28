@@ -10,17 +10,22 @@ function ChatComponent() {
 
   return(
     <>
-      {/* <div className="all_container"> */}
-        <div className="chat_component">
-          {openMenu && (
-            <div className="chat_window_container">
-              <h1>go</h1>
-            </div>
-          )}
+      <div className="all_container">
+        <div className="d-flex justify-content-center align-items-end chatAi_container">
+          <div className="chatAi_box w-100 text-center">
 
-          <button className="chat_toggle_btn" onClick={() => setOpenMenu(!openMenu)}>{openMenu ? "Close Chat" : "Open Chat"}</button>
+            <div className="input_wrapper w-50">
+              <input
+                type="text"
+                className="chat_input"
+                placeholder="Say something..."
+              />
+              <button className="chat_btn">Enter</button>
+            </div>
+
+          </div>
         </div>
-        {/* </div> */}
+      </div>
     </>
   )
 }
