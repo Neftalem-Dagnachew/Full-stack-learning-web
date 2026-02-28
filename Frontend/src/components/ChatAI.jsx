@@ -47,9 +47,12 @@ function ChatComponent() {;
                     </div>
                 </div>
                 ))}
-                  {messages.length === 0 && (
-              <h1 className="hello_class d-flex align-items-center justify-content-center">hello {user?.nickname}</h1>
-            )}
+                
+                {messages.length === 0 && (
+                  <h1 className="hello_class d-flex align-items-center justify-content-center">
+                    Hello, {user?.first_name}
+                  </h1>
+                )}
 
                 {loading && (
                   <div className="message ai">
