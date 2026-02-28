@@ -7,6 +7,7 @@ import logo from "../assets//Navbar-img/Main-Logo.png"
 // imge
 import profileImg from "../assets/Navbar-img/profile.png";
 import ethioFlag from "../assets/Navbar-img/ethio_flag.svg";
+import uropFlag from "../assets/Navbar-img/flag.svg";
 
 const SERVER_URL = "http://localhost:5000";
 
@@ -70,7 +71,7 @@ function Navbar( {variant} ) {
 
             <img
               className="nav_translator_img ps-2"
-              src={ethioFlag}
+              src={uropFlag}
               alt="English"
             />
             <p className="m-0 ps-2 translator_text poppins-light">EN</p>
