@@ -42,7 +42,7 @@ function SidebarMenu() {
                             Races
                         </NavLink>
 
-                        <NavLink to="/my-dashboard/ask-ai" className={`menu_btn ps-2 align-items-center ${isActive === "dashboard4" ? "active" : ""}`} onClick={() => {
+                        <NavLink to="/my-dashboard/ask-ai" end className={({ isActive }) => `menu_btn ps-2 align-items-center ${isActive ? "active" : ""}`} onClick={() => {
                             setIsActive("dashboard4")}}> 
                             <i className="fa-solid fa-crown btn_icons pe-4"></i>
                             Ask AI
