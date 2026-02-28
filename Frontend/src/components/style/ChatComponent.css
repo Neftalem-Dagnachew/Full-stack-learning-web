@@ -1,6 +1,6 @@
 
 .chatAi_container {
-    height: 70vh;
+  height: 70vh;
 }
 
 .input_wrapper {
@@ -22,11 +22,16 @@
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  background: #000;
+  background: #007bff;
   color: white;
   padding: 8px 18px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+.chat_btn:hover {
+  background: #0056b3;
+  transition: all 0.4s;
 }
 
 .chat-container {
@@ -35,7 +40,7 @@
   height: 50vh;
 }
 
-.chat-box {
+.chat_box {
   width: 100%;
   max-width: 700px;
   padding: 20px;
@@ -76,4 +81,9 @@
   background: #e4e6eb;
   color: black;
   border-bottom-left-radius: 5px;
+}
+
+.hello_class {
+  height: 50vh;
+  color: #013C5A;
 }

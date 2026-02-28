@@ -17,7 +17,7 @@ function ChatComponent() {;
     if (!input.trim()) return;
 
     const userMessage = { role: "user", text: input };
-    setMessages([...messages, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setLoading(true);
     setInput("");
 
@@ -36,9 +36,10 @@ function ChatComponent() {;
       <div className="all_container">
         <div className="d-flex justify-content-center align-items-end chatAi_container">
           <div className="chatAi_box w-100 text-center">
+            
 
             <div className="chat-container">
-              <div className="chat-box">
+              <div className="chat_box">
                   {messages.map((msg, index) => (
                   <div key={index} className={`message ${msg.role}`}>
                     <div className="bubble">
@@ -46,6 +47,9 @@ function ChatComponent() {;
                     </div>
                 </div>
                 ))}
+                  {messages.length === 0 && (
+              <h1 className="hello_class d-flex align-items-center justify-content-center">hello {user?.nickname}</h1>
+            )}
 
                 {loading && (
                   <div className="message ai">
