@@ -2,12 +2,16 @@
 import "../components/style/ChatComponent.css";
 
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 import axios from 'axios';
 
 function ChatComponent() {;
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const { user } = useContext(AuthContext);
 
   const handleSend = async () => {
     if (!input.trim()) return;
