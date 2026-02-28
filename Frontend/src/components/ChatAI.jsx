@@ -47,7 +47,7 @@ function ChatComponent() {;
                     </div>
                 </div>
                 ))}
-                
+
                 {messages.length === 0 && (
                   <h1 className="hello_class d-flex align-items-center justify-content-center">
                     Hello, {user?.first_name}
@@ -71,7 +71,7 @@ function ChatComponent() {;
                 className="chat_input"
                 placeholder="Say something..."
               />
-              <button onClick={handleSend} className="chat_btn">Enter</button>
+              <button onClick={handleSend} className="chat_btn">Ask</button>
             </div>
 
           </div>
