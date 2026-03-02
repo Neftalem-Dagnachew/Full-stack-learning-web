@@ -6,8 +6,6 @@ this a modern, full-stack web-based learning platform designed to provide intera
 
 ---
 
-## 🌟 Features
-
 ### 📚 Interactive Learning Modules
 - 🎥 High-quality video lessons
 - 📈 Progress tracking system
