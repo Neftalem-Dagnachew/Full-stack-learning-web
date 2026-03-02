@@ -1,6 +1,6 @@
 # 🚀  Web-Based Learning Platform
 
-> powering students to learn smarter, build fastere.
+> powering students to learn smarter.
 
 this a modern, full-stack web-based learning platform designed to provide interactive education, AI-powered student support.
 
