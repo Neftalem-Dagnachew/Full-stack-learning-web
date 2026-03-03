@@ -1,4 +1,4 @@
-# 🚀  Web-Based Learning Platform
+#  Web-Based Learning Platform
 
 > powering students to learn smarter.
 
